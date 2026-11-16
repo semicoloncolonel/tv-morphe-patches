@@ -51,6 +51,8 @@ jobs:
         uses: actions/checkout@v7
         with:
           repository: semicoloncolonel/mobile-morphe-patches
+          # dev, because the script's TV options reach dev before main.
+          ref: dev
           path: mobile
           # main and dev are both read for the supported versions.
           fetch-depth: 0
