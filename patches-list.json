@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.1.0-dev.26",
+  "version": "1.0.21",
   "patches": [
     {
       "name": "Auto-skip (Android TV)",
@@ -25,7 +25,7 @@
                 "X86_64": 170300,
                 "X86": 170300
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": "Android TV build"
             },
@@ -83,7 +83,7 @@
         {
           "packageName": "com.justwatch.justwatch",
           "name": "JustWatch",
-          "description": "The JustWatch streaming guide app for Android TV.",
+          "description": "The JustWatch streaming guide app, for phones and Android TV.",
           "apkFileType": "APKM",
           "appIconColor": "#FBC500",
           "signatures": null,
@@ -96,13 +96,6 @@
                 "ARM64_V8A": 2643008
               },
               "isExperimental": false,
-              "minSdk": null,
-              "description": "Android TV build"
-            },
-            {
-              "version": "26.44.5",
-              "versionCodes": null,
-              "isExperimental": true,
               "minSdk": null,
               "description": "Android TV build"
             }
@@ -120,7 +113,7 @@
         {
           "packageName": "com.disney.disneyplus",
           "name": "Disney+",
-          "description": "The Disney+ Android TV app. Patch the Android TV build (version code 1793662190).",
+          "description": "The Disney+ phone and Android TV apps. The phone and Android TV builds of 26.20.0+rc3-2026.11.02 share the version name. On a TV, patch the Android TV build (version code 1793662190); it crashes on a phone, where the phone build (179366219) is used.",
           "apkFileType": "APKM",
           "appIconColor": "#113CCF",
           "signatures": null,
@@ -147,7 +140,7 @@
         {
           "packageName": "com.wbd.hbomax",
           "name": "HBO Max",
-          "description": "The HBO Max Android TV app (version 22.0.0.36).",
+          "description": "The HBO Max app, for phones (version 22.0.0.321) and Android TV (version 22.0.0.36).",
           "apkFileType": "APKM",
           "appIconColor": "#002BE7",
           "signatures": null,
@@ -170,7 +163,7 @@
         {
           "packageName": "com.wbd.stream",
           "name": "HBO Max",
-          "description": "The HBO Max Android TV app as the Play Store installs it (version 22.0.0.36).",
+          "description": "The HBO Max app as the Play Store installs it, for phones (version 22.0.0.321) and Android TV (version 22.0.0.36).",
           "apkFileType": "APKM",
           "appIconColor": "#002BE7",
           "signatures": null,
@@ -202,7 +195,7 @@
         {
           "packageName": "com.justwatch.justwatch",
           "name": "JustWatch",
-          "description": "The JustWatch streaming guide app for Android TV.",
+          "description": "The JustWatch streaming guide app, for phones and Android TV.",
           "apkFileType": "APKM",
           "appIconColor": "#FBC500",
           "signatures": null,
@@ -215,13 +208,6 @@
                 "ARM64_V8A": 2643008
               },
               "isExperimental": false,
-              "minSdk": null,
-              "description": "Android TV build"
-            },
-            {
-              "version": "26.44.5",
-              "versionCodes": null,
-              "isExperimental": true,
               "minSdk": null,
               "description": "Android TV build"
             }
@@ -256,18 +242,6 @@
               "isExperimental": false,
               "minSdk": null,
               "description": "Android TV build"
-            },
-            {
-              "version": "4.71",
-              "versionCodes": {
-                "ARM64_V8A": 8294,
-                "ARMEABI_V7A": 8294,
-                "X86_64": 8294,
-                "X86": 8294
-              },
-              "isExperimental": false,
-              "minSdk": null,
-              "description": "Android TV build"
             }
           ]
         }
@@ -283,7 +257,7 @@
         {
           "packageName": "com.plexapp.android",
           "name": "Plex",
-          "description": "The Plex app for Android TV.",
+          "description": "The Plex app, for phones and Android TV.",
           "apkFileType": "APKM",
           "appIconColor": "#E5A00D",
           "signatures": null,
@@ -310,19 +284,12 @@
         {
           "packageName": "tv.pluto.android",
           "name": "Pluto TV",
-          "description": "The Pluto TV app for Android TV. Android TV builds have version codes that start with 5.",
+          "description": "The Pluto TV app, for phones and Android TV. Both builds are version 17.3.0. On a TV, patch the Android TV build (version code 520000991), not the phone build (420000991).",
           "apkFileType": "APKM",
           "appIconColor": "#B8B004",
           "signatures": null,
           "formFactor": "TV",
           "targets": [
-            {
-              "version": "17.4.0",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
             {
               "version": "17.3.0",
               "versionCodes": null,
@@ -357,7 +324,7 @@
         {
           "packageName": "com.bydeluxe.d3.android.program.starz",
           "name": "Starz",
-          "description": "The Starz Android TV app. The Android TV build of 6.12.0 has version code 9510.",
+          "description": "The Starz phone, tablet, and Android TV apps. The 6.12.0 builds share the version name. On a TV, patch the Android TV build (version code 9510), not the phone build (4518).",
           "apkFileType": "APKM",
           "appIconColor": "#000000",
           "signatures": null,
@@ -365,13 +332,6 @@
           "targets": [
             {
               "version": "6.12.0",
-              "versionCodes": null,
-              "isExperimental": true,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "6.11.0",
               "versionCodes": null,
               "isExperimental": false,
               "minSdk": null,
@@ -391,7 +351,7 @@
         {
           "packageName": "com.tubitv",
           "name": "Tubi",
-          "description": "The Tubi app for Android TV.",
+          "description": "The Tubi app, for phones and Android TV. On a TV, patch the Android TV build, version 10.44.5001.",
           "apkFileType": "APKM",
           "appIconColor": "#E9181C",
           "signatures": null,
@@ -405,7 +365,7 @@
                 "X86_64": 1067,
                 "X86": 1067
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": "Android TV build"
             }
@@ -437,7 +397,7 @@
                 "X86_64": 170300,
                 "X86": 170300
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": "Android TV build"
             },
@@ -459,38 +419,6 @@
       "options": []
     },
     {
-      "name": "Block analytics & tracking (experimental)",
-      "description": "Blocks the Hulu Android TV app's analytics and tracking requests (Hulu telemetry, Conviva, and Adobe) through an in-process native hook, with no root. Functional traffic is untouched.",
-      "default": false,
-      "category": "Privacy",
-      "compatiblePackages": [
-        {
-          "packageName": "com.hulu.livingroomplus",
-          "name": "Hulu (Android TV)",
-          "description": "The Android TV app, not the phone app. Removes the ads Hulu stitches into its on-demand manifests, through an in-process native hook, with no root. Live broadcast commercials are part of the broadcast and still play. Patch the full APKM bundle, and install the patched file as a single app. If it is saved with a bundle extension such as .apkm or .apks, rename it to end in .apk first.",
-          "apkFileType": "APKM",
-          "appIconColor": "#1CE783",
-          "signatures": null,
-          "formFactor": "TV",
-          "targets": [
-            {
-              "version": "C59F39CFP3.10.33",
-              "versionCodes": {
-                "ARM64_V8A": 3010033,
-                "ARMEABI_V7A": 3010033,
-                "X86_64": 3010033,
-                "X86": 3010033
-              },
-              "isExperimental": false,
-              "minSdk": null,
-              "description": "Android TV build"
-            }
-          ]
-        }
-      ],
-      "options": []
-    },
-    {
       "name": "Disable auto-updates",
       "description": "Stops the Play Store from replacing the patched app with the official version.",
       "default": false,
@@ -499,7 +427,7 @@
         {
           "packageName": "com.tubitv",
           "name": "Tubi",
-          "description": "The Tubi app for Android TV.",
+          "description": "The Tubi app, for phones and Android TV. On a TV, patch the Android TV build, version 10.44.5001.",
           "apkFileType": "APKM",
           "appIconColor": "#E9181C",
           "signatures": null,
@@ -513,7 +441,7 @@
                 "X86_64": 1067,
                 "X86": 1067
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": "Android TV build"
             }
@@ -522,7 +450,7 @@
         {
           "packageName": "com.disney.disneyplus",
           "name": "Disney+",
-          "description": "The Disney+ Android TV app. Patch the Android TV build (version code 1793662190).",
+          "description": "The Disney+ phone and Android TV apps. The phone and Android TV builds of 26.20.0+rc3-2026.11.02 share the version name. On a TV, patch the Android TV build (version code 1793662190); it crashes on a phone, where the phone build (179366219) is used.",
           "apkFileType": "APKM",
           "appIconColor": "#113CCF",
           "signatures": null,
@@ -540,19 +468,12 @@
         {
           "packageName": "tv.pluto.android",
           "name": "Pluto TV",
-          "description": "The Pluto TV app for Android TV. Android TV builds have version codes that start with 5.",
+          "description": "The Pluto TV app, for phones and Android TV. Both builds are version 17.3.0. On a TV, patch the Android TV build (version code 520000991), not the phone build (420000991).",
           "apkFileType": "APKM",
           "appIconColor": "#B8B004",
           "signatures": null,
           "formFactor": "TV",
           "targets": [
-            {
-              "version": "17.4.0",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
             {
               "version": "17.3.0",
               "versionCodes": null,
@@ -565,7 +486,7 @@
         {
           "packageName": "com.wbd.hbomax",
           "name": "HBO Max",
-          "description": "The HBO Max Android TV app (version 22.0.0.36).",
+          "description": "The HBO Max app, for phones (version 22.0.0.321) and Android TV (version 22.0.0.36).",
           "apkFileType": "APKM",
           "appIconColor": "#002BE7",
           "signatures": null,
@@ -588,7 +509,7 @@
         {
           "packageName": "com.wbd.stream",
           "name": "HBO Max",
-          "description": "The HBO Max Android TV app as the Play Store installs it (version 22.0.0.36).",
+          "description": "The HBO Max app as the Play Store installs it, for phones (version 22.0.0.321) and Android TV (version 22.0.0.36).",
           "apkFileType": "APKM",
           "appIconColor": "#002BE7",
           "signatures": null,
@@ -611,7 +532,7 @@
         {
           "packageName": "com.bydeluxe.d3.android.program.starz",
           "name": "Starz",
-          "description": "The Starz Android TV app. The Android TV build of 6.12.0 has version code 9510.",
+          "description": "The Starz phone, tablet, and Android TV apps. The 6.12.0 builds share the version name. On a TV, patch the Android TV build (version code 9510), not the phone build (4518).",
           "apkFileType": "APKM",
           "appIconColor": "#000000",
           "signatures": null,
@@ -619,13 +540,6 @@
           "targets": [
             {
               "version": "6.12.0",
-              "versionCodes": null,
-              "isExperimental": true,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "6.11.0",
               "versionCodes": null,
               "isExperimental": false,
               "minSdk": null,
@@ -636,7 +550,7 @@
         {
           "packageName": "com.justwatch.justwatch",
           "name": "JustWatch",
-          "description": "The JustWatch streaming guide app for Android TV.",
+          "description": "The JustWatch streaming guide app, for phones and Android TV.",
           "apkFileType": "APKM",
           "appIconColor": "#FBC500",
           "signatures": null,
@@ -649,13 +563,6 @@
                 "ARM64_V8A": 2643008
               },
               "isExperimental": false,
-              "minSdk": null,
-              "description": "Android TV build"
-            },
-            {
-              "version": "26.44.5",
-              "versionCodes": null,
-              "isExperimental": true,
               "minSdk": null,
               "description": "Android TV build"
             }
@@ -681,18 +588,6 @@
               "isExperimental": false,
               "minSdk": null,
               "description": "Android TV build"
-            },
-            {
-              "version": "4.71",
-              "versionCodes": {
-                "ARM64_V8A": 8294,
-                "ARMEABI_V7A": 8294,
-                "X86_64": 8294,
-                "X86": 8294
-              },
-              "isExperimental": false,
-              "minSdk": null,
-              "description": "Android TV build"
             }
           ]
         }
@@ -708,7 +603,7 @@
         {
           "packageName": "com.justwatch.justwatch",
           "name": "JustWatch",
-          "description": "The JustWatch streaming guide app for Android TV.",
+          "description": "The JustWatch streaming guide app, for phones and Android TV.",
           "apkFileType": "APKM",
           "appIconColor": "#FBC500",
           "signatures": null,
@@ -721,13 +616,6 @@
                 "ARM64_V8A": 2643008
               },
               "isExperimental": false,
-              "minSdk": null,
-              "description": "Android TV build"
-            },
-            {
-              "version": "26.44.5",
-              "versionCodes": null,
-              "isExperimental": true,
               "minSdk": null,
               "description": "Android TV build"
             }
@@ -758,15 +646,15 @@
       ]
     },
     {
-      "name": "Hide device identifiers",
-      "description": "Hides details about your phone from the app. Choose which ones in the patch options.",
+      "name": "Hide VPN connection",
+      "description": "Hides an active VPN from the app's checks on the phone.",
       "default": false,
       "category": null,
       "compatiblePackages": [
         {
           "packageName": "com.tubitv",
           "name": "Tubi",
-          "description": "The Tubi app for Android TV.",
+          "description": "The Tubi app, for phones and Android TV. On a TV, patch the Android TV build, version 10.44.5001.",
           "apkFileType": "APKM",
           "appIconColor": "#E9181C",
           "signatures": null,
@@ -780,7 +668,7 @@
                 "X86_64": 1067,
                 "X86": 1067
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": "Android TV build"
             }
@@ -789,7 +677,7 @@
         {
           "packageName": "com.disney.disneyplus",
           "name": "Disney+",
-          "description": "The Disney+ Android TV app. Patch the Android TV build (version code 1793662190).",
+          "description": "The Disney+ phone and Android TV apps. The phone and Android TV builds of 26.20.0+rc3-2026.11.02 share the version name. On a TV, patch the Android TV build (version code 1793662190); it crashes on a phone, where the phone build (179366219) is used.",
           "apkFileType": "APKM",
           "appIconColor": "#113CCF",
           "signatures": null,
@@ -807,19 +695,12 @@
         {
           "packageName": "tv.pluto.android",
           "name": "Pluto TV",
-          "description": "The Pluto TV app for Android TV. Android TV builds have version codes that start with 5.",
+          "description": "The Pluto TV app, for phones and Android TV. Both builds are version 17.3.0. On a TV, patch the Android TV build (version code 520000991), not the phone build (420000991).",
           "apkFileType": "APKM",
           "appIconColor": "#B8B004",
           "signatures": null,
           "formFactor": "TV",
           "targets": [
-            {
-              "version": "17.4.0",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
             {
               "version": "17.3.0",
               "versionCodes": null,
@@ -832,7 +713,7 @@
         {
           "packageName": "com.wbd.hbomax",
           "name": "HBO Max",
-          "description": "The HBO Max Android TV app (version 22.0.0.36).",
+          "description": "The HBO Max app, for phones (version 22.0.0.321) and Android TV (version 22.0.0.36).",
           "apkFileType": "APKM",
           "appIconColor": "#002BE7",
           "signatures": null,
@@ -855,7 +736,7 @@
         {
           "packageName": "com.wbd.stream",
           "name": "HBO Max",
-          "description": "The HBO Max Android TV app as the Play Store installs it (version 22.0.0.36).",
+          "description": "The HBO Max app as the Play Store installs it, for phones (version 22.0.0.321) and Android TV (version 22.0.0.36).",
           "apkFileType": "APKM",
           "appIconColor": "#002BE7",
           "signatures": null,
@@ -878,7 +759,7 @@
         {
           "packageName": "com.bydeluxe.d3.android.program.starz",
           "name": "Starz",
-          "description": "The Starz Android TV app. The Android TV build of 6.12.0 has version code 9510.",
+          "description": "The Starz phone, tablet, and Android TV apps. The 6.12.0 builds share the version name. On a TV, patch the Android TV build (version code 9510), not the phone build (4518).",
           "apkFileType": "APKM",
           "appIconColor": "#000000",
           "signatures": null,
@@ -887,12 +768,137 @@
             {
               "version": "6.12.0",
               "versionCodes": null,
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
-            },
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Hide device identifiers",
+      "description": "Gives the app a random Android ID and a zeroed advertising ID.",
+      "default": false,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "com.tubitv",
+          "name": "Tubi",
+          "description": "The Tubi app, for phones and Android TV. On a TV, patch the Android TV build, version 10.44.5001.",
+          "apkFileType": "APKM",
+          "appIconColor": "#E9181C",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
             {
-              "version": "6.11.0",
+              "version": "10.44.5001",
+              "versionCodes": {
+                "ARM64_V8A": 1067,
+                "ARMEABI_V7A": 1067,
+                "X86_64": 1067,
+                "X86": 1067
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": "Android TV build"
+            }
+          ]
+        },
+        {
+          "packageName": "com.disney.disneyplus",
+          "name": "Disney+",
+          "description": "The Disney+ phone and Android TV apps. The phone and Android TV builds of 26.20.0+rc3-2026.11.02 share the version name. On a TV, patch the Android TV build (version code 1793662190); it crashes on a phone, where the phone build (179366219) is used.",
+          "apkFileType": "APKM",
+          "appIconColor": "#113CCF",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "26.20.0+rc3-2026.11.02",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "packageName": "tv.pluto.android",
+          "name": "Pluto TV",
+          "description": "The Pluto TV app, for phones and Android TV. Both builds are version 17.3.0. On a TV, patch the Android TV build (version code 520000991), not the phone build (420000991).",
+          "apkFileType": "APKM",
+          "appIconColor": "#B8B004",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "17.3.0",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "packageName": "com.wbd.hbomax",
+          "name": "HBO Max",
+          "description": "The HBO Max app, for phones (version 22.0.0.321) and Android TV (version 22.0.0.36).",
+          "apkFileType": "APKM",
+          "appIconColor": "#002BE7",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "22.0.0.36",
+              "versionCodes": {
+                "ARM64_V8A": 1842000036,
+                "ARMEABI_V7A": 1842000036,
+                "X86_64": 1842000036,
+                "X86": 1842000036
+              },
+              "isExperimental": false,
+              "minSdk": 29,
+              "description": "Android TV build"
+            }
+          ]
+        },
+        {
+          "packageName": "com.wbd.stream",
+          "name": "HBO Max",
+          "description": "The HBO Max app as the Play Store installs it, for phones (version 22.0.0.321) and Android TV (version 22.0.0.36).",
+          "apkFileType": "APKM",
+          "appIconColor": "#002BE7",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "22.0.0.36",
+              "versionCodes": {
+                "ARM64_V8A": 1842000036,
+                "ARMEABI_V7A": 1842000036,
+                "X86_64": 1842000036,
+                "X86": 1842000036
+              },
+              "isExperimental": false,
+              "minSdk": 29,
+              "description": "Android TV build"
+            }
+          ]
+        },
+        {
+          "packageName": "com.bydeluxe.d3.android.program.starz",
+          "name": "Starz",
+          "description": "The Starz phone, tablet, and Android TV apps. The 6.12.0 builds share the version name. On a TV, patch the Android TV build (version code 9510), not the phone build (4518).",
+          "apkFileType": "APKM",
+          "appIconColor": "#000000",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "6.12.0",
               "versionCodes": null,
               "isExperimental": false,
               "minSdk": null,
@@ -903,7 +909,7 @@
         {
           "packageName": "com.justwatch.justwatch",
           "name": "JustWatch",
-          "description": "The JustWatch streaming guide app for Android TV.",
+          "description": "The JustWatch streaming guide app, for phones and Android TV.",
           "apkFileType": "APKM",
           "appIconColor": "#FBC500",
           "signatures": null,
@@ -916,13 +922,6 @@
                 "ARM64_V8A": 2643008
               },
               "isExperimental": false,
-              "minSdk": null,
-              "description": "Android TV build"
-            },
-            {
-              "version": "26.44.5",
-              "versionCodes": null,
-              "isExperimental": true,
               "minSdk": null,
               "description": "Android TV build"
             }
@@ -948,114 +947,11 @@
               "isExperimental": false,
               "minSdk": null,
               "description": "Android TV build"
-            },
-            {
-              "version": "4.71",
-              "versionCodes": {
-                "ARM64_V8A": 8294,
-                "ARMEABI_V7A": 8294,
-                "X86_64": 8294,
-                "X86": 8294
-              },
-              "isExperimental": false,
-              "minSdk": null,
-              "description": "Android TV build"
             }
           ]
         }
       ],
-      "options": [
-        {
-          "key": "deviceIds",
-          "title": "Android ID and advertising ID",
-          "description": "Gives the app a random Android ID and a zeroed advertising ID. The DRM ID is left alone, so playback works.",
-          "required": false,
-          "type": "kotlin.Boolean",
-          "default": true,
-          "values": null
-        },
-        {
-          "key": "carrier",
-          "title": "Carrier",
-          "description": "Hides your mobile carrier, or reports the name set in Carrier name. Carrier deals, such as League Pass with a phone plan, stop working.",
-          "required": false,
-          "type": "kotlin.Boolean",
-          "default": false,
-          "values": null
-        },
-        {
-          "key": "carrierName",
-          "title": "Carrier name",
-          "description": "The carrier name the app sees when Carrier is on. Pick one from the list or type any name. Blank hides the carrier.",
-          "required": false,
-          "type": "kotlin.String",
-          "default": "",
-          "values": {
-            "Hidden (blank)": "",
-            "AT&T": "AT&T",
-            "Google Fi": "Google Fi",
-            "Mint Mobile": "Mint Mobile",
-            "T-Mobile": "T-Mobile",
-            "US Mobile": "US Mobile",
-            "Verizon": "Verizon",
-            "Visible": "Visible"
-          }
-        },
-        {
-          "key": "reportWifi",
-          "title": "Report Wi-Fi connection",
-          "description": "Shows mobile data as Wi-Fi, so Wi-Fi-only downloads and mobile quality limits do not apply. This can use a lot of data.",
-          "required": false,
-          "type": "kotlin.Boolean",
-          "default": false,
-          "values": null
-        },
-        {
-          "key": "hideVpn",
-          "title": "VPN connection",
-          "description": "Hides an active VPN from the app's checks on the phone. The app's servers can still detect a VPN from your IP address.",
-          "required": false,
-          "type": "kotlin.Boolean",
-          "default": false,
-          "values": null
-        },
-        {
-          "key": "wifiNetworks",
-          "title": "Nearby Wi-Fi networks",
-          "description": "Hides nearby Wi-Fi networks and the name of yours. Store detection, smart-home setup, and checkout fraud checks can be affected.",
-          "required": false,
-          "type": "kotlin.Boolean",
-          "default": false,
-          "values": null
-        },
-        {
-          "key": "bluetooth",
-          "title": "Bluetooth scanning",
-          "description": "Stops scans for Bluetooth devices and beacons, and hides paired devices. In-store maps, kiosk check-in, smart-home setup, and accessory pairing stop working.",
-          "required": false,
-          "type": "kotlin.Boolean",
-          "default": false,
-          "values": null
-        },
-        {
-          "key": "cellTowers",
-          "title": "Cell tower info",
-          "description": "Hides the cell towers your phone sees, which can place you within a few blocks.",
-          "required": false,
-          "type": "kotlin.Boolean",
-          "default": false,
-          "values": null
-        },
-        {
-          "key": "backgroundLocation",
-          "title": "Background location",
-          "description": "Removes the app's access to your location while it is closed or in the background. Store-arrival features and pickup check-in can stop working. RetailMeNot has its own patch for this.",
-          "required": false,
-          "type": "kotlin.Boolean",
-          "default": false,
-          "values": null
-        }
-      ]
+      "options": []
     },
     {
       "name": "Hide rating prompt",
@@ -1066,7 +962,7 @@
         {
           "packageName": "com.tubitv",
           "name": "Tubi",
-          "description": "The Tubi app for Android TV.",
+          "description": "The Tubi app, for phones and Android TV. On a TV, patch the Android TV build, version 10.44.5001.",
           "apkFileType": "APKM",
           "appIconColor": "#E9181C",
           "signatures": null,
@@ -1080,7 +976,7 @@
                 "X86_64": 1067,
                 "X86": 1067
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": "Android TV build"
             }
@@ -1089,7 +985,7 @@
         {
           "packageName": "com.disney.disneyplus",
           "name": "Disney+",
-          "description": "The Disney+ Android TV app. Patch the Android TV build (version code 1793662190).",
+          "description": "The Disney+ phone and Android TV apps. The phone and Android TV builds of 26.20.0+rc3-2026.11.02 share the version name. On a TV, patch the Android TV build (version code 1793662190); it crashes on a phone, where the phone build (179366219) is used.",
           "apkFileType": "APKM",
           "appIconColor": "#113CCF",
           "signatures": null,
@@ -1107,19 +1003,12 @@
         {
           "packageName": "tv.pluto.android",
           "name": "Pluto TV",
-          "description": "The Pluto TV app for Android TV. Android TV builds have version codes that start with 5.",
+          "description": "The Pluto TV app, for phones and Android TV. Both builds are version 17.3.0. On a TV, patch the Android TV build (version code 520000991), not the phone build (420000991).",
           "apkFileType": "APKM",
           "appIconColor": "#B8B004",
           "signatures": null,
           "formFactor": "TV",
           "targets": [
-            {
-              "version": "17.4.0",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
             {
               "version": "17.3.0",
               "versionCodes": null,
@@ -1132,7 +1021,7 @@
         {
           "packageName": "com.wbd.hbomax",
           "name": "HBO Max",
-          "description": "The HBO Max Android TV app (version 22.0.0.36).",
+          "description": "The HBO Max app, for phones (version 22.0.0.321) and Android TV (version 22.0.0.36).",
           "apkFileType": "APKM",
           "appIconColor": "#002BE7",
           "signatures": null,
@@ -1155,7 +1044,7 @@
         {
           "packageName": "com.wbd.stream",
           "name": "HBO Max",
-          "description": "The HBO Max Android TV app as the Play Store installs it (version 22.0.0.36).",
+          "description": "The HBO Max app as the Play Store installs it, for phones (version 22.0.0.321) and Android TV (version 22.0.0.36).",
           "apkFileType": "APKM",
           "appIconColor": "#002BE7",
           "signatures": null,
@@ -1178,7 +1067,7 @@
         {
           "packageName": "com.bydeluxe.d3.android.program.starz",
           "name": "Starz",
-          "description": "The Starz Android TV app. The Android TV build of 6.12.0 has version code 9510.",
+          "description": "The Starz phone, tablet, and Android TV apps. The 6.12.0 builds share the version name. On a TV, patch the Android TV build (version code 9510), not the phone build (4518).",
           "apkFileType": "APKM",
           "appIconColor": "#000000",
           "signatures": null,
@@ -1186,13 +1075,6 @@
           "targets": [
             {
               "version": "6.12.0",
-              "versionCodes": null,
-              "isExperimental": true,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "6.11.0",
               "versionCodes": null,
               "isExperimental": false,
               "minSdk": null,
@@ -1203,7 +1085,7 @@
         {
           "packageName": "com.plexapp.android",
           "name": "Plex",
-          "description": "The Plex app for Android TV.",
+          "description": "The Plex app, for phones and Android TV.",
           "apkFileType": "APKM",
           "appIconColor": "#E5A00D",
           "signatures": null,
@@ -1221,7 +1103,7 @@
         {
           "packageName": "com.justwatch.justwatch",
           "name": "JustWatch",
-          "description": "The JustWatch streaming guide app for Android TV.",
+          "description": "The JustWatch streaming guide app, for phones and Android TV.",
           "apkFileType": "APKM",
           "appIconColor": "#FBC500",
           "signatures": null,
@@ -1234,13 +1116,6 @@
                 "ARM64_V8A": 2643008
               },
               "isExperimental": false,
-              "minSdk": null,
-              "description": "Android TV build"
-            },
-            {
-              "version": "26.44.5",
-              "versionCodes": null,
-              "isExperimental": true,
               "minSdk": null,
               "description": "Android TV build"
             }
@@ -1262,18 +1137,6 @@
                 "ARMEABI_V7A": 8335,
                 "X86_64": 8335,
                 "X86": 8335
-              },
-              "isExperimental": false,
-              "minSdk": null,
-              "description": "Android TV build"
-            },
-            {
-              "version": "4.71",
-              "versionCodes": {
-                "ARM64_V8A": 8294,
-                "ARMEABI_V7A": 8294,
-                "X86_64": 8294,
-                "X86": 8294
               },
               "isExperimental": false,
               "minSdk": null,
@@ -1307,7 +1170,7 @@
                 "X86_64": 170300,
                 "X86": 170300
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": "Android TV build"
             },
@@ -1354,18 +1217,6 @@
               "isExperimental": false,
               "minSdk": null,
               "description": "Android TV build"
-            },
-            {
-              "version": "4.71",
-              "versionCodes": {
-                "ARM64_V8A": 8294,
-                "ARMEABI_V7A": 8294,
-                "X86_64": 8294,
-                "X86": 8294
-              },
-              "isExperimental": false,
-              "minSdk": null,
-              "description": "Android TV build"
             }
           ]
         }
@@ -1381,7 +1232,7 @@
         {
           "packageName": "com.tubitv",
           "name": "Tubi",
-          "description": "The Tubi app for Android TV.",
+          "description": "The Tubi app, for phones and Android TV. On a TV, patch the Android TV build, version 10.44.5001.",
           "apkFileType": "APKM",
           "appIconColor": "#E9181C",
           "signatures": null,
@@ -1395,7 +1246,7 @@
                 "X86_64": 1067,
                 "X86": 1067
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": "Android TV build"
             }
@@ -1413,7 +1264,7 @@
         {
           "packageName": "com.plexapp.android",
           "name": "Plex",
-          "description": "The Plex app for Android TV.",
+          "description": "The Plex app, for phones and Android TV.",
           "apkFileType": "APKM",
           "appIconColor": "#E5A00D",
           "signatures": null,
@@ -1440,7 +1291,7 @@
         {
           "packageName": "com.justwatch.justwatch",
           "name": "JustWatch",
-          "description": "The JustWatch streaming guide app for Android TV.",
+          "description": "The JustWatch streaming guide app, for phones and Android TV.",
           "apkFileType": "APKM",
           "appIconColor": "#FBC500",
           "signatures": null,
@@ -1453,13 +1304,6 @@
                 "ARM64_V8A": 2643008
               },
               "isExperimental": false,
-              "minSdk": null,
-              "description": "Android TV build"
-            },
-            {
-              "version": "26.44.5",
-              "versionCodes": null,
-              "isExperimental": true,
               "minSdk": null,
               "description": "Android TV build"
             }
@@ -1477,7 +1321,7 @@
         {
           "packageName": "com.justwatch.justwatch",
           "name": "JustWatch",
-          "description": "The JustWatch streaming guide app for Android TV.",
+          "description": "The JustWatch streaming guide app, for phones and Android TV.",
           "apkFileType": "APKM",
           "appIconColor": "#FBC500",
           "signatures": null,
@@ -1490,13 +1334,6 @@
                 "ARM64_V8A": 2643008
               },
               "isExperimental": false,
-              "minSdk": null,
-              "description": "Android TV build"
-            },
-            {
-              "version": "26.44.5",
-              "versionCodes": null,
-              "isExperimental": true,
               "minSdk": null,
               "description": "Android TV build"
             }
@@ -1514,7 +1351,7 @@
         {
           "packageName": "com.tubitv",
           "name": "Tubi",
-          "description": "The Tubi app for Android TV.",
+          "description": "The Tubi app, for phones and Android TV. On a TV, patch the Android TV build, version 10.44.5001.",
           "apkFileType": "APKM",
           "appIconColor": "#E9181C",
           "signatures": null,
@@ -1528,7 +1365,7 @@
                 "X86_64": 1067,
                 "X86": 1067
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": "Android TV build"
             }
@@ -1546,7 +1383,7 @@
         {
           "packageName": "com.justwatch.justwatch",
           "name": "JustWatch",
-          "description": "The JustWatch streaming guide app for Android TV.",
+          "description": "The JustWatch streaming guide app, for phones and Android TV.",
           "apkFileType": "APKM",
           "appIconColor": "#FBC500",
           "signatures": null,
@@ -1559,13 +1396,6 @@
                 "ARM64_V8A": 2643008
               },
               "isExperimental": false,
-              "minSdk": null,
-              "description": "Android TV build"
-            },
-            {
-              "version": "26.44.5",
-              "versionCodes": null,
-              "isExperimental": true,
               "minSdk": null,
               "description": "Android TV build"
             }
@@ -1583,7 +1413,7 @@
         {
           "packageName": "com.tubitv",
           "name": "Tubi",
-          "description": "The Tubi app for Android TV.",
+          "description": "The Tubi app, for phones and Android TV. On a TV, patch the Android TV build, version 10.44.5001.",
           "apkFileType": "APKM",
           "appIconColor": "#E9181C",
           "signatures": null,
@@ -1597,7 +1427,7 @@
                 "X86_64": 1067,
                 "X86": 1067
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": "Android TV build"
             }
@@ -1615,19 +1445,12 @@
         {
           "packageName": "tv.pluto.android",
           "name": "Pluto TV",
-          "description": "The Pluto TV app for Android TV. Android TV builds have version codes that start with 5.",
+          "description": "The Pluto TV app, for phones and Android TV. Both builds are version 17.3.0. On a TV, patch the Android TV build (version code 520000991), not the phone build (420000991).",
           "apkFileType": "APKM",
           "appIconColor": "#B8B004",
           "signatures": null,
           "formFactor": "TV",
           "targets": [
-            {
-              "version": "17.4.0",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
             {
               "version": "17.3.0",
               "versionCodes": null,
@@ -1649,7 +1472,7 @@
         {
           "packageName": "com.bydeluxe.d3.android.program.starz",
           "name": "Starz",
-          "description": "The Starz Android TV app. The Android TV build of 6.12.0 has version code 9510.",
+          "description": "The Starz phone, tablet, and Android TV apps. The 6.12.0 builds share the version name. On a TV, patch the Android TV build (version code 9510), not the phone build (4518).",
           "apkFileType": "APKM",
           "appIconColor": "#000000",
           "signatures": null,
@@ -1657,13 +1480,6 @@
           "targets": [
             {
               "version": "6.12.0",
-              "versionCodes": null,
-              "isExperimental": true,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "6.11.0",
               "versionCodes": null,
               "isExperimental": false,
               "minSdk": null,
@@ -1683,7 +1499,7 @@
         {
           "packageName": "com.tubitv",
           "name": "Tubi",
-          "description": "The Tubi app for Android TV.",
+          "description": "The Tubi app, for phones and Android TV. On a TV, patch the Android TV build, version 10.44.5001.",
           "apkFileType": "APKM",
           "appIconColor": "#E9181C",
           "signatures": null,
@@ -1697,9 +1513,141 @@
                 "X86_64": 1067,
                 "X86": 1067
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": "Android TV build"
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Report Wi-Fi connection",
+      "description": "Makes the app see a Wi-Fi connection when the phone is on mobile data.",
+      "default": false,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "com.tubitv",
+          "name": "Tubi",
+          "description": "The Tubi app, for phones and Android TV. On a TV, patch the Android TV build, version 10.44.5001.",
+          "apkFileType": "APKM",
+          "appIconColor": "#E9181C",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "10.44.5001",
+              "versionCodes": {
+                "ARM64_V8A": 1067,
+                "ARMEABI_V7A": 1067,
+                "X86_64": 1067,
+                "X86": 1067
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": "Android TV build"
+            }
+          ]
+        },
+        {
+          "packageName": "com.disney.disneyplus",
+          "name": "Disney+",
+          "description": "The Disney+ phone and Android TV apps. The phone and Android TV builds of 26.20.0+rc3-2026.11.02 share the version name. On a TV, patch the Android TV build (version code 1793662190); it crashes on a phone, where the phone build (179366219) is used.",
+          "apkFileType": "APKM",
+          "appIconColor": "#113CCF",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "26.20.0+rc3-2026.11.02",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "packageName": "tv.pluto.android",
+          "name": "Pluto TV",
+          "description": "The Pluto TV app, for phones and Android TV. Both builds are version 17.3.0. On a TV, patch the Android TV build (version code 520000991), not the phone build (420000991).",
+          "apkFileType": "APKM",
+          "appIconColor": "#B8B004",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "17.3.0",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "packageName": "com.wbd.hbomax",
+          "name": "HBO Max",
+          "description": "The HBO Max app, for phones (version 22.0.0.321) and Android TV (version 22.0.0.36).",
+          "apkFileType": "APKM",
+          "appIconColor": "#002BE7",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "22.0.0.36",
+              "versionCodes": {
+                "ARM64_V8A": 1842000036,
+                "ARMEABI_V7A": 1842000036,
+                "X86_64": 1842000036,
+                "X86": 1842000036
+              },
+              "isExperimental": false,
+              "minSdk": 29,
+              "description": "Android TV build"
+            }
+          ]
+        },
+        {
+          "packageName": "com.wbd.stream",
+          "name": "HBO Max",
+          "description": "The HBO Max app as the Play Store installs it, for phones (version 22.0.0.321) and Android TV (version 22.0.0.36).",
+          "apkFileType": "APKM",
+          "appIconColor": "#002BE7",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "22.0.0.36",
+              "versionCodes": {
+                "ARM64_V8A": 1842000036,
+                "ARMEABI_V7A": 1842000036,
+                "X86_64": 1842000036,
+                "X86": 1842000036
+              },
+              "isExperimental": false,
+              "minSdk": 29,
+              "description": "Android TV build"
+            }
+          ]
+        },
+        {
+          "packageName": "com.bydeluxe.d3.android.program.starz",
+          "name": "Starz",
+          "description": "The Starz phone, tablet, and Android TV apps. The 6.12.0 builds share the version name. On a TV, patch the Android TV build (version code 9510), not the phone build (4518).",
+          "apkFileType": "APKM",
+          "appIconColor": "#000000",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "6.12.0",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
             }
           ]
         }
@@ -1729,7 +1677,7 @@
                 "X86_64": 170300,
                 "X86": 170300
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": "Android TV build"
             },
@@ -1772,7 +1720,7 @@
         {
           "packageName": "com.disney.disneyplus",
           "name": "Disney+",
-          "description": "The Disney+ Android TV app. Patch the Android TV build (version code 1793662190).",
+          "description": "The Disney+ phone and Android TV apps. The phone and Android TV builds of 26.20.0+rc3-2026.11.02 share the version name. On a TV, patch the Android TV build (version code 1793662190); it crashes on a phone, where the phone build (179366219) is used.",
           "apkFileType": "APKM",
           "appIconColor": "#113CCF",
           "signatures": null,
@@ -1799,7 +1747,7 @@
         {
           "packageName": "com.wbd.hbomax",
           "name": "HBO Max",
-          "description": "The HBO Max Android TV app (version 22.0.0.36).",
+          "description": "The HBO Max app, for phones (version 22.0.0.321) and Android TV (version 22.0.0.36).",
           "apkFileType": "APKM",
           "appIconColor": "#002BE7",
           "signatures": null,
@@ -1822,7 +1770,7 @@
         {
           "packageName": "com.wbd.stream",
           "name": "HBO Max",
-          "description": "The HBO Max Android TV app as the Play Store installs it (version 22.0.0.36).",
+          "description": "The HBO Max app as the Play Store installs it, for phones (version 22.0.0.321) and Android TV (version 22.0.0.36).",
           "apkFileType": "APKM",
           "appIconColor": "#002BE7",
           "signatures": null,
@@ -1854,7 +1802,7 @@
         {
           "packageName": "com.plexapp.android",
           "name": "Plex",
-          "description": "The Plex app for Android TV.",
+          "description": "The Plex app, for phones and Android TV.",
           "apkFileType": "APKM",
           "appIconColor": "#E5A00D",
           "signatures": null,
@@ -1881,19 +1829,12 @@
         {
           "packageName": "tv.pluto.android",
           "name": "Pluto TV",
-          "description": "The Pluto TV app for Android TV. Android TV builds have version codes that start with 5.",
+          "description": "The Pluto TV app, for phones and Android TV. Both builds are version 17.3.0. On a TV, patch the Android TV build (version code 520000991), not the phone build (420000991).",
           "apkFileType": "APKM",
           "appIconColor": "#B8B004",
           "signatures": null,
           "formFactor": "TV",
           "targets": [
-            {
-              "version": "17.4.0",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
             {
               "version": "17.3.0",
               "versionCodes": null,
@@ -1915,7 +1856,7 @@
         {
           "packageName": "com.tubitv",
           "name": "Tubi",
-          "description": "The Tubi app for Android TV.",
+          "description": "The Tubi app, for phones and Android TV. On a TV, patch the Android TV build, version 10.44.5001.",
           "apkFileType": "APKM",
           "appIconColor": "#E9181C",
           "signatures": null,
@@ -1929,7 +1870,7 @@
                 "X86_64": 1067,
                 "X86": 1067
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": "Android TV build"
             }
@@ -1960,50 +1901,6 @@
                 "ARMEABI_V7A": 8335,
                 "X86_64": 8335,
                 "X86": 8335
-              },
-              "isExperimental": false,
-              "minSdk": null,
-              "description": "Android TV build"
-            },
-            {
-              "version": "4.71",
-              "versionCodes": {
-                "ARM64_V8A": 8294,
-                "ARMEABI_V7A": 8294,
-                "X86_64": 8294,
-                "X86": 8294
-              },
-              "isExperimental": false,
-              "minSdk": null,
-              "description": "Android TV build"
-            }
-          ]
-        }
-      ],
-      "options": []
-    },
-    {
-      "name": "Skip ads (experimental)",
-      "description": "EXPERIMENTAL and not yet verified against a real ad break: attempts to remove the ads Hulu stitches into its Android TV on-demand manifests, through an in-process native hook on libwkf_support.so, with no root. It is conservative (it only removes explicit ad periods, so it will not affect ad-free content) and may not remove every ad. Live broadcast commercials are part of the broadcast and still play. Sign in with the activation code at hulu.com/activate.",
-      "default": true,
-      "category": "Ads",
-      "compatiblePackages": [
-        {
-          "packageName": "com.hulu.livingroomplus",
-          "name": "Hulu (Android TV)",
-          "description": "The Android TV app, not the phone app. Removes the ads Hulu stitches into its on-demand manifests, through an in-process native hook, with no root. Live broadcast commercials are part of the broadcast and still play. Patch the full APKM bundle, and install the patched file as a single app. If it is saved with a bundle extension such as .apkm or .apks, rename it to end in .apk first.",
-          "apkFileType": "APKM",
-          "appIconColor": "#1CE783",
-          "signatures": null,
-          "formFactor": "TV",
-          "targets": [
-            {
-              "version": "C59F39CFP3.10.33",
-              "versionCodes": {
-                "ARM64_V8A": 3010033,
-                "ARMEABI_V7A": 3010033,
-                "X86_64": 3010033,
-                "X86": 3010033
               },
               "isExperimental": false,
               "minSdk": null,
@@ -2050,7 +1947,7 @@
         {
           "packageName": "com.disney.disneyplus",
           "name": "Disney+",
-          "description": "The Disney+ Android TV app. Patch the Android TV build (version code 1793662190).",
+          "description": "The Disney+ phone and Android TV apps. The phone and Android TV builds of 26.20.0+rc3-2026.11.02 share the version name. On a TV, patch the Android TV build (version code 1793662190); it crashes on a phone, where the phone build (179366219) is used.",
           "apkFileType": "APKM",
           "appIconColor": "#113CCF",
           "signatures": null,
@@ -2077,19 +1974,12 @@
         {
           "packageName": "tv.pluto.android",
           "name": "Pluto TV",
-          "description": "The Pluto TV app for Android TV. Android TV builds have version codes that start with 5.",
+          "description": "The Pluto TV app, for phones and Android TV. Both builds are version 17.3.0. On a TV, patch the Android TV build (version code 520000991), not the phone build (420000991).",
           "apkFileType": "APKM",
           "appIconColor": "#B8B004",
           "signatures": null,
           "formFactor": "TV",
           "targets": [
-            {
-              "version": "17.4.0",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
             {
               "version": "17.3.0",
               "versionCodes": null,
@@ -2111,7 +2001,7 @@
         {
           "packageName": "com.bydeluxe.d3.android.program.starz",
           "name": "Starz",
-          "description": "The Starz Android TV app. The Android TV build of 6.12.0 has version code 9510.",
+          "description": "The Starz phone, tablet, and Android TV apps. The 6.12.0 builds share the version name. On a TV, patch the Android TV build (version code 9510), not the phone build (4518).",
           "apkFileType": "APKM",
           "appIconColor": "#000000",
           "signatures": null,
@@ -2120,13 +2010,6 @@
             {
               "version": "6.12.0",
               "versionCodes": null,
-              "isExperimental": true,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "6.11.0",
-              "versionCodes": null,
               "isExperimental": false,
               "minSdk": null,
               "description": null
@@ -2137,64 +2020,61 @@
       "options": []
     },
     {
-      "name": "Streaming titles only",
-      "description": "Shows only titles you can stream on a subscription or for free on the Watchlist. Titles you can only rent or buy are hidden. Picking a Types filter in the app overrides this.",
+      "name": "Spoof carrier",
+      "description": "Hides your mobile carrier from the app, or reports a carrier name you choose.",
       "default": false,
-      "category": "Interface",
+      "category": null,
       "compatiblePackages": [
         {
-          "packageName": "com.justwatch.justwatch",
-          "name": "JustWatch",
-          "description": "The JustWatch streaming guide app for Android TV.",
+          "packageName": "com.tubitv",
+          "name": "Tubi",
+          "description": "The Tubi app, for phones and Android TV. On a TV, patch the Android TV build, version 10.44.5001.",
           "apkFileType": "APKM",
-          "appIconColor": "#FBC500",
+          "appIconColor": "#E9181C",
           "signatures": null,
           "formFactor": "TV",
           "targets": [
             {
-              "version": "26.43.8",
+              "version": "10.44.5001",
               "versionCodes": {
-                "ARMEABI_V7A": 12643008,
-                "ARM64_V8A": 2643008
+                "ARM64_V8A": 1067,
+                "ARMEABI_V7A": 1067,
+                "X86_64": 1067,
+                "X86": 1067
               },
               "isExperimental": false,
               "minSdk": null,
               "description": "Android TV build"
-            },
-            {
-              "version": "26.44.5",
-              "versionCodes": null,
-              "isExperimental": true,
-              "minSdk": null,
-              "description": "Android TV build"
             }
           ]
-        }
-      ],
-      "options": []
-    },
-    {
-      "name": "Translate ad break screen",
-      "description": "Experimental. Shows the \"We'll be right back!\" screen in your device's language when it is Arabic, Chinese, French, German, Greek, Italian, Korean, Portuguese, Russian, Spanish, Tagalog, or Vietnamese. Other languages show English. The translations come from a translation service. Please submit corrections or rewrites through GitHub issues.",
-      "default": true,
-      "category": "Ads",
-      "compatiblePackages": [
+        },
+        {
+          "packageName": "com.disney.disneyplus",
+          "name": "Disney+",
+          "description": "The Disney+ phone and Android TV apps. The phone and Android TV builds of 26.20.0+rc3-2026.11.02 share the version name. On a TV, patch the Android TV build (version code 1793662190); it crashes on a phone, where the phone build (179366219) is used.",
+          "apkFileType": "APKM",
+          "appIconColor": "#113CCF",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "26.20.0+rc3-2026.11.02",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
         {
           "packageName": "tv.pluto.android",
           "name": "Pluto TV",
-          "description": "The Pluto TV app for Android TV. Android TV builds have version codes that start with 5.",
+          "description": "The Pluto TV app, for phones and Android TV. Both builds are version 17.3.0. On a TV, patch the Android TV build (version code 520000991), not the phone build (420000991).",
           "apkFileType": "APKM",
           "appIconColor": "#B8B004",
           "signatures": null,
           "formFactor": "TV",
           "targets": [
-            {
-              "version": "17.4.0",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
             {
               "version": "17.3.0",
               "versionCodes": null,
@@ -2203,20 +2083,11 @@
               "description": null
             }
           ]
-        }
-      ],
-      "options": []
-    },
-    {
-      "name": "Video quality",
-      "description": "Plays the video resolution you choose instead of letting the app pick one. Videos can buffer if your connection is too slow for it.",
-      "default": false,
-      "category": null,
-      "compatiblePackages": [
+        },
         {
           "packageName": "com.wbd.hbomax",
           "name": "HBO Max",
-          "description": "The HBO Max Android TV app (version 22.0.0.36).",
+          "description": "The HBO Max app, for phones (version 22.0.0.321) and Android TV (version 22.0.0.36).",
           "apkFileType": "APKM",
           "appIconColor": "#002BE7",
           "signatures": null,
@@ -2239,7 +2110,150 @@
         {
           "packageName": "com.wbd.stream",
           "name": "HBO Max",
-          "description": "The HBO Max Android TV app as the Play Store installs it (version 22.0.0.36).",
+          "description": "The HBO Max app as the Play Store installs it, for phones (version 22.0.0.321) and Android TV (version 22.0.0.36).",
+          "apkFileType": "APKM",
+          "appIconColor": "#002BE7",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "22.0.0.36",
+              "versionCodes": {
+                "ARM64_V8A": 1842000036,
+                "ARMEABI_V7A": 1842000036,
+                "X86_64": 1842000036,
+                "X86": 1842000036
+              },
+              "isExperimental": false,
+              "minSdk": 29,
+              "description": "Android TV build"
+            }
+          ]
+        },
+        {
+          "packageName": "com.bydeluxe.d3.android.program.starz",
+          "name": "Starz",
+          "description": "The Starz phone, tablet, and Android TV apps. The 6.12.0 builds share the version name. On a TV, patch the Android TV build (version code 9510), not the phone build (4518).",
+          "apkFileType": "APKM",
+          "appIconColor": "#000000",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "6.12.0",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "packageName": "com.justwatch.justwatch",
+          "name": "JustWatch",
+          "description": "The JustWatch streaming guide app, for phones and Android TV.",
+          "apkFileType": "APKM",
+          "appIconColor": "#FBC500",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "26.43.8",
+              "versionCodes": {
+                "ARMEABI_V7A": 12643008,
+                "ARM64_V8A": 2643008
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": "Android TV build"
+            }
+          ]
+        }
+      ],
+      "options": [
+        {
+          "key": "carrierName",
+          "title": "Carrier name",
+          "description": "The carrier name the app sees. Pick one from the list or type any name. Blank hides the carrier.",
+          "required": false,
+          "type": "kotlin.String",
+          "default": "",
+          "values": {
+            "Hidden (blank)": "",
+            "AT&T": "AT&T",
+            "Google Fi": "Google Fi",
+            "Mint Mobile": "Mint Mobile",
+            "T-Mobile": "T-Mobile",
+            "US Mobile": "US Mobile",
+            "Verizon": "Verizon",
+            "Visible": "Visible"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Streaming titles only",
+      "description": "Shows only titles you can stream on a subscription or for free on the Watchlist. Titles you can only rent or buy are hidden. Picking a Types filter in the app overrides this.",
+      "default": false,
+      "category": "Interface",
+      "compatiblePackages": [
+        {
+          "packageName": "com.justwatch.justwatch",
+          "name": "JustWatch",
+          "description": "The JustWatch streaming guide app, for phones and Android TV.",
+          "apkFileType": "APKM",
+          "appIconColor": "#FBC500",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "26.43.8",
+              "versionCodes": {
+                "ARMEABI_V7A": 12643008,
+                "ARM64_V8A": 2643008
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": "Android TV build"
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Video quality",
+      "description": "Plays the video resolution you choose instead of letting the app pick one. Videos can buffer if your connection is too slow for it.",
+      "default": false,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "com.wbd.hbomax",
+          "name": "HBO Max",
+          "description": "The HBO Max app, for phones (version 22.0.0.321) and Android TV (version 22.0.0.36).",
+          "apkFileType": "APKM",
+          "appIconColor": "#002BE7",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "22.0.0.36",
+              "versionCodes": {
+                "ARM64_V8A": 1842000036,
+                "ARMEABI_V7A": 1842000036,
+                "X86_64": 1842000036,
+                "X86": 1842000036
+              },
+              "isExperimental": false,
+              "minSdk": 29,
+              "description": "Android TV build"
+            }
+          ]
+        },
+        {
+          "packageName": "com.wbd.stream",
+          "name": "HBO Max",
+          "description": "The HBO Max app as the Play Store installs it, for phones (version 22.0.0.321) and Android TV (version 22.0.0.36).",
           "apkFileType": "APKM",
           "appIconColor": "#002BE7",
           "signatures": null,
