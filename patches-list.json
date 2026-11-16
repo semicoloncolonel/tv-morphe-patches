@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.1.0-dev.32",
+  "version": "1.1.0-dev.33",
   "patches": [
     {
       "name": "Auto-skip",
@@ -1105,6 +1105,110 @@
                 "X86": 8294
               },
               "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Force decode capability (experimental)",
+      "description": "Reports video as decodable at every size and frame rate, so the app can request the highest rendition. Experimental: can stutter or fail on a device that cannot decode it. Pair with Video quality set to 2160p.",
+      "default": false,
+      "category": "Video",
+      "compatiblePackages": [
+        {
+          "packageName": "com.wbd.hbomax",
+          "name": "HBO Max",
+          "description": "The HBO Max phone app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#002BE7",
+          "signatures": null,
+          "formFactor": "MOBILE",
+          "targets": [
+            {
+              "version": "22.0.0.321",
+              "versionCodes": {
+                "ARM64_V8A": 1800026515,
+                "ARMEABI_V7A": 1800026515,
+                "X86_64": 1800026515,
+                "X86": 1800026515
+              },
+              "isExperimental": false,
+              "minSdk": 32,
+              "description": "Phone build"
+            },
+            {
+              "version": "7.14.0.530",
+              "versionCodes": {
+                "ARM64_V8A": 1800025444,
+                "ARMEABI_V7A": 1800025444,
+                "X86_64": 1800025444,
+                "X86": 1800025444
+              },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": "Phone build"
+            }
+          ]
+        },
+        {
+          "packageName": "com.wbd.stream",
+          "name": "HBO Max",
+          "description": "The HBO Max phone app as the Play Store installs it (version 22.0.0.321).",
+          "apkFileType": "APKM",
+          "appIconColor": "#002BE7",
+          "signatures": null,
+          "formFactor": "MOBILE",
+          "targets": [
+            {
+              "version": "22.0.0.321",
+              "versionCodes": {
+                "ARM64_V8A": 1800026515,
+                "ARMEABI_V7A": 1800026515,
+                "X86_64": 1800026515,
+                "X86": 1800026515
+              },
+              "isExperimental": false,
+              "minSdk": 32,
+              "description": "Phone build"
+            }
+          ]
+        }
+      ],
+      "options": [
+        {
+          "key": "aggressive",
+          "title": "Aggressive",
+          "description": "Also report every format as fully supported, not just its size and frame rate. Only for a device that under-reports codec support; more likely to break playback.",
+          "required": false,
+          "type": "kotlin.Boolean",
+          "default": false,
+          "values": null
+        }
+      ]
+    },
+    {
+      "name": "Force highest quality",
+      "description": "Reports every video quality as fully supported, so the app streams the highest available. Experimental: can stutter or fail on a device that cannot decode the top quality.",
+      "default": false,
+      "category": "Video",
+      "compatiblePackages": [
+        {
+          "packageName": "com.amazon.amazonvideo.livingroom",
+          "name": "Prime Video",
+          "description": "The Prime Video app for Android TV.",
+          "apkFileType": "APKM",
+          "appIconColor": "#1399FF",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "6.24.13+v16.0.1.93-allAbis",
+              "versionCodes": null,
+              "isExperimental": true,
               "minSdk": null,
               "description": null
             }
@@ -2818,6 +2922,33 @@
               "version": "17.3.0",
               "versionCodes": null,
               "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Skip ads",
+      "description": "Removes the ads in Android TV titles. Ads in live channels still play.",
+      "default": true,
+      "category": "Ads",
+      "compatiblePackages": [
+        {
+          "packageName": "com.amazon.amazonvideo.livingroom",
+          "name": "Prime Video",
+          "description": "The Prime Video app for Android TV.",
+          "apkFileType": "APKM",
+          "appIconColor": "#1399FF",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "6.24.13+v16.0.1.93-allAbis",
+              "versionCodes": null,
+              "isExperimental": true,
               "minSdk": null,
               "description": null
             }
