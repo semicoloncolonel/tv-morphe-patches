@@ -1,8 +1,8 @@
 {
-  "created_at": "2026-11-16T00:43:08",
-  "description": "# [1.1.0-dev.26](https://github.com/semicoloncolonel/mobile-morphe-patches/releases/tag/v1.1.0-dev.26) (2026-11-16)\n\nThe first release of the Android TV patches as their own source.\n\nBuilt from [mobile-morphe-patches v1.1.0-dev.26](https://github.com/semicoloncolonel/mobile-morphe-patches/releases/tag/v1.1.0-dev.26).",
-  "download_url": "https://github.com/semicoloncolonel/tv-morphe-patches/releases/download/v1.1.0-dev.26/patches-1.1.0-dev.26.mpp",
+  "created_at": "2026-11-16T00:57:00",
+  "description": "# [1.0.21](https://github.com/semicoloncolonel/mobile-morphe-patches/releases/tag/v1.0.21) (2026-11-16)\n\nThe stable Android TV patches from mobile-morphe-patches v1.0.21, as their own source. They are the same patches and app versions as that release.\n\nHulu (Android TV) is not in this release, because its patches are still in testing. The pre-release channel has them.\n\nBuilt from [mobile-morphe-patches v1.0.21](https://github.com/semicoloncolonel/mobile-morphe-patches/releases/tag/v1.0.21).",
+  "download_url": "https://github.com/semicoloncolonel/tv-morphe-patches/releases/download/v1.0.21/patches-1.0.21.mpp",
   "signature_download_url": "",
-  "version": "1.1.0-dev.26",
+  "version": "1.0.21",
   "public_key": "6sNE7CnUmEbvfVcaYklfOzJuN60m4+HH2LKlqlxhSN0="
 }
