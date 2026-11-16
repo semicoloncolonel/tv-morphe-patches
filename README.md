@@ -6,6 +6,8 @@
   <a href="https://morphe.software/add-source?github=semicoloncolonel/tv-morphe-patches"><img alt="Add to Morphe Manager" src="https://img.shields.io/badge/%2B_Add_to-Morphe_Manager-4f46e5?style=for-the-badge"></a>
   <br>
   <sub>Open this link on the device with Morphe Manager installed.</sub>
+  <br><br>
+  <a href="https://morphe.software/add-source?github=semicoloncolonel/mobile-morphe-patches"><img alt="Add the phone patches to Morphe Manager" src="https://img.shields.io/badge/%2B_Add_the-phone_patches-4f46e5?style=flat-square"></a>
 </p>
 
 These patches are built from [mobile-morphe-patches](https://github.com/semicoloncolonel/mobile-morphe-patches), which holds the source and the documentation. This repository holds the releases, the `patches-bundle.json` that Morphe Manager reads, and the issues for the Android TV apps. Its files are updated automatically, so changes made here are overwritten.
