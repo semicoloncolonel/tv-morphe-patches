@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.1.0-dev.41",
+  "version": "1.1.0-dev.44",
   "patches": [
     {
       "name": "Auto-skip",
@@ -631,6 +631,18 @@
               "description": null
             },
             {
+              "version": "6.12.1",
+              "versionCodes": {
+                "ARM64_V8A": 4519,
+                "ARMEABI_V7A": 4519,
+                "X86_64": 4519,
+                "X86": 4519
+              },
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            },
+            {
               "version": "6.11.0",
               "versionCodes": null,
               "isExperimental": false,
@@ -944,6 +956,18 @@
             {
               "version": "6.12.0",
               "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            },
+            {
+              "version": "6.12.1",
+              "versionCodes": {
+                "ARM64_V8A": 4519,
+                "ARMEABI_V7A": 4519,
+                "X86_64": 4519,
+                "X86": 4519
+              },
               "isExperimental": true,
               "minSdk": null,
               "description": null
@@ -1409,6 +1433,18 @@
             {
               "version": "6.12.0",
               "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            },
+            {
+              "version": "6.12.1",
+              "versionCodes": {
+                "ARM64_V8A": 4519,
+                "ARMEABI_V7A": 4519,
+                "X86_64": 4519,
+                "X86": 4519
+              },
               "isExperimental": true,
               "minSdk": null,
               "description": null
@@ -1896,6 +1932,18 @@
             {
               "version": "6.12.0",
               "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            },
+            {
+              "version": "6.12.1",
+              "versionCodes": {
+                "ARM64_V8A": 4519,
+                "ARMEABI_V7A": 4519,
+                "X86_64": 4519,
+                "X86": 4519
+              },
               "isExperimental": true,
               "minSdk": null,
               "description": null
@@ -3077,6 +3125,18 @@
             {
               "version": "6.12.0",
               "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            },
+            {
+              "version": "6.12.1",
+              "versionCodes": {
+                "ARM64_V8A": 4519,
+                "ARMEABI_V7A": 4519,
+                "X86_64": 4519,
+                "X86": 4519
+              },
               "isExperimental": true,
               "minSdk": null,
               "description": null
