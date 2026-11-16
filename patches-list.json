@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.1.0-dev.29",
+  "version": "1.1.0-dev.30",
   "patches": [
     {
       "name": "Auto-skip",
@@ -189,6 +189,60 @@
       "category": null,
       "compatiblePackages": [
         {
+          "packageName": "com.espn.score_center",
+          "name": "ESPN",
+          "description": "The ESPN app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#CC0000",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "6.13.2",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Block analytics & tracking",
+      "description": "Stops the app's analytics, ad measurement, and marketing services.",
+      "default": false,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "com.fox.foxone",
+          "name": "Fox One",
+          "description": "The Fox One app. Needs the Pairip license-check patch to run once re-signed.",
+          "apkFileType": "APKM",
+          "appIconColor": "#030B1A",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "1.20.0",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Block analytics & tracking",
+      "description": "Stops the app's analytics, ad measurement, and marketing services.",
+      "default": false,
+      "category": null,
+      "compatiblePackages": [
+        {
           "packageName": "com.wbd.hbomax",
           "name": "HBO Max",
           "description": "The HBO Max app (version 22.0.0.36).",
@@ -276,6 +330,33 @@
     },
     {
       "name": "Block analytics & tracking",
+      "description": "Stops the app's analytics and audience-measurement services.",
+      "default": false,
+      "category": "Privacy",
+      "compatiblePackages": [
+        {
+          "packageName": "com.bamnetworks.mobile.android.gameday.atbat",
+          "name": "MLB",
+          "description": "The MLB app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#002D72",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "26.21.0.76",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Block analytics & tracking",
       "description": "Stops the apps' analytics, attribution, and audience-measurement services.",
       "default": false,
       "category": null,
@@ -310,6 +391,33 @@
                 "X86": 8294
               },
               "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Block analytics & tracking",
+      "description": "Stops the app's analytics, ad measurement, and marketing services.",
+      "default": false,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "com.peacocktv.peacockandroid",
+          "name": "Peacock",
+          "description": "The Peacock app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#000000",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "7.10.200",
+              "versionCodes": null,
+              "isExperimental": true,
               "minSdk": null,
               "description": null
             }
@@ -491,6 +599,33 @@
       "options": []
     },
     {
+      "name": "Disable Pairip license check",
+      "description": "Lets the patched app start by skipping Google's Pairip license check.",
+      "default": true,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "com.fox.foxone",
+          "name": "Fox One",
+          "description": "The Fox One app. Needs the Pairip license-check patch to run once re-signed.",
+          "apkFileType": "APKM",
+          "appIconColor": "#030B1A",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "1.20.0",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
       "name": "Disable auto-updates",
       "description": "Stops the Play Store from replacing the patched app with the official version.",
       "default": false,
@@ -609,6 +744,42 @@
           ]
         },
         {
+          "packageName": "com.peacocktv.peacockandroid",
+          "name": "Peacock",
+          "description": "The Peacock app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#000000",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "7.10.200",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "packageName": "com.fox.foxone",
+          "name": "Fox One",
+          "description": "The Fox One app. Needs the Pairip license-check patch to run once re-signed.",
+          "apkFileType": "APKM",
+          "appIconColor": "#030B1A",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "1.20.0",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
+        {
           "packageName": "com.bydeluxe.d3.android.program.starz",
           "name": "Starz",
           "description": "The Starz app. Patch the 6.12.0 build with version code 9510.",
@@ -628,6 +799,24 @@
               "version": "6.11.0",
               "versionCodes": null,
               "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "packageName": "com.espn.score_center",
+          "name": "ESPN",
+          "description": "The ESPN app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#CC0000",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "6.13.2",
+              "versionCodes": null,
+              "isExperimental": true,
               "minSdk": null,
               "description": null
             }
@@ -654,6 +843,24 @@
             },
             {
               "version": "26.44.5",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "packageName": "com.bamnetworks.mobile.android.gameday.atbat",
+          "name": "MLB",
+          "description": "The MLB app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#002D72",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "26.21.0.76",
               "versionCodes": null,
               "isExperimental": true,
               "minSdk": null,
@@ -756,6 +963,33 @@
           }
         }
       ]
+    },
+    {
+      "name": "Hide betting odds",
+      "description": "Removes the betting-odds section from the scores sheet.",
+      "default": false,
+      "category": "Interface",
+      "compatiblePackages": [
+        {
+          "packageName": "com.bamnetworks.mobile.android.gameday.atbat",
+          "name": "MLB",
+          "description": "The MLB app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#002D72",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "26.21.0.76",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
     },
     {
       "name": "Hide device identifiers",
@@ -876,6 +1110,42 @@
           ]
         },
         {
+          "packageName": "com.peacocktv.peacockandroid",
+          "name": "Peacock",
+          "description": "The Peacock app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#000000",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "7.10.200",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "packageName": "com.fox.foxone",
+          "name": "Fox One",
+          "description": "The Fox One app. Needs the Pairip license-check patch to run once re-signed.",
+          "apkFileType": "APKM",
+          "appIconColor": "#030B1A",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "1.20.0",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
+        {
           "packageName": "com.bydeluxe.d3.android.program.starz",
           "name": "Starz",
           "description": "The Starz app. Patch the 6.12.0 build with version code 9510.",
@@ -895,6 +1165,24 @@
               "version": "6.11.0",
               "versionCodes": null,
               "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "packageName": "com.espn.score_center",
+          "name": "ESPN",
+          "description": "The ESPN app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#CC0000",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "6.13.2",
+              "versionCodes": null,
+              "isExperimental": true,
               "minSdk": null,
               "description": null
             }
@@ -921,6 +1209,24 @@
             },
             {
               "version": "26.44.5",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "packageName": "com.bamnetworks.mobile.android.gameday.atbat",
+          "name": "MLB",
+          "description": "The MLB app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#002D72",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "26.21.0.76",
               "versionCodes": null,
               "isExperimental": true,
               "minSdk": null,
@@ -1219,6 +1525,42 @@
           ]
         },
         {
+          "packageName": "com.peacocktv.peacockandroid",
+          "name": "Peacock",
+          "description": "The Peacock app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#000000",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "7.10.200",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "packageName": "com.fox.foxone",
+          "name": "Fox One",
+          "description": "The Fox One app. Needs the Pairip license-check patch to run once re-signed.",
+          "apkFileType": "APKM",
+          "appIconColor": "#030B1A",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "1.20.0",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
+        {
           "packageName": "com.bydeluxe.d3.android.program.starz",
           "name": "Starz",
           "description": "The Starz app. Patch the 6.12.0 build with version code 9510.",
@@ -1282,6 +1624,42 @@
             },
             {
               "version": "26.44.5",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "packageName": "com.espn.score_center",
+          "name": "ESPN",
+          "description": "The ESPN app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#CC0000",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "6.13.2",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "packageName": "com.bamnetworks.mobile.android.gameday.atbat",
+          "name": "MLB",
+          "description": "The MLB app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#002D72",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "26.21.0.76",
               "versionCodes": null,
               "isExperimental": true,
               "minSdk": null,
@@ -1528,6 +1906,33 @@
     },
     {
       "name": "Mask live ad breaks",
+      "description": "Covers live gambling-ad breaks with a notice.",
+      "default": false,
+      "category": "Ads",
+      "compatiblePackages": [
+        {
+          "packageName": "com.bamnetworks.mobile.android.gameday.atbat",
+          "name": "MLB",
+          "description": "The MLB app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#002D72",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "26.21.0.76",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Mask live ad breaks",
       "description": "Covers live ad breaks with a \"We'll be right back!\" screen and mutes them.",
       "default": true,
       "category": null,
@@ -1678,6 +2083,60 @@
     },
     {
       "name": "Skip ads",
+      "description": "Removes pre-roll, mid-roll, and pause ads.",
+      "default": true,
+      "category": "Ads",
+      "compatiblePackages": [
+        {
+          "packageName": "com.espn.score_center",
+          "name": "ESPN",
+          "description": "The ESPN app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#CC0000",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "6.13.2",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Skip ads",
+      "description": "Removes the ads in on-demand videos and the limits on skipping live TV breaks.",
+      "default": true,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "com.fox.foxone",
+          "name": "Fox One",
+          "description": "The Fox One app. Needs the Pairip license-check patch to run once re-signed.",
+          "apkFileType": "APKM",
+          "appIconColor": "#030B1A",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "1.20.0",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Skip ads",
       "description": "Blocks HBO Max's ad servers, so videos play without ads.",
       "default": true,
       "category": null,
@@ -1733,6 +2192,33 @@
     },
     {
       "name": "Skip ads",
+      "description": "Removes the ads before on-demand videos.",
+      "default": true,
+      "category": "Ads",
+      "compatiblePackages": [
+        {
+          "packageName": "com.bamnetworks.mobile.android.gameday.atbat",
+          "name": "MLB",
+          "description": "The MLB app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#002D72",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "26.21.0.76",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Skip ads",
       "description": "Removes the video ads before clips.",
       "default": true,
       "category": null,
@@ -1767,6 +2253,33 @@
                 "X86": 8294
               },
               "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Skip ads",
+      "description": "Turns off the ads inserted into Peacock streams.",
+      "default": true,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "com.peacocktv.peacockandroid",
+          "name": "Peacock",
+          "description": "The Peacock app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#000000",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "7.10.200",
+              "versionCodes": null,
+              "isExperimental": true,
               "minSdk": null,
               "description": null
             }
@@ -2065,6 +2578,24 @@
       "default": true,
       "category": "Ads",
       "compatiblePackages": [
+        {
+          "packageName": "com.bamnetworks.mobile.android.gameday.atbat",
+          "name": "MLB",
+          "description": "The MLB app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#002D72",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "26.21.0.76",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
         {
           "packageName": "tv.pluto.android",
           "name": "Pluto TV",
