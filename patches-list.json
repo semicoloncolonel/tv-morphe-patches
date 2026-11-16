@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.1.0-dev.30",
+  "version": "1.1.0-dev.31",
   "patches": [
     {
       "name": "Auto-skip",
@@ -330,6 +330,33 @@
     },
     {
       "name": "Block analytics & tracking",
+      "description": "Stops the app's analytics, ad measurement, and marketing services.",
+      "default": false,
+      "category": "Privacy",
+      "compatiblePackages": [
+        {
+          "packageName": "com.epix.epix.now",
+          "name": "MGM+",
+          "description": "The MGM+ app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#C9A227",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "241.0.2026241001",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Block analytics & tracking",
       "description": "Stops the app's analytics and audience-measurement services.",
       "default": false,
       "category": "Privacy",
@@ -345,6 +372,33 @@
           "targets": [
             {
               "version": "26.21.0.76",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Block analytics & tracking",
+      "description": "Stops the app's analytics, ad measurement, and marketing services.",
+      "default": false,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "com.nbaimd.gametime.nba2011",
+          "name": "NBA",
+          "description": "The NBA app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#1D428A",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "1.1.0.20261026155843",
               "versionCodes": null,
               "isExperimental": true,
               "minSdk": null,
@@ -390,6 +444,60 @@
                 "X86_64": 8294,
                 "X86": 8294
               },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Block analytics & tracking",
+      "description": "Stops the app's analytics, ad measurement, and marketing services.",
+      "default": false,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "com.gotv.nflgamecenter.us.lite",
+          "name": "NFL",
+          "description": "The NFL app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#013369",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "18.27.0",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Block analytics & tracking",
+      "description": "Stops the app's analytics, ad measurement, and marketing services.",
+      "default": false,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "com.pbs.video",
+          "name": "PBS",
+          "description": "The PBS app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#2638C4",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "5.27.0",
+              "versionCodes": null,
               "isExperimental": false,
               "minSdk": null,
               "description": null
@@ -599,6 +707,33 @@
       "options": []
     },
     {
+      "name": "Disable MGM+ AI",
+      "description": "Turns off the MGM+ AI chat assistant, its prompts, and the AI-picks rows.",
+      "default": false,
+      "category": "Interface",
+      "compatiblePackages": [
+        {
+          "packageName": "com.epix.epix.now",
+          "name": "MGM+",
+          "description": "The MGM+ app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#C9A227",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "241.0.2026241001",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
       "name": "Disable Pairip license check",
       "description": "Lets the patched app start by skipping Google's Pairip license check.",
       "default": true,
@@ -762,6 +897,24 @@
           ]
         },
         {
+          "packageName": "com.epix.epix.now",
+          "name": "MGM+",
+          "description": "The MGM+ app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#C9A227",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "241.0.2026241001",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
+        {
           "packageName": "com.fox.foxone",
           "name": "Fox One",
           "description": "The Fox One app. Needs the Pairip license-check patch to run once re-signed.",
@@ -805,6 +958,24 @@
           ]
         },
         {
+          "packageName": "com.pbs.video",
+          "name": "PBS",
+          "description": "The PBS app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#2638C4",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "5.27.0",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
+        {
           "packageName": "com.espn.score_center",
           "name": "ESPN",
           "description": "The ESPN app.",
@@ -815,6 +986,42 @@
           "targets": [
             {
               "version": "6.13.2",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "packageName": "com.gotv.nflgamecenter.us.lite",
+          "name": "NFL",
+          "description": "The NFL app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#013369",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "18.27.0",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "packageName": "com.nbaimd.gametime.nba2011",
+          "name": "NBA",
+          "description": "The NBA app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#1D428A",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "1.1.0.20261026155843",
               "versionCodes": null,
               "isExperimental": true,
               "minSdk": null,
@@ -1128,6 +1335,24 @@
           ]
         },
         {
+          "packageName": "com.epix.epix.now",
+          "name": "MGM+",
+          "description": "The MGM+ app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#C9A227",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "241.0.2026241001",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
+        {
           "packageName": "com.fox.foxone",
           "name": "Fox One",
           "description": "The Fox One app. Needs the Pairip license-check patch to run once re-signed.",
@@ -1171,6 +1396,24 @@
           ]
         },
         {
+          "packageName": "com.pbs.video",
+          "name": "PBS",
+          "description": "The PBS app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#2638C4",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "5.27.0",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
+        {
           "packageName": "com.espn.score_center",
           "name": "ESPN",
           "description": "The ESPN app.",
@@ -1181,6 +1424,42 @@
           "targets": [
             {
               "version": "6.13.2",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "packageName": "com.gotv.nflgamecenter.us.lite",
+          "name": "NFL",
+          "description": "The NFL app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#013369",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "18.27.0",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "packageName": "com.nbaimd.gametime.nba2011",
+          "name": "NBA",
+          "description": "The NBA app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#1D428A",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "1.1.0.20261026155843",
               "versionCodes": null,
               "isExperimental": true,
               "minSdk": null,
@@ -1543,6 +1822,24 @@
           ]
         },
         {
+          "packageName": "com.epix.epix.now",
+          "name": "MGM+",
+          "description": "The MGM+ app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#C9A227",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "241.0.2026241001",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
+        {
           "packageName": "com.fox.foxone",
           "name": "Fox One",
           "description": "The Fox One app. Needs the Pairip license-check patch to run once re-signed.",
@@ -1578,6 +1875,24 @@
             },
             {
               "version": "6.11.0",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "packageName": "com.pbs.video",
+          "name": "PBS",
+          "description": "The PBS app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#2638C4",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "5.27.0",
               "versionCodes": null,
               "isExperimental": false,
               "minSdk": null,
@@ -1642,6 +1957,42 @@
           "targets": [
             {
               "version": "6.13.2",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "packageName": "com.gotv.nflgamecenter.us.lite",
+          "name": "NFL",
+          "description": "The NFL app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#013369",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "18.27.0",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "packageName": "com.nbaimd.gametime.nba2011",
+          "name": "NBA",
+          "description": "The NBA app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#1D428A",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "1.1.0.20261026155843",
               "versionCodes": null,
               "isExperimental": true,
               "minSdk": null,
@@ -1966,6 +2317,51 @@
       "options": []
     },
     {
+      "name": "Reject tracking consent",
+      "description": "Answers the app's tracking consent prompt with Reject All, so the prompt does not appear and the optional trackers stay off.",
+      "default": true,
+      "category": "Privacy",
+      "compatiblePackages": [
+        {
+          "packageName": "com.gotv.nflgamecenter.us.lite",
+          "name": "NFL",
+          "description": "The NFL app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#013369",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "18.27.0",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "packageName": "com.nbaimd.gametime.nba2011",
+          "name": "NBA",
+          "description": "The NBA app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#1D428A",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "1.1.0.20261026155843",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
       "name": "Remove social sign-in",
       "description": "Removes the Continue with Google sign-in option.",
       "default": true,
@@ -2219,6 +2615,33 @@
     },
     {
       "name": "Skip ads",
+      "description": "Removes the ads the app plays before and during videos. Ads that are part of a live broadcast still play.",
+      "default": true,
+      "category": "Ads",
+      "compatiblePackages": [
+        {
+          "packageName": "com.nbaimd.gametime.nba2011",
+          "name": "NBA",
+          "description": "The NBA app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#1D428A",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "1.1.0.20261026155843",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Skip ads",
       "description": "Removes the video ads before clips.",
       "default": true,
       "category": null,
@@ -2252,6 +2675,60 @@
                 "X86_64": 8294,
                 "X86": 8294
               },
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Skip ads",
+      "description": "Stops the video ads before and during clips and highlights.",
+      "default": true,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "com.gotv.nflgamecenter.us.lite",
+          "name": "NFL",
+          "description": "The NFL app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#013369",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "18.27.0",
+              "versionCodes": null,
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Skip ads",
+      "description": "Stops the sponsor messages before and during videos.",
+      "default": true,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "com.pbs.video",
+          "name": "PBS",
+          "description": "The PBS app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#2638C4",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "5.27.0",
+              "versionCodes": null,
               "isExperimental": false,
               "minSdk": null,
               "description": null
@@ -2493,6 +2970,33 @@
               "version": "17.3.0",
               "versionCodes": null,
               "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Skip lion intro",
+      "description": "Opens the app after the MGM+ logo, without the lion intro video.",
+      "default": true,
+      "category": "Playback",
+      "compatiblePackages": [
+        {
+          "packageName": "com.epix.epix.now",
+          "name": "MGM+",
+          "description": "The MGM+ app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#C9A227",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "241.0.2026241001",
+              "versionCodes": null,
+              "isExperimental": true,
               "minSdk": null,
               "description": null
             }
