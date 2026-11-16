@@ -14,8 +14,6 @@ These patches are built from [mobile-morphe-patches](https://github.com/semicolo
 
 > **New source.** Until its 1.1 release, the phone source, mobile-morphe-patches, also lists the Android TV apps. Hulu (Android TV) is in testing, so only the pre-release channel has it.
 
-> Some patches are based on [ajstrick81's Android TV patches](https://github.com/ajstrick81/morphe-androidtv-patches), and the original hook designs are their work.
-
 ## Install
 
 1. Download the Android TV build of the app, in the version listed in [Supported apps](https://github.com/semicoloncolonel/mobile-morphe-patches/blob/main/docs/apps.md). [Android TV](https://github.com/semicoloncolonel/mobile-morphe-patches/blob/main/docs/android-tv.md) lists the apps and explains how to get the Android TV build.
@@ -28,6 +26,10 @@ The phone patches are a separate source, [mobile-morphe-patches](https://github.
 
 Open an issue with one of the [forms in this repository](https://github.com/semicoloncolonel/tv-morphe-patches/issues/new/choose). For a security problem, follow the [security policy](SECURITY.md) instead.
 
+## Credits
+
+Some patches are based on [ajstrick81's Android TV patches](https://github.com/ajstrick81/morphe-androidtv-patches), and the original hook designs are their work. [NOTICE](NOTICE) lists every project these patches build on.
+
 ## License
 
-[GPLv3](LICENSE), the same license as mobile-morphe-patches. [NOTICE](NOTICE) credits the work these patches build on.
+[GPLv3](LICENSE), the same license as mobile-morphe-patches.
