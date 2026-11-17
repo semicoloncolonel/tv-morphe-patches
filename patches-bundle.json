@@ -1,8 +1,8 @@
 {
-  "created_at": "2026-11-16T23:41:30",
-  "description": "# [1.1.0-dev.44](https://github.com/semicoloncolonel/mobile-morphe-patches/releases/tag/v1.1.0-dev.44) (2026-11-16)\n\n### Bug Fixes\n\n* testing Best Buy 26.11.10, myAT&T 2026.11.1, NPR 7.11.0, Starz 6.12.1 ([05dad1d](https://github.com/semicoloncolonel/mobile-morphe-patches/commit/05dad1d6f8c3ec3cc8c8c6a7593ab50a4399d333))\n\nBuilt from [mobile-morphe-patches v1.1.0-dev.44](https://github.com/semicoloncolonel/mobile-morphe-patches/releases/tag/v1.1.0-dev.44).",
-  "download_url": "https://github.com/semicoloncolonel/tv-morphe-patches/releases/download/v1.1.0-dev.44/patches-1.1.0-dev.44.mpp",
+  "created_at": "2026-11-17T02:25:25",
+  "description": "# [1.1.0-dev.46](https://github.com/semicoloncolonel/mobile-morphe-patches/releases/tag/v1.1.0-dev.46) (2026-11-17)\n\n### Features\n\n* Experimental Skip ads for the official YouTube TV app 4.01.03 ([7f69766](https://github.com/semicoloncolonel/mobile-morphe-patches/commit/7f697662088a43f513c52a1840b7f43c26fc00de))\n* Name the patch YT TV+ (ad-free YouTube TV) ([11c1e13](https://github.com/semicoloncolonel/mobile-morphe-patches/commit/11c1e13340dfe8496fd4da3ec3cde1d2124ea175))\n\n### Bug Fixes\n\n* Refuse a YouTube for Android TV base.apk without its native libraries ([0388796](https://github.com/semicoloncolonel/mobile-morphe-patches/commit/03887960b6f87ac7093784c25f26373a86c8ba10))\n\nAlso includes 1 change to the shared patches and extension. The mobile-morphe-patches release notes have the details.\n\nBuilt from [mobile-morphe-patches v1.1.0-dev.46](https://github.com/semicoloncolonel/mobile-morphe-patches/releases/tag/v1.1.0-dev.46).",
+  "download_url": "https://github.com/semicoloncolonel/tv-morphe-patches/releases/download/v1.1.0-dev.46/patches-1.1.0-dev.46.mpp",
   "signature_download_url": "",
-  "version": "1.1.0-dev.44",
+  "version": "1.1.0-dev.46",
   "public_key": "6sNE7CnUmEbvfVcaYklfOzJuN60m4+HH2LKlqlxhSN0="
 }
