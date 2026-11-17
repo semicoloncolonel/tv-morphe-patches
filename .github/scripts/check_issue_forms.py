@@ -1,14 +1,12 @@
 """Checks that the issue forms' App dropdowns list every app the patches support,
-and that docs/apps.md and the README's app counts match those apps.
+and that docs/apps.md and the README's app count match those apps.
 
 The dropdowns in the bug report and enhancement forms are kept by hand. This
-compares them with the Compatibility names in the patches, leaving out the
-apps build.gradle.kts excludes from the bundle, and with each other.
+compares them with the Compatibility names in the patches, and with each other.
 
 Run from the repository root: python3 .github/scripts/check_issue_forms.py
 """
 
-import fnmatch
 import re
 import sys
 from pathlib import Path
@@ -17,22 +15,11 @@ FORMS = [Path(".github/ISSUE_TEMPLATE/0-version-or-build.yml"), Path(".github/IS
          Path(".github/ISSUE_TEMPLATE/2-enhancement.yml")]
 
 
-def excluded_globs():
-    text = Path("patches/build.gradle.kts").read_text()
-    block = re.search(r"kotlin\.exclude\((.*?)\)", text, re.S)
-    return re.findall(r'"([^"]+)"', block.group(1)) if block else []
-
-
 def patched_apps():
-    """The phone apps. The Android TV-only apps, named "... (Android TV)", are in
-    tv-morphe-patches, whose forms build_tv_repo.py writes."""
-    globs = excluded_globs()
     names = set()
     for path in Path("patches/src/main/kotlin").rglob("*.kt"):
-        if any(fnmatch.fnmatch(path.as_posix(), glob) for glob in globs):
-            continue
         names.update(re.findall(r'Compatibility\(\s*name\s*=\s*"([^"]+)"', path.read_text()))
-    return {name for name in names if not name.endswith("(Android TV)")}
+    return names
 
 
 def form_apps(form):
@@ -43,43 +30,18 @@ def form_apps(form):
     return [o for o in re.findall(r'^\s+- "([^"]+)"', block.group(1), re.M) if not o.startswith("Other")]
 
 
-def apps_md_rows():
-    """{section: [app names]} from the tables in docs/apps.md."""
-    sections, section = {}, None
-    for line in Path("docs/apps.md").read_text().splitlines():
-        heading = re.match(r"## (\S.*)$", line)
-        if heading:
-            section = heading.group(1)
-            sections[section] = []
-            continue
-        row = re.match(r"\| ([^|]+?) \|", line)
-        if section and row and not line.startswith(("| App |", "|---")):
-            # "Disney+ (also on Android TV)" is the Disney+ app.
-            sections[section].append(re.sub(r" \(also on Android TV\)$", "", row.group(1)))
-    return sections
-
-
 def doc_problems(apps):
-    """docs/apps.md has a row for every app, and the README's counts match it."""
+    """docs/apps.md has a row for every app, and the README's count matches it."""
     problems = []
-    sections = apps_md_rows()
-    rows = [name for names in sections.values() for name in names]
+    table = Path("docs/apps.md").read_text().split("\n## ", 1)[0]
+    rows = [row for row in re.findall(r"^\| ([^|]+?) \|", table, re.M) if row not in ("App",) and not row.startswith("-")]
     for name in sorted(apps - set(rows), key=str.lower):
         problems.append(f"docs/apps.md: no row for \"{name}\"")
-    readme = Path("README.md").read_text()
-    badge = re.search(r"badge/apps-(\d+)-", readme)
-    if not badge or int(badge.group(1)) != len(apps):
-        problems.append(f"README.md: the apps badge should say {len(apps)}")
-    for section, names in sections.items():
-        count = re.search(rf"\| \[{re.escape(section)}\]\(docs/apps\.md#[^)]+\) \| (\d+) \|", readme)
-        if not count:
-            problems.append(f"README.md: the Apps table has no {section} row")
-        elif int(count.group(1)) != len(names):
-            problems.append(f"README.md: {section} should say {len(names)}, as docs/apps.md lists")
-    tv = len(re.findall(r"^\| (?!App \|)(?!-)[^|]+ \|", Path("docs/android-tv.md").read_text().split("\n## ", 1)[0], re.M))
-    tv_badge = re.search(r"badge/Android_TV-(\d+)_apps", readme)
-    if not tv_badge or int(tv_badge.group(1)) != tv:
-        problems.append(f"README.md: the Android TV badge should say {tv}, as docs/android-tv.md lists")
+    for name in sorted(set(rows) - apps, key=str.lower):
+        problems.append(f"docs/apps.md: a row for \"{name}\", which no patch supports")
+    count = re.search(r"supports (\d+) Android TV apps", Path("README.md").read_text())
+    if not count or int(count.group(1)) != len(apps):
+        problems.append(f"README.md: the app count should say {len(apps)}")
     return problems
 
 

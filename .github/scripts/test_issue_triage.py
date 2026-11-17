@@ -190,7 +190,8 @@ class CommentTest(unittest.TestCase):
         fields = t.parse_form(body)
         self.assertEqual(t.form_of(fields), "2-enhancement.yml")
         gaps = t.missing(body, fields, "2-enhancement.yml")
-        for label in ("App", "Patch", "App version", "Phone or Android TV build", "Patches version", "Device"):
+        # The Android TV forms have no "Phone or Android TV build" question.
+        for label in ("App", "Patch", "App version", "Patches version", "Device"):
             self.assertIn(label, gaps)
         self.assertIn("- App\n", t.incomplete_comment(gaps))
         self.assertIn("closes after 7 days", t.incomplete_comment(gaps))
@@ -211,7 +212,7 @@ class CommentTest(unittest.TestCase):
 
     def test_version_form(self):
         labels = [label for label, _ in t.required_fields("0-version-or-build.yml")]
-        self.assertEqual(labels[:4], ["App", "App version", "App version code", "Phone or Android TV build"])
+        self.assertEqual(labels[:4], ["App", "App version", "App version code", "Where the APK came from"])
         self.assertIn("Morphe Manager's message", labels)
         self.assertNotIn("Anything else", labels)
         body = (form("Disney+", "26.20.0+rc3-2026.11.02", code="1793662190", build="Android TV or Google TV")

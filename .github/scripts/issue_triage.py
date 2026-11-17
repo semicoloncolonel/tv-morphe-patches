@@ -45,8 +45,8 @@ INCOMPLETE_LABEL = "incomplete"
 # its own forms, which have no "Phone or Android TV build" field.
 FORMS_DIR = os.environ.get("TRIAGE_FORMS_DIR", ".github/ISSUE_TEMPLATE")
 DEFAULT_BUILD = os.environ.get("TRIAGE_DEFAULT_BUILD", "")
-# The repository that takes Android TV reports ("owner/name"), set here from the
-# TV_SOURCE variable. Empty in tv-morphe-patches itself.
+# The repository that takes Android TV reports ("owner/name"). mobile-morphe-patches
+# sets it; this repository leaves it empty.
 TV_REPO = os.environ.get("TRIAGE_TV_REPO", "")
 # A heading that only one form has, which tells the forms apart.
 FORM_MARKERS = {"Morphe Manager's message": "0-version-or-build.yml", "What happened": "1-bug-report.yml", "What could be better": "2-enhancement.yml",
@@ -156,7 +156,10 @@ def parse_source(text):
 
 
 def excluded_globs(ref):
-    text = git("show", f"{ref}:patches/build.gradle.kts")
+    try:
+        text = git("show", f"{ref}:patches/build.gradle.kts")
+    except subprocess.CalledProcessError:
+        return []
     block = re.search(r"kotlin\.exclude\((.*?)\)", text, re.S)
     return re.findall(r'"\*\*/([^"*]+)/?\*\*"', block.group(1)) if block else []
 
