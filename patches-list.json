@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.1.0-dev.44",
+  "version": "1.1.0-dev.46",
   "patches": [
     {
       "name": "Auto-skip",
@@ -2961,6 +2961,38 @@
       "options": []
     },
     {
+      "name": "Skip ads",
+      "description": "Removes the ads YouTube adds to on-demand videos and recordings in the official YouTube TV app, along with ad and analytics tracking. Experimental and not yet tested on a device. It needs version 4.01.03, for Android TV devices on Android 12 or later. Commercials that are part of a live broadcast still play.",
+      "default": true,
+      "category": "Ads",
+      "compatiblePackages": [
+        {
+          "packageName": "com.google.android.youtube.tvunplugged",
+          "name": "YouTube TV",
+          "description": "The official YouTube TV app, version 4.01.03, for Android TV devices on Android 12 or later. Older devices, such as the NVIDIA Shield, get version 3.83, which cannot be patched; use YT TV+ there instead. Download version 4.01.03 from APKMirror and patch the whole bundle.",
+          "apkFileType": "APKM",
+          "appIconColor": "#FF0000",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "4.01.03",
+              "versionCodes": {
+                "ARM64_V8A": 401003320,
+                "ARMEABI_V7A": 401003320,
+                "X86_64": 401003320,
+                "X86": 401003320
+              },
+              "isExperimental": true,
+              "minSdk": null,
+              "description": "Android TV build, Android 12 or later"
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
       "name": "Skip ads (experimental)",
       "description": "Removes the ads Hulu stitches into its on-demand videos, through an in-process native hook, with no root. It removed the ad breaks from an on-demand episode in testing, but it has not been tested widely and may not remove every ad. It only removes explicit ad periods, so it does not affect ad-free content. Live broadcast commercials are part of the broadcast and still play. Sign in with the activation code at hulu.com/activate.",
       "default": true,
@@ -2983,33 +3015,6 @@
                 "X86_64": 3010033,
                 "X86": 3010033
               },
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            }
-          ]
-        }
-      ],
-      "options": []
-    },
-    {
-      "name": "Skip injected ads",
-      "description": "Turns YouTube for Android TV into the standalone ad-free YouTube TV app \"YT TV+\" (see this app's description), and removes the ads YouTube injects into YouTube TV on-demand videos and DVR recordings, plus ad and analytics tracking. It does not patch regular YouTube. Live broadcast commercials are part of the broadcast and still play. Sign in with an activation code at tv.youtube.com/start.",
-      "default": true,
-      "category": "Ads",
-      "compatiblePackages": [
-        {
-          "packageName": "com.google.android.youtube.tv",
-          "name": "YouTube TV",
-          "description": "IMPORTANT: this patches the YouTube FOR Android TV app (com.google.android.youtube.tv), but it does NOT give you regular YouTube. It converts that app into a separate, ad-free YouTube TV app called \"YT TV+\" that loads the YouTube TV live and DVR service and removes the ads YouTube injects into it. YT TV+ installs alongside the original app, so regular YouTube for Android TV is left untouched. (YouTube TV's own app, com.google.android.youtube.tvunplugged, runs on a different engine and cannot be patched; this is the way to an ad-free YouTube TV on Android TV.)",
-          "apkFileType": "APKM",
-          "appIconColor": "#FF0000",
-          "signatures": null,
-          "formFactor": "TV",
-          "targets": [
-            {
-              "version": "7.32.300",
-              "versionCodes": null,
               "isExperimental": false,
               "minSdk": null,
               "description": null
@@ -3311,6 +3316,33 @@
           }
         }
       ]
+    },
+    {
+      "name": "YT TV+ (ad-free YouTube TV)",
+      "description": "Makes this app into YT TV+, an ad-free YouTube TV app that installs beside your other apps. It loads the YouTube TV live guide, library, and DVR, and removes the ads YouTube adds to on-demand videos and recordings, along with ad and analytics tracking. It does not give you regular YouTube. Commercials that are part of a live broadcast still play. Sign in with the code at tv.youtube.com/start.",
+      "default": true,
+      "category": "Ads",
+      "compatiblePackages": [
+        {
+          "packageName": "com.google.android.youtube.tv",
+          "name": "YouTube TV",
+          "description": "Patch this app to get YT TV+, an ad-free YouTube TV app. YouTube TV's own app cannot be patched, so YT TV+ is made from YouTube for Android TV, version 7.32.300. Download that version from APKMirror, the variant marked APK, instead of using the installed app. YT TV+ installs beside your YouTube and YouTube TV apps, which stay unchanged.",
+          "apkFileType": "APKM",
+          "appIconColor": "#FF0000",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "7.32.300",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
     }
   ]
 }
