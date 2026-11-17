@@ -1,8 +1,8 @@
-# Android TV
+# Supported apps
 
-These apps have patches for their Android TV builds. On a TV, patch the Android TV build, not the phone build. The table lists each app's own patches and the versions they were tested on. Disable auto-updates, Hide device identifiers, and Hide rating prompt also cover most of these apps, as [What the patches do](patches.md) explains.
+These apps have patches for their Android TV builds. On a TV, patch the Android TV build, not the phone build. The table lists each app's own patches and the versions they were tested on. Disable auto-updates, Hide device identifiers, and Hide rating prompt also cover most of these apps, as [What the patches do](https://github.com/semicoloncolonel/mobile-morphe-patches/blob/v1.1.0/docs/patches.md) explains.
 
-The Android TV patches have moved to their own source, [TV Morphe Patches](https://github.com/semicoloncolonel/tv-morphe-patches). Add it in Morphe Manager with the link in its README. The pre-releases of mobile-morphe-patches no longer include the Android TV apps. Its 1.1.0 release is the last stable release that does: from 1.2.0, the Android TV patches are only in the TV source.
+From 1.2.0, these patches are built from this repository. Until then, they were built from [mobile-morphe-patches](https://github.com/semicoloncolonel/mobile-morphe-patches), which now patches phone apps only.
 
 | App | Patches | Tested version | Notes |
 |-----|---------|----------------|-------|
@@ -39,9 +39,9 @@ To download the Android TV build directly, use [Aurora Store](https://auroraoss.
 
 Hulu on Android TV takes a few extra steps, because its app is a split bundle and the patched result installs as a single file. Follow these in order.
 
-1. **Download the full app bundle, not a single APK.** You need the Android TV build: `com.hulu.livingroomplus`, version `C59F39CFP3.10.33`, including the `armeabi_v7a` split. Hulu's native libraries live in that split, so a base-only APK, or Morphe Manager's "Use installed app" on a Play Store copy, leaves them out and the patched app closes at launch. The simplest source is APKMirror. In the APK Download Helper, select Hulu (Android TV), set the source to APKMirror, and download the bundle.
+1. **Download the full app bundle, not a single APK.** You need the Android TV build: `com.hulu.livingroomplus`, version `C59F39CFP3.10.33`, including the `armeabi_v7a` split. Hulu's native libraries live in that split, so a base-only APK, or Morphe Manager's "Use installed app" on a Play Store copy, leaves them out and the patched app closes at launch. The simplest source is APKMirror. In the APK Download Helper, select Hulu, set the source to APKMirror, and download the bundle.
 
-2. **Patch the downloaded bundle in Morphe Manager.** Patch the file you downloaded, not an installed copy, and select the Hulu (Android TV) patches. Morphe Manager merges the splits and the patch into one APK.
+2. **Patch the downloaded bundle in Morphe Manager.** Patch the file you downloaded, not an installed copy, and select the Hulu patches. Morphe Manager merges the splits and the patch into one APK.
 
 3. **Install the patched file as a single APK.** The patched result is one complete APK, even though it keeps a bundle extension such as `.apkm` or `.apks`. A split installer expects several APKs inside the file and refuses the single file with an error about the package kind. Rename the patched file to end in `.apk`, and install it as an ordinary app.
 
@@ -58,7 +58,7 @@ YT TV+ is YouTube TV without the ads that YouTube adds to it. YouTube TV's own a
    - Do not download the YouTube TV app (`com.google.android.youtube.tvunplugged`). That is the app that cannot be patched.
    - Do not download the phone version of YouTube.
 
-3. **Patch the downloaded file in Morphe Manager.** Select **YouTube TV (Android TV)** and the **YT TV+ (ad-free YouTube TV)** patch.
+3. **Patch the downloaded file in Morphe Manager.** Select **YouTube TV** and the **YT TV+ (ad-free YouTube TV)** patch.
 
 4. **Install the patched file.** If it still ends in `.apkm` or `.apks`, rename it to end in `.apk` first, as with Hulu. It installs as a new app called **YT TV+**. Your YouTube and YouTube TV apps stay installed and unchanged.
 

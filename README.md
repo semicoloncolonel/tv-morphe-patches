@@ -10,13 +10,13 @@
   <a href="https://morphe.software/add-source?github=semicoloncolonel/mobile-morphe-patches"><img alt="Add the phone patches to Morphe Manager" src="https://img.shields.io/badge/%2B_Add_the-phone_patches-4f46e5?style=flat-square"></a>
 </p>
 
-These patches are built from [mobile-morphe-patches](https://github.com/semicoloncolonel/mobile-morphe-patches), which holds the source and the documentation. This repository holds the releases, the `patches-bundle.json` that Morphe Manager reads, and the issues for the Android TV apps. Its files are updated automatically, so changes made here are overwritten.
+This repository holds the source of the Android TV patches, their releases, the `patches-bundle.json` that Morphe Manager reads, and the issues for the Android TV apps.
 
-> **New source.** The phone source, mobile-morphe-patches, also lists the Android TV apps in its 1.1.0 release. From 1.2.0, they are only in this source. Hulu (Android TV) is in testing and is marked experimental.
+> **New source.** From 1.2.0, the Android TV patches are built and released from this repository. The phone source, mobile-morphe-patches, includes the Android TV apps up to its 1.1.0 release. Hulu is in testing and is marked experimental.
 
 ## Install
 
-1. Download the Android TV build of the app, in a version listed in [Supported apps](https://github.com/semicoloncolonel/mobile-morphe-patches/blob/main/docs/android-tv.md), which also explains how to get the Android TV build.
+1. Download the Android TV build of the app, in a version listed in [Supported apps](https://github.com/semicoloncolonel/tv-morphe-patches/blob/main/docs/apps.md), which also explains how to get the Android TV build.
 2. Add this source in Morphe Manager with the link above, or go to Sources, tap +, choose Remote, and paste `https://raw.githubusercontent.com/semicoloncolonel/tv-morphe-patches/main/patches-bundle.json`.
 3. Select the file and apply the patches.
 
@@ -26,7 +26,7 @@ The phone patches are a separate source, [mobile-morphe-patches](https://github.
 
 <!-- apps:start -->
 
-TV Morphe Patches supports 20 Android TV apps: Apple TV, Disney+, ESPN, Fox One, HBO Max, Hulu, JustWatch, MGM+, MLB, NBA, NewsNation, NFL, PBS, Peacock, Plex, Pluto TV, Prime Video, Starz, Tubi, and YouTube TV. [Supported apps](https://github.com/semicoloncolonel/mobile-morphe-patches/blob/main/docs/android-tv.md) lists the patches and the tested versions for each.
+TV Morphe Patches supports 20 Android TV apps: Apple TV, Disney+, ESPN, Fox One, HBO Max, Hulu, JustWatch, MGM+, MLB, NBA, NewsNation, NFL, PBS, Peacock, Plex, Pluto TV, Prime Video, Starz, Tubi, and YouTube TV. [Supported apps](https://github.com/semicoloncolonel/tv-morphe-patches/blob/main/docs/apps.md) lists the patches and the tested versions for each.
 
 <!-- apps:end -->
 
