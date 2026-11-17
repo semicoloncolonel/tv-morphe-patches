@@ -2,7 +2,7 @@
 
 These apps have patches for their Android TV builds. On a TV, patch the Android TV build, not the phone build. The table lists each app's own patches and the versions they were tested on. Disable auto-updates, Hide device identifiers, and Hide rating prompt also cover most of these apps, as [What the patches do](https://github.com/semicoloncolonel/mobile-morphe-patches/blob/v1.1.0/docs/patches.md) explains.
 
-From 1.2.0, these patches are built from this repository. Until then, they were built from [mobile-morphe-patches](https://github.com/semicoloncolonel/mobile-morphe-patches), which now patches phone apps only.
+Starting version 1.2.0, these patches are built from this repository. Until then, they were built from [mobile-morphe-patches](https://github.com/semicoloncolonel/mobile-morphe-patches), which now patches phone apps only.
 
 | App | Patches | Tested version | Notes |
 |-----|---------|----------------|-------|

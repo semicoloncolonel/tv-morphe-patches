@@ -12,7 +12,7 @@
 
 This repository holds the source of the Android TV patches, their releases, the `patches-bundle.json` that Morphe Manager reads, and the issues for the Android TV apps.
 
-> **New source.** From 1.2.0, the Android TV patches are built and released from this repository. The phone source, mobile-morphe-patches, includes the Android TV apps up to its 1.1.0 release. Hulu is in testing and is marked experimental.
+> **New source.** Starting version 1.2.0, the Android TV patches are built and released from this repository. The phone source, mobile-morphe-patches, includes the Android TV apps up to its 1.1.0 release. Hulu is in testing and is marked experimental.
 
 ## Install
 
