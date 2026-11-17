@@ -1,4 +1,4 @@
-rootProject.name = "mobile-morphe-patches"
+rootProject.name = "tv-morphe-patches"
 
 pluginManagement {
     repositories {

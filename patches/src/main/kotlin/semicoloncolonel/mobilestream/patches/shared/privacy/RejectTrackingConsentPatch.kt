@@ -5,7 +5,6 @@ import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
 import com.android.tools.smali.dexlib2.immutable.ImmutableMethod
-import semicoloncolonel.mobilestream.patches.shared.misc.tvOnly
 import semicoloncolonel.mobilestream.patches.nba.shared.Constants as Nba
 import semicoloncolonel.mobilestream.patches.nfl.shared.Constants as Nfl
 
@@ -36,7 +35,7 @@ val rejectTrackingConsentPatch = bytecodePatch(
         "and the optional trackers stay off.",
 ) {
     category("Privacy")
-    compatibleWith(Nfl.COMPATIBILITY.tvOnly(), Nba.TV_COMPATIBILITY)
+    compatibleWith(Nfl.COMPATIBILITY, Nba.COMPATIBILITY)
 
     extendWith("extensions/extension.mpe")
 

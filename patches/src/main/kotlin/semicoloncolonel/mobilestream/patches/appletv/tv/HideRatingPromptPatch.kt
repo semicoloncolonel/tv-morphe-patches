@@ -3,8 +3,6 @@ package semicoloncolonel.mobilestream.patches.appletv.tv
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.patch.bytecodePatch
 import semicoloncolonel.mobilestream.patches.appletv.shared.Constants
-import semicoloncolonel.mobilestream.patches.shared.misc.tvName
-import semicoloncolonel.mobilestream.patches.shared.misc.tvText
 
 // Apple TV Android TV 17.0.2. The app's engine asks Java to show Google Play's
 // review sheet through AndroidControlMessage.showInAppReviewRatingPrompt(int),
@@ -19,10 +17,10 @@ private const val CONTROL = "Lcom/apple/atve/androidtv/appletv/AndroidControlMes
 
 @Suppress("unused")
 val hideRatingPromptPatch = bytecodePatch(
-    name = tvName("Hide rating prompt (Android TV)"),
-    description = tvText("Stops the review prompt from Google Play in the Android TV app."),
+    name = "Hide rating prompt",
+    description = "Stops the review prompt from Google Play.",
 ) {
-    compatibleWith(Constants.TV_COMPATIBILITY)
+    compatibleWith(Constants.COMPATIBILITY)
 
     execute {
         if (classDefByOrNull(CONTROL) == null) return@execute

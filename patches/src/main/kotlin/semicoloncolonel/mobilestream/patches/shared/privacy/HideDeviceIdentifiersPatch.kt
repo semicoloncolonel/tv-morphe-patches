@@ -1,8 +1,6 @@
 package semicoloncolonel.mobilestream.patches.shared.privacy
 
 import app.morphe.patcher.Fingerprint
-import semicoloncolonel.mobilestream.patches.shared.misc.forBundle
-import semicoloncolonel.mobilestream.patches.shared.misc.isTvBundle
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.extensions.InstructionExtensions.replaceInstruction
 import app.morphe.patcher.patch.BytecodePatch
@@ -21,66 +19,22 @@ import com.android.tools.smali.dexlib2.iface.instruction.RegisterRangeInstructio
 import com.android.tools.smali.dexlib2.iface.reference.MethodReference
 import com.android.tools.smali.dexlib2.iface.reference.StringReference
 import org.w3c.dom.Element
-import semicoloncolonel.mobilestream.patches.fandango.shared.Constants as Fandango
-import semicoloncolonel.mobilestream.patches.cbsnews.shared.Constants as CbsNews
-import semicoloncolonel.mobilestream.patches.nbcnews.shared.Constants as NbcNews
-import semicoloncolonel.mobilestream.patches.foxlocal.shared.Constants as FoxLocal
-import semicoloncolonel.mobilestream.patches.abcnews.shared.Constants as AbcNews
-import semicoloncolonel.mobilestream.patches.moviebase.shared.Constants as Moviebase
-import semicoloncolonel.mobilestream.patches.shared.SHOPPING_APPS
-import semicoloncolonel.mobilestream.patches.amc.shared.Constants as Amc
 import semicoloncolonel.mobilestream.patches.pbs.shared.Constants as Pbs
 import semicoloncolonel.mobilestream.patches.starz.shared.Constants as Starz
-import semicoloncolonel.mobilestream.patches.cnn.shared.Constants as Cnn
 import semicoloncolonel.mobilestream.patches.espn.shared.Constants as Espn
 import semicoloncolonel.mobilestream.patches.nfl.shared.Constants as Nfl
 import semicoloncolonel.mobilestream.patches.nba.shared.Constants as Nba
 import semicoloncolonel.mobilestream.patches.disney.shared.Constants as Disney
-import semicoloncolonel.mobilestream.patches.hulu.shared.Constants as Hulu
-import semicoloncolonel.mobilestream.patches.netflix.shared.Constants as Netflix
-import semicoloncolonel.mobilestream.patches.foxnews.shared.Constants as FoxNews
 import semicoloncolonel.mobilestream.patches.foxone.shared.Constants as FoxOne
 import semicoloncolonel.mobilestream.patches.hbomax.shared.Constants as HboMax
 import semicoloncolonel.mobilestream.patches.mgm.shared.Constants as Mgm
-import semicoloncolonel.mobilestream.patches.msnow.shared.Constants as MsNow
-import semicoloncolonel.mobilestream.patches.nytimes.shared.Constants as NyTimes
-import semicoloncolonel.mobilestream.patches.paramount.shared.Constants as Paramount
 import semicoloncolonel.mobilestream.patches.peacock.shared.Constants as Peacock
-import semicoloncolonel.mobilestream.patches.primevideo.shared.Constants as PrimeVideo
 import semicoloncolonel.mobilestream.patches.pluto.shared.Constants as Pluto
-import semicoloncolonel.mobilestream.patches.tmobileplay.shared.Constants as TMobilePlay
-import semicoloncolonel.mobilestream.patches.tlife.shared.Constants as TLife
 import semicoloncolonel.mobilestream.patches.justwatch.shared.Constants as JustWatch
-import semicoloncolonel.mobilestream.patches.mint.shared.Constants as Mint
-import semicoloncolonel.mobilestream.patches.verizon.shared.Constants as Verizon
-import semicoloncolonel.mobilestream.patches.xfinity.shared.Constants as Xfinity
-import semicoloncolonel.mobilestream.patches.att.shared.Constants as Att
-import semicoloncolonel.mobilestream.patches.visible.shared.Constants as Visible
-import semicoloncolonel.mobilestream.patches.whitehouse.shared.Constants as WhiteHouse
-import semicoloncolonel.mobilestream.patches.recgov.shared.Constants as RecGov
-import semicoloncolonel.mobilestream.patches.nfg.shared.Constants as Nfg
-import semicoloncolonel.mobilestream.patches.reuters.shared.Constants as Reuters
 import semicoloncolonel.mobilestream.patches.tubi.shared.Constants as Tubi
-import semicoloncolonel.mobilestream.patches.xumo.shared.Constants as Xumo
 import semicoloncolonel.mobilestream.patches.mlb.shared.Constants as Mlb
-import semicoloncolonel.mobilestream.patches.npr.shared.Constants as Npr
-import semicoloncolonel.mobilestream.patches.apnews.shared.Constants as ApNews
-import semicoloncolonel.mobilestream.patches.substack.shared.Constants as Substack
-import semicoloncolonel.mobilestream.patches.cspan.shared.Constants as Cspan
 import semicoloncolonel.mobilestream.patches.newsnation.shared.Constants as NewsNation
-import semicoloncolonel.mobilestream.patches.dailywire.shared.Constants as DailyWire
-import semicoloncolonel.mobilestream.patches.usatoday.shared.Constants as UsaToday
-import semicoloncolonel.mobilestream.patches.newsbreak.shared.Constants as NewsBreak
-import semicoloncolonel.mobilestream.patches.settingshome.shared.Constants as SettingsHome
-import semicoloncolonel.mobilestream.patches.shudder.shared.Constants as Shudder
-import semicoloncolonel.mobilestream.patches.sundancenow.shared.Constants as SundanceNow
-import semicoloncolonel.mobilestream.patches.thescore.shared.Constants as TheScore
-import semicoloncolonel.mobilestream.patches.wsj.shared.Constants as Wsj
-import semicoloncolonel.mobilestream.patches.washingtonpost.shared.Constants as WashingtonPost
 import semicoloncolonel.mobilestream.patches.appletv.shared.Constants as AppleTv
-import semicoloncolonel.mobilestream.patches.nps.shared.Constants as Nps
-import semicoloncolonel.mobilestream.patches.fema.shared.Constants as Fema
-import semicoloncolonel.mobilestream.patches.truthsocial.shared.Constants as TruthSocial
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Hide device identifiers (OPT-IN, default OFF).
@@ -270,11 +224,28 @@ internal val deviceIdentifiersManifestPatch: ResourcePatch = resourcePatch {
 @Suppress("unused")
 val hideDeviceIdentifiersPatch: BytecodePatch = bytecodePatch(
     name = "Hide device identifiers",
-    description = "Hides details about your ${if (isTvBundle) "device" else "phone"} from the app. " +
+    description = "Hides details about your device from the app. " +
         "Choose which ones in the patch options.",
     default = false,
 ) {
-    compatibleWith(*forBundle(Tubi.COMPATIBILITY, Disney.COMPATIBILITY, Hulu.COMPATIBILITY, Pluto.COMPATIBILITY, Paramount.COMPATIBILITY, HboMax.COMPATIBILITY, HboMax.STREAM_COMPATIBILITY, Peacock.COMPATIBILITY, PrimeVideo.COMPATIBILITY, Mgm.COMPATIBILITY, FoxOne.COMPATIBILITY, NyTimes.COMPATIBILITY, WashingtonPost.COMPATIBILITY, Wsj.COMPATIBILITY, Amc.COMPATIBILITY, Starz.COMPATIBILITY, Pbs.COMPATIBILITY, FoxNews.COMPATIBILITY, MsNow.COMPATIBILITY, Cnn.COMPATIBILITY, Espn.COMPATIBILITY, Espn.TV_COMPATIBILITY, Nfl.COMPATIBILITY, Nba.COMPATIBILITY, Nba.TV_COMPATIBILITY, Fandango.COMPATIBILITY, CbsNews.COMPATIBILITY, NbcNews.COMPATIBILITY, FoxLocal.COMPATIBILITY, AbcNews.COMPATIBILITY, Moviebase.COMPATIBILITY, TMobilePlay.COMPATIBILITY, TLife.COMPATIBILITY, JustWatch.COMPATIBILITY, Mint.COMPATIBILITY, Xfinity.COMPATIBILITY, Att.COMPATIBILITY, Verizon.COMPATIBILITY, Visible.COMPATIBILITY, WhiteHouse.COMPATIBILITY, Nps.COMPATIBILITY, Fema.COMPATIBILITY, RecGov.COMPATIBILITY, *SHOPPING_APPS, AppleTv.COMPATIBILITY, Xumo.COMPATIBILITY, Mlb.COMPATIBILITY, Npr.COMPATIBILITY, ApNews.COMPATIBILITY, NewsBreak.COMPATIBILITY, Shudder.COMPATIBILITY, SundanceNow.COMPATIBILITY, TheScore.COMPATIBILITY, Substack.COMPATIBILITY, Cspan.COMPATIBILITY, NewsNation.COMPATIBILITY, NewsNation.TV_COMPATIBILITY, DailyWire.COMPATIBILITY, UsaToday.COMPATIBILITY, TruthSocial.COMPATIBILITY, SettingsHome.COMPATIBILITY, Netflix.COMPATIBILITY, Nfg.COMPATIBILITY, Reuters.COMPATIBILITY))
+    compatibleWith(
+        Tubi.COMPATIBILITY,
+        Disney.COMPATIBILITY,
+        Pluto.COMPATIBILITY,
+        HboMax.COMPATIBILITY,
+        HboMax.STREAM_COMPATIBILITY,
+        Peacock.COMPATIBILITY,
+        Mgm.COMPATIBILITY,
+        FoxOne.COMPATIBILITY,
+        Starz.COMPATIBILITY,
+        Pbs.COMPATIBILITY,
+        Espn.COMPATIBILITY,
+        Nfl.COMPATIBILITY,
+        Nba.COMPATIBILITY,
+        JustWatch.COMPATIBILITY,
+        Mlb.COMPATIBILITY,
+        NewsNation.COMPATIBILITY,
+    )
 
     dependsOn(deviceIdentifiersManifestPatch)
 
@@ -287,100 +258,44 @@ val hideDeviceIdentifiersPatch: BytecodePatch = bytecodePatch(
         description = "Gives the app a random Android ID and a zeroed advertising ID. The DRM ID is left alone, " +
             "so playback works.",
     )
-    // A TV has no SIM or mobile data, so the TV bundle leaves out the carrier,
-    // Wi-Fi report, and cell tower options.
-    val phoneOptions = !isTvBundle
-    val carrier = if (!phoneOptions) null else booleanOption(
-        key = "carrier",
-        default = false,
-        title = "Carrier",
-        description = "Hides your mobile carrier, or reports the name set in Carrier name. Carrier deals, such as " +
-            "League Pass with a phone plan, stop working.",
-    )
-    val carrierName = if (!phoneOptions) null else stringOption(
-        key = "carrierName",
-        default = "",
-        values = mapOf(
-            "Hidden (blank)" to "",
-            "AT&T" to "AT&T",
-            "Google Fi" to "Google Fi",
-            "Mint Mobile" to "Mint Mobile",
-            "T-Mobile" to "T-Mobile",
-            "US Mobile" to "US Mobile",
-            "Verizon" to "Verizon",
-            "Visible" to "Visible",
-        ),
-        title = "Carrier name",
-        description = "The carrier name the app sees when Carrier is on. Pick one from the list or type any name. " +
-            "Blank hides the carrier.",
-        required = false,
-    )
-    val reportWifi = if (!phoneOptions) null else booleanOption(
-        key = "reportWifi",
-        default = false,
-        title = "Report Wi-Fi connection",
-        description = "Shows mobile data as Wi-Fi, so Wi-Fi-only downloads and mobile quality limits do not apply. " +
-            "This can use a lot of data.",
-    )
     val hideVpn by booleanOption(
         key = "hideVpn",
         default = false,
         title = "VPN connection",
-        description = "Hides an active VPN from the app's checks on the ${if (isTvBundle) "device" else "phone"}. " +
+        description = "Hides an active VPN from the app's checks on the device. " +
             "The app's servers can still detect a VPN from your IP address.",
     )
     val wifiNetworks by booleanOption(
         key = "wifiNetworks",
         default = false,
         title = "Nearby Wi-Fi networks",
-        description = if (isTvBundle) {
-            "Hides nearby Wi-Fi networks and the name of yours. Smart-home setup in the app can be affected."
-        } else {
-            "Hides nearby Wi-Fi networks and the name of yours. Store detection, smart-home setup, and " +
-                "checkout fraud checks can be affected."
-        },
+        description =
+            "Hides nearby Wi-Fi networks and the name of yours. Smart-home setup in the app can be affected.",
     )
     val bluetooth by booleanOption(
         key = "bluetooth",
         default = false,
         title = "Bluetooth scanning",
-        description = if (isTvBundle) {
+        description =
             "Stops the app's scans for Bluetooth devices and beacons, and hides paired devices from it. " +
-                "Smart-home setup in the app stops working. Remotes and controllers keep working."
-        } else {
-            "Stops scans for Bluetooth devices and beacons, and hides paired devices. In-store maps, " +
-                "kiosk check-in, smart-home setup, and accessory pairing stop working."
-        },
-    )
-    val cellTowers = if (!phoneOptions) null else booleanOption(
-        key = "cellTowers",
-        default = false,
-        title = "Cell tower info",
-        description = "Hides the cell towers your phone sees, which can place you within a few blocks.",
+                "Smart-home setup in the app stops working. Remotes and controllers keep working.",
     )
     // Read by deviceIdentifiersManifestPatch through option().
     booleanOption(
         key = "backgroundLocation",
         default = false,
         title = "Background location",
-        description = if (isTvBundle) {
-            "Removes the app's access to your location while it is closed or in the background."
-        } else {
-            "Removes the app's access to your location while it is closed or in the background. " +
-                "Store-arrival features and pickup check-in can stop working. RetailMeNot has its own patch for this."
-        },
+        description =
+            "Removes the app's access to your location while it is closed or in the background.",
     )
 
     execute {
         if (deviceIds == true) hideIds()
-        if (carrier?.value == true) spoofCarrier(carrierName?.value ?: "")
         // Before the Wi-Fi networks rewrite, which also covers the calls this
         // one rewrote.
-        if (reportWifi?.value == true || hideVpn == true) rewriteNetworkState()
-        if (reportWifi?.value == true) reportWifi()
+        if (hideVpn == true) rewriteNetworkState()
         if (hideVpn == true) hideVpn()
         if (wifiNetworks == true) rewriteCalls(WIFI_REWRITES)
         if (bluetooth == true) rewriteCalls(BLUETOOTH_REWRITES)
-        if (cellTowers?.value == true) rewriteCalls(CELL_REWRITES)
     }
 }

@@ -3,7 +3,6 @@ package semicoloncolonel.mobilestream.patches.appletv.shared
 import app.morphe.patcher.patch.ApkFileType
 import app.morphe.patcher.patch.AppTarget
 import app.morphe.patcher.patch.Compatibility
-import semicoloncolonel.mobilestream.patches.shared.misc.forTvSource
 import app.morphe.patcher.patch.FormFactor
 
 // Apple TV ships two different apps under one package name: the phone app
@@ -14,22 +13,13 @@ object Constants {
     val COMPATIBILITY = Compatibility(
         name = "Apple TV",
         packageName = "com.apple.atve.androidtv.appletv",
-        description = "The phone app. The package name says androidtv, but this is the phone build.",
-        apkFileType = ApkFileType.APKM,
-        appIconColor = 0x000000,
-        targets = listOf(AppTarget(version = "3.0.0", description = "Phone build"))
-    )
-
-    val TV_COMPATIBILITY = Compatibility(
-        name = "Apple TV (Android TV)",
-        packageName = "com.apple.atve.androidtv.appletv",
-        description = "The Android TV app, not the phone app.",
+        description = "The Apple TV app.",
         apkFileType = ApkFileType.APKM,
         appIconColor = 0x000000,
         targets = listOf(
-            AppTarget("17.0.3", versionCode = 170300, description = "Android TV build"),
-            AppTarget(version = "17.0.2", versionCode = 170202, description = "Android TV build"),
+            AppTarget("17.0.3", versionCode = 170300),
+            AppTarget(version = "17.0.2", versionCode = 170202),
         ),
         formFactor = FormFactor.TV,
-    ).forTvSource("The Apple TV app.")
+    )
 }

@@ -8,8 +8,6 @@ import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.reference.FieldReference
 import semicoloncolonel.mobilestream.patches.mlb.shared.Constants
-import semicoloncolonel.mobilestream.patches.shared.misc.tvName
-import semicoloncolonel.mobilestream.patches.shared.misc.tvOnly
 
 // ─────────────────────────────────────────────────────────────────────────────
 // MLB Android TV — Hide betting odds.
@@ -32,12 +30,12 @@ private const val ODDS_BANNER =
 
 @Suppress("unused")
 val hideBettingOddsPatch = bytecodePatch(
-    name = tvName("Hide betting odds (Android TV)"),
+    name = "Hide betting odds",
     description = "Removes the betting-odds banner from the scores screen.",
     default = false,
 ) {
     category("Interface")
-    compatibleWith(Constants.COMPATIBILITY.tvOnly())
+    compatibleWith(Constants.COMPATIBILITY)
 
     execute {
         var patched = 0

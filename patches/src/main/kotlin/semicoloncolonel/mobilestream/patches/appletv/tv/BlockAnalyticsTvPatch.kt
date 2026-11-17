@@ -2,8 +2,6 @@ package semicoloncolonel.mobilestream.patches.appletv.tv
 
 import app.morphe.patcher.patch.resourcePatch
 import semicoloncolonel.mobilestream.patches.appletv.shared.Constants
-import semicoloncolonel.mobilestream.patches.shared.misc.tvName
-import semicoloncolonel.mobilestream.patches.shared.misc.tvText
 
 // Apple TV Android TV 17.0.2 and 17.0.3. The engine networks from native code, so a
 // blocker in Java cannot see its requests. The JavaScript in app.zip is
@@ -55,14 +53,13 @@ private val EDITS = listOf(
 
 @Suppress("unused")
 val blockAnalyticsTvPatch = resourcePatch(
-    name = tvName("Block analytics & tracking (Android TV)"),
-    description = tvText(
-        "Reduces Apple's usage metrics and stops playback reports in the Android TV app. " +
+    name = "Block analytics & tracking",
+    description =
+        "Reduces Apple's usage metrics and stops playback reports. " +
             "The app also stops downloading updates to its screens between app updates.",
-    ),
     default = false,
 ) {
-    compatibleWith(Constants.TV_COMPATIBILITY)
+    compatibleWith(Constants.COMPATIBILITY)
 
     execute {
         editAppZip(EDITS)

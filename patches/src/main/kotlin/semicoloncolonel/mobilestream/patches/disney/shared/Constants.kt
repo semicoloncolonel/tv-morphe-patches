@@ -3,15 +3,13 @@ package semicoloncolonel.mobilestream.patches.disney.shared
 import app.morphe.patcher.patch.ApkFileType
 import app.morphe.patcher.patch.AppTarget
 import app.morphe.patcher.patch.Compatibility
-import semicoloncolonel.mobilestream.patches.shared.misc.splitByBundle
+import app.morphe.patcher.patch.FormFactor
 
 object Constants {
     val COMPATIBILITY = Compatibility(
         name = "Disney+",
         packageName = "com.disney.disneyplus",
-        description = "The Disney+ phone and Android TV apps. The phone and Android TV builds of " +
-            "26.20.0+rc3-2026.11.02 share the version name. On a TV, patch the Android TV build " +
-            "(version code 1793662190); it crashes on a phone, where the phone build (179366219) is used.",
+        description = "The Disney+ app. Patch the build with version code 1793662190.",
         apkFileType = ApkFileType.APKM,
         appIconColor = 0x113CCF,
         targets = listOf(
@@ -21,10 +19,7 @@ object Constants {
             // build is accepted too; the Android TV build crashes on a phone, so use
             // it only on a TV. The older +rc2 phone build is pinned below.
             AppTarget("26.20.0+rc3-2026.11.02"),
-            AppTarget(version = "26.20.0+rc2-2026.10.28", versionCode = 179321403, description = "Phone build"),
-        )
-    ).splitByBundle(
-        phoneDescription = "The Disney+ phone app. The Android TV build of the same version crashes on a phone.",
-        tvDescription = "The Disney+ app. Patch the build with version code 1793662190.",
+        ),
+        formFactor = FormFactor.TV,
     )
 }

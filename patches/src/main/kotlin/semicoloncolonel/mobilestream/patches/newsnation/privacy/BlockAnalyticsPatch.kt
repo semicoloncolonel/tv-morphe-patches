@@ -1,7 +1,6 @@
 package semicoloncolonel.mobilestream.patches.newsnation.privacy
 
 import app.morphe.patcher.patch.bytecodePatch
-import semicoloncolonel.mobilestream.patches.shared.misc.forBundle
 import semicoloncolonel.mobilestream.patches.newsnation.shared.Constants
 import semicoloncolonel.mobilestream.patches.shared.privacy.analyticsKillSwitchesPatch
 import semicoloncolonel.mobilestream.patches.shared.privacy.blockTrackers
@@ -22,7 +21,7 @@ val blockAnalyticsPatch = bytecodePatch(
     description = "Stops the apps' analytics, attribution, and audience-measurement services.",
     default = false,
 ) {
-    compatibleWith(*forBundle(Constants.COMPATIBILITY, Constants.TV_COMPATIBILITY))
+    compatibleWith(Constants.COMPATIBILITY)
 
     dependsOn(analyticsKillSwitchesPatch)
 
