@@ -13,7 +13,7 @@ contact_links:
     url: https://github.com/semicoloncolonel/tv-morphe-patches/blob/main/docs/apps.md
     about: Every supported app, its patches, and the versions they were tested on.
   - name: 🧩 What the patches do
-    url: https://github.com/semicoloncolonel/mobile-morphe-patches/blob/v1.1.0/docs/patches.md
+    url: https://github.com/semicoloncolonel/tv-morphe-patches/blob/main/docs/patches.md
     about: What each patch changes in each app.
   - name: ❓ FAQ
     url: https://github.com/semicoloncolonel/mobile-morphe-patches/blob/main/docs/faq.md
