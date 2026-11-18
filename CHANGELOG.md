@@ -1,15 +1,14 @@
 # [1.2.0-dev.2](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.1...v1.2.0-dev.2) (2026-11-18)
 
+### Supported apps
 
-### Bug Fixes
+- **Starz**: the Android TV build of 6.12.1 (version code 9511) is now supported. Before, 6.12.1 was listed with the phone build's version code (4519), so the Android TV build was refused. 6.12.0 and 6.11.0 are still supported.
+- **Peacock**: 7.11.200 is now supported, as an experimental version. 7.10.200 is still supported.
+- **NBA**: 1.2.0.20261103221954 is now supported, as an experimental version. 1.1.0.20261026155843 is still supported.
 
-* Support the Android TV build of Starz 6.12.1 ([7e56c65](https://github.com/semicoloncolonel/tv-morphe-patches/commit/7e56c65b340fcc402010e35bcde1874d533ab60d))
+### Update checks
 
-
-### Features
-
-* Support NBA 1.2.0.20261103221954 for Android TV ([8ee15a5](https://github.com/semicoloncolonel/tv-morphe-patches/commit/8ee15a55bb667b1e02afc710fec0f39fe38ecbe6))
-* Support Peacock 7.11.200 for Android TV ([8ef0dd4](https://github.com/semicoloncolonel/tv-morphe-patches/commit/8ef0dd47f1a3558492e1f13f72bf5df28140a856))
+This source now checks its Android TV apps for new versions and opens an "App update" issue for each one, in this repository.
 
 # [1.2.0-dev.1](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.1.0...v1.2.0-dev.1) (2026-11-17)
 
