@@ -1,3 +1,11 @@
+# [1.2.0-dev.4](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.3...v1.2.0-dev.4) (2026-11-18)
+
+
+### Bug Fixes
+
+* **mlb:** Keep the playlist header when a preroll ad is removed ([3b43745](https://github.com/semicoloncolonel/tv-morphe-patches/commit/3b43745ce743c291504136ba1ba2503f2d018f19))
+* **yttvshell:** Answer blocked tracking requests with an empty 204 response ([d8a6720](https://github.com/semicoloncolonel/tv-morphe-patches/commit/d8a67209a1f09a8c39da478ff863c6cafc40021d))
+
 # [1.2.0-dev.3](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.2...v1.2.0-dev.3) (2026-11-18)
 
 ### Supported apps
