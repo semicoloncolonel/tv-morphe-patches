@@ -1,3 +1,10 @@
+# [1.2.0-dev.8](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.7...v1.2.0-dev.8) (2026-11-18)
+
+
+### Bug Fixes
+
+* **hbomax:** Write the pin as a version string so the update check can bump it ([686211b](https://github.com/semicoloncolonel/tv-morphe-patches/commit/686211b0a27186e54f68afceba92b57b535a5862))
+
 # [1.2.0-dev.7](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.6...v1.2.0-dev.7) (2026-11-18)
 
 
