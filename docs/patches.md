@@ -51,6 +51,7 @@ Each row is a patch, the Android TV apps it is for, and what it does. Morphe Man
 | Skip ads (experimental) | Fox News | Removes the video ads and pause ads in on-demand videos, and the targeted ads that replace part of a live channel's breaks. The commercials in the channel's own broadcast still play. |
 | Skip ads | HBO Max | Blocks HBO Max's ad servers, so videos play without ads. |
 | Skip ads | MLB | Removes the ads before on-demand videos. |
+| Skip ads (experimental) | MS NOW | Removes the ads in on-demand clips, which play from MS NOW's own video server instead of the ad server's copy. Ads in the live stream still play. |
 | Skip ads | NBA | Removes the ads the app plays before and during videos. Ads that are part of a live broadcast still play. |
 | Skip ads | NewsNation | Removes the video ads before clips. |
 | Skip ads | NFL | Stops the video ads before and during clips and highlights. |
@@ -68,5 +69,6 @@ Each row is a patch, the Android TV apps it is for, and what it does. Morphe Man
 | Skip pre-roll promo | Starz | Starts titles without the promo for other Starz shows that plays first. |
 | Streaming titles only | JustWatch (off by default) | Shows only titles you can stream on a subscription or for free on the Watchlist. Titles you can only rent or buy are hidden. Picking a Types filter in the app overrides this. |
 | Translate ad break screen | Fandango at Home, MLB, Pluto TV | Experimental. Shows the "We'll be right back!" screen in your device's language when it is Arabic, Chinese, French, German, Greek, Italian, Korean, Portuguese, Russian, Spanish, Tagalog, or Vietnamese. Other languages show English. The translations come from a translation service. Please submit corrections or rewrites through GitHub issues. |
+| Use the public web app | MS NOW | Loads the public MS NOW web app. The 7.10.2 build loads a test version of it by default. |
 | Video quality | HBO Max (off by default) | Plays the video resolution you choose instead of letting the app pick one. Videos can buffer if your connection is too slow for it. |
 | YT TV+ (ad-free YouTube TV) | YouTube TV | Makes this app into YT TV+, an ad-free YouTube TV app that installs beside your other apps. It loads the YouTube TV live guide, library, and DVR, and removes the ads YouTube adds to on-demand videos and recordings, along with ad and analytics tracking. It does not give you regular YouTube. Commercials that are part of a live broadcast still play. Sign in with the code at tv.youtube.com/start. |
