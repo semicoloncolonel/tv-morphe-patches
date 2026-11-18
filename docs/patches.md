@@ -51,7 +51,7 @@ Each row is a patch, the Android TV apps it is for, and what it does. Morphe Man
 | Skip ads (experimental) | Fox News | Removes the video ads and pause ads in on-demand videos, and the targeted ads that replace part of a live channel's breaks. The commercials in the channel's own broadcast still play. |
 | Skip ads | HBO Max | Blocks HBO Max's ad servers, so videos play without ads. |
 | Skip ads | MLB | Removes the ads before on-demand videos. |
-| Skip ads (experimental) | MS NOW | Removes the ads in on-demand clips, which play from MS NOW's own video server instead of the ad server's copy. Ads in the live stream still play. |
+| Skip ads | CNBC, MS NOW, NBC News | Removes the ads in on-demand clips. On CNBC and MS NOW, clips play from the network's own video server instead of the ad server's copy. On NBC News, the preroll request gets an empty answer. Ads in the live stream still play. |
 | Skip ads | NBA | Removes the ads the app plays before and during videos. Ads that are part of a live broadcast still play. |
 | Skip ads | NewsNation | Removes the video ads before clips. |
 | Skip ads | NFL | Stops the video ads before and during clips and highlights. |

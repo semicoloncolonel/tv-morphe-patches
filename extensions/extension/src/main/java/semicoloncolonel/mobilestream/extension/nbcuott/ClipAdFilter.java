@@ -1,4 +1,4 @@
-package semicoloncolonel.mobilestream.extension.msnow;
+package semicoloncolonel.mobilestream.extension.nbcuott;
 
 import android.net.Uri;
 import android.util.Log;
@@ -17,30 +17,43 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * MS NOW's web app plays each clip through an AWS MediaTailor session, which
+ * Clip ads in the NBCU news web apps on Android TV.
+ *
+ * MS NOW and CNBC play each clip through an AWS MediaTailor session, which
  * stitches FreeWheel ads into the clip's HLS playlists. MediaTailor's paths
  * keep the clip's path on its origin:
- * /v1/master/{account}/{configuration}/{path on the origin}.
- *
- * For a configuration whose origin is known, the master playlist request is
+ * /v1/master/{account}/{configuration}/{path on the origin}. For a
+ * configuration whose origin is known, the master playlist request is
  * answered with the origin's own playlist, so the clip plays from the origin
  * with no ads in it. The session's tracking request is answered with no ad
- * breaks, so the player shows no ad markers. Anything else, or any failure,
- * goes to MediaTailor as before.
+ * breaks, so the player shows no ad markers.
+ *
+ * NBC News plays clips straight from the origin and asks FreeWheel for a
+ * preroll first (/ad/g/1, a VMAP). That request is answered with an empty
+ * VMAP, which the player treats like an unfilled break.
+ *
+ * Anything else, or any failure, goes to the network as before.
  */
 @SuppressWarnings("unused")
 public final class ClipAdFilter {
-    private static final String TAG = "MSP-MSNOW-ADS";
+    private static final String TAG = "MSP-NBCU-ADS";
 
     private static final Pattern MEDIATAILOR_PATH =
-            Pattern.compile("^/v1/(master|tracking)/[^/]+/([^/]+)/(.+)$");
+            Pattern.compile("^/v1/(master|dash|tracking)/[^/]+/([^/]+)/(.+)$");
 
     // MediaTailor configuration -> the origin host its content comes from.
     private static final Map<String, String> ORIGINS = new HashMap<>();
 
     static {
         ORIGINS.put("usanetwork-vod-sf-external-newsencoding", "vs-newsencoding.akamaized.net");
+        ORIGINS.put("usanetwork-vod-sf-external-prodamdnewsencoding", "prodamdnewsencoding.akamaized.net");
+        ORIGINS.put("usanetwork-vod-sf-external-cnbcawsmpvod", "cnbcawsmpvod.akamaized.net");
+        ORIGINS.put("usanetwork-vod-sf-external-cnbchls", "cnbc-hls.akamaized.net");
     }
+
+    private static final byte[] EMPTY_VMAP =
+            "<vmap:VMAP xmlns:vmap=\"http://www.iab.net/videosuite/vmap\" version=\"1.0\"/>"
+                    .getBytes(StandardCharsets.UTF_8);
 
     private ClipAdFilter() {
     }
@@ -51,31 +64,59 @@ public final class ClipAdFilter {
             Uri url = request.getUrl();
             String host = url.getHost();
             String path = url.getPath();
-            if (host == null || path == null || !host.contains(".mediatailor.") || !host.endsWith(".amazonaws.com")) {
+            if (host == null || path == null || !"GET".equalsIgnoreCase(request.getMethod())) return null;
+            if (host.endsWith(".v.fwmrm.net") && path.equals("/ad/g/1")) {
+                Log.i(TAG, "No preroll from " + host);
+                return respond(request, "text/xml", EMPTY_VMAP);
+            }
+            if (!host.contains(".mediatailor.") || !host.endsWith(".amazonaws.com")) return null;
+            Matcher match = MEDIATAILOR_PATH.matcher(path);
+            if (!match.matches()) {
+                Log.i(TAG, "Not a clip playlist: " + host + path.substring(0, Math.min(path.length(), 40)));
                 return null;
             }
-            if (!"GET".equalsIgnoreCase(request.getMethod())) return null;
-            Matcher match = MEDIATAILOR_PATH.matcher(path);
-            if (!match.matches()) return null;
             String origin = ORIGINS.get(match.group(2));
-            if (origin == null) return null;
+            if (origin == null) {
+                Log.i(TAG, "No origin known for " + match.group(2));
+                return null;
+            }
 
             if ("tracking".equals(match.group(1))) {
                 Log.i(TAG, "No ad breaks for " + match.group(2));
                 return respond(request, "application/json", "{\"avails\":[]}".getBytes(StandardCharsets.UTF_8));
             }
 
-            String originUrl = "https://" + origin + "/" + match.group(3);
+            String originUrl = "https://" + origin + "/" + match.group(3) + originQuery(url);
             byte[] playlist = fetch(originUrl);
-            if (playlist == null) return null;
-            Log.i(TAG, "Playing from the origin: " + origin);
-            String base = originUrl.substring(0, originUrl.lastIndexOf('/') + 1);
-            return respond(request, "application/vnd.apple.mpegurl",
-                    absolutize(new String(playlist, StandardCharsets.UTF_8), base).getBytes(StandardCharsets.UTF_8));
+            if (playlist == null) {
+                Log.w(TAG, "The origin did not answer, so the ads stay: " + origin);
+                return null;
+            }
+            Log.i(TAG, "Playing from the origin: " + origin + " (" + match.group(1) + ")");
+            String withoutQuery = originUrl.split("\\?", 2)[0];
+            String base = withoutQuery.substring(0, withoutQuery.lastIndexOf('/') + 1);
+            String text = new String(playlist, StandardCharsets.UTF_8);
+            if ("dash".equals(match.group(1))) {
+                return respond(request, "application/dash+xml", withBaseUrl(text, base).getBytes(StandardCharsets.UTF_8));
+            }
+            return respond(request, "application/vnd.apple.mpegurl", absolutize(text, base).getBytes(StandardCharsets.UTF_8));
         } catch (Throwable t) {
-            Log.w(TAG, "Left the request to MediaTailor", t);
+            Log.w(TAG, "Left the request to the network", t);
             return null;
         }
+    }
+
+    /** The request's own query (such as an origin token), without MediaTailor's aws.* parameters. */
+    private static String originQuery(Uri url) {
+        StringBuilder query = new StringBuilder();
+        for (String name : url.getQueryParameterNames()) {
+            if (name.startsWith("aws.")) continue;
+            for (String value : url.getQueryParameters(name)) {
+                query.append(query.length() == 0 ? '?' : '&')
+                        .append(Uri.encode(name)).append('=').append(Uri.encode(value));
+            }
+        }
+        return query.toString();
     }
 
     private static byte[] fetch(String address) throws Exception {
@@ -83,7 +124,11 @@ public final class ClipAdFilter {
         connection.setConnectTimeout(10_000);
         connection.setReadTimeout(10_000);
         try {
-            if (connection.getResponseCode() != 200) return null;
+            int status = connection.getResponseCode();
+            if (status != 200) {
+                Log.w(TAG, "HTTP " + status + " from " + address.split("\\?", 2)[0]);
+                return null;
+            }
             try (InputStream in = connection.getInputStream()) {
                 ByteArrayOutputStream out = new ByteArrayOutputStream();
                 byte[] buffer = new byte[8192];
@@ -94,6 +139,19 @@ public final class ClipAdFilter {
         } finally {
             connection.disconnect();
         }
+    }
+
+    /**
+     * Relative URLs in a DASH manifest would resolve against MediaTailor. A
+     * BaseURL at the top of the MPD makes them resolve against the origin;
+     * deeper relative BaseURLs resolve against it in turn.
+     */
+    static String withBaseUrl(String mpd, String base) {
+        Matcher open = Pattern.compile("<MPD\\b[^>]*>").matcher(mpd);
+        if (!open.find()) return mpd;
+        Matcher existing = Pattern.compile("<BaseURL>\\s*(https?://)").matcher(mpd);
+        if (existing.find() && existing.start() < mpd.indexOf("<Period")) return mpd;
+        return mpd.substring(0, open.end()) + "<BaseURL>" + base + "</BaseURL>" + mpd.substring(open.end());
     }
 
     /** Relative URIs would resolve against MediaTailor, so point them at the origin. */

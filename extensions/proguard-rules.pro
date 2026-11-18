@@ -159,5 +159,5 @@
 -keep class semicoloncolonel.mobilestream.extension.cbsnews.CbsLiveMask { public static *; }
 -keep class semicoloncolonel.mobilestream.extension.cbsnews.CbsLiveMask$Remaining { public *; }
 
-# MS NOW — "Skip ads". Called only from the injected shouldInterceptRequest.
--keep class semicoloncolonel.mobilestream.extension.msnow.ClipAdFilter { public static *; }
+# CNBC, NBC News, and MS NOW — "Skip ads". Called only from the injected shouldInterceptRequest.
+-keep class semicoloncolonel.mobilestream.extension.nbcuott.ClipAdFilter { public static *; }
