@@ -585,11 +585,12 @@ def check_tv(package, name, app, certs, cli_path, mpp, workdir, aapt2, apksigner
               "targets": sorted(app["versions"], key=version_order)}
     served = play.version(package, tv=True)
     record["play"] = served
-    # The only Android TV profile Google Play can be asked as is an Android 11 TV.
-    # For an app whose current TV build needs Android 12 or later, Play serves it an
-    # older build than the pin (YouTube TV 3.83.01 for the 4.01.03 pin, YouTube for
-    # Android TV 5.30.340 for 7.32.300). That answer says nothing about the newest
-    # build, so APKPure is asked instead.
+    # The only Android TV profile Google Play can be asked as is a 32-bit Android 11
+    # TV. For an app whose current TV build needs Android 12 or later, or a 64-bit
+    # device, Play serves it an older build than the pin: YouTube TV 3.83.01 for the
+    # 4.01.03 pin, and YouTube for Android TV 5.30.340 for 7.32.300, while a 64-bit
+    # Android 11 NVIDIA Shield got 8.03.300. That answer says nothing about the
+    # newest build, so APKPure is asked instead.
     if served and newer(pinned, served):
         record["play_below_pin"] = True
         play.discard(package, tv=True)
@@ -753,9 +754,9 @@ def review_reasons(r):
     for name in patches.get("failed", []):
         reasons.append(f"The patch \"{name}\" failed on this version and needs an update.")
     if r.get("track") == "tv" and r.get("play_below_pin"):
-        reasons.append(f"Google Play serves `{r['play']}`, an older build than the pin, to the Android 11 TV "
-                       "profile the check asks as, so this version came from APKPure. Check that Google Play "
-                       "serves it to Android TV devices on Android 12 or later.")
+        reasons.append(f"Google Play serves `{r['play']}`, an older build than the pin, to the 32-bit Android 11 "
+                       "TV profile the check asks as, so this version came from APKPure. Check that Google Play "
+                       "serves it to current Android TV devices.")
     elif r.get("track") == "tv" and r.get("source") != "Google Play":
         reasons.append("Google Play could not be asked for the Android TV build, so this version came from "
                        "APKPure. Check that Google Play serves it to Android TV devices.")
@@ -770,7 +771,7 @@ def play_note(r):
         if r.get("play") is None:
             return "its Android TV version could not be read"
         if r.get("play_below_pin"):
-            return (f"serves `{r['play']}`, older than the pin, to the Android 11 TV profile the check asks as, "
+            return (f"serves `{r['play']}`, older than the pin, to the 32-bit Android 11 TV profile the check asks as, "
                     "so APKPure was asked instead")
         return f"serves `{r['play']}` to an Android TV"
     if r.get("play") is None:
