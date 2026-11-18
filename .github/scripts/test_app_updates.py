@@ -8,6 +8,7 @@ from pathlib import Path
 from unittest import mock
 
 import app_updates
+import auto_bump
 
 
 class NewerTest(unittest.TestCase):
@@ -302,6 +303,35 @@ class OlderApkTest(unittest.TestCase):
                                           apps["com.hulu.livingroomplus"], {}, "cli", "mpp", "work", "aapt2",
                                           "apksigner", Path("keep"), FakePlay(None))
         self.assertEqual(record["status"], "up to date")
+
+
+class PlayPhoneBuildTest(unittest.TestCase):
+    """A phone build that Google Play serves to the TV profile must not be
+    reported as an Android TV update."""
+
+    APP = {"versions": ["10.44.5001"], "patches": ["Skip ads"]}
+
+    def run_tv(self, outcome):
+        play = FakePlay("10.46.5000")
+        with mock.patch.object(app_updates, "inspect_apk", return_value=outcome):
+            record = app_updates.check_tv("com.tubitv", "Tubi (Android TV)", self.APP, {}, "cli", "mpp", "work",
+                                          "aapt2", "apksigner", Path("keep"), play)
+        return record, play
+
+    def test_phone_build_is_not_an_update(self):
+        record, play = self.run_tv({"tv_build": False, "cert": "matches", "version_name": "10.46.5000"})
+        self.assertEqual((record["status"], record["latest"]), ("TV build not found", "10.44.5001"))
+        self.assertEqual(record["phone_build"], "10.46.5000")
+        self.assertNotIn("patched_apk", record)
+        self.assertEqual(auto_bump.qualifies(record, {}), "no update")
+        self.assertEqual(play.discarded, ["com.tubitv"])
+
+    def test_tv_build_is_an_update(self):
+        record, _ = self.run_tv({"tv_build": True, "cert": "matches", "version_name": "10.46.5000",
+                                 "patches": {"applied": ["Skip ads"], "failed": []}, "patched_apk": "com.tubitv.apk"})
+        self.assertEqual((record["status"], record["latest"], record["source"]),
+                         ("update", "10.46.5000", "Google Play"))
+        self.assertIsNone(auto_bump.qualifies(record, {}))
 
 
 class PlayBelowPinTest(unittest.TestCase):

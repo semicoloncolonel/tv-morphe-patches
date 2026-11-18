@@ -602,8 +602,14 @@ def check_tv(package, name, app, certs, cli_path, mpp, workdir, aapt2, apksigner
             base, patch_input = found
             outcome = inspect_apk(package, base, patch_input, app, certs, cli_path, mpp, workdir, aapt2,
                                   apksigner, keep_dir, expect_tv=True)
-            record.update(outcome, status="update", source="Google Play",
-                          latest=outcome.get("version_name") or served, rollout=False)
+            if outcome.get("tv_build") is False:
+                # Play answered the TV profile with a phone build, which has no Android
+                # TV launcher entry. It is not an Android TV update, so no issue opens.
+                record.update(status="TV build not found", latest=pinned, source="Google Play",
+                              phone_build=outcome.get("version_name") or served)
+            else:
+                record.update(outcome, status="update", source="Google Play",
+                              latest=outcome.get("version_name") or served, rollout=False)
         else:
             record.update(status="update", source="Google Play", latest=served, download="failed")
         play.discard(package, tv=True)
