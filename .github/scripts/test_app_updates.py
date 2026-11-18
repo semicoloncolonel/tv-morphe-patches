@@ -304,6 +304,49 @@ class OlderApkTest(unittest.TestCase):
         self.assertEqual(record["status"], "up to date")
 
 
+class PlayBelowPinTest(unittest.TestCase):
+    """Google Play served the Android 11 TV profile YouTube for Android TV
+    5.30.340, below the 7.32.300 pin, and the check called it up to date while
+    APKPure had 8.02.300 (issue 14)."""
+
+    APP = {"versions": ["7.32.300"], "patches": ["YT TV+ (ad-free YouTube TV)"]}
+
+    def run_tv(self, play, public=("8.02.300", "7.32.300")):
+        tv = {"tv_build": True, "cert": "matches", "version_name": "8.02.300",
+              "patches": {"applied": ["YT TV+ (ad-free YouTube TV)"], "failed": []}}
+        with mock.patch.object(app_updates, "apkpure_versions", return_value=list(public)) as listed, \
+                mock.patch.object(app_updates, "check_version", return_value=tv), \
+                mock.patch.object(app_updates, "inspect_apk", return_value={}) as inspect:
+            record = app_updates.check_tv("com.google.android.youtube.tv", "YouTube TV (Android TV)", self.APP, {},
+                                          "cli", "mpp", "work", "aapt2", "apksigner", Path("keep"), play)
+        return record, listed, inspect
+
+    def test_older_play_build_falls_back_to_apkpure(self):
+        play = FakePlay("5.30.340")
+        record, listed, inspect = self.run_tv(play)
+        self.assertEqual((record["status"], record["latest"]), ("update", "8.02.300"))
+        self.assertTrue(record["play_below_pin"])
+        self.assertEqual(record["play"], "5.30.340")
+        self.assertNotIn("source", record)
+        listed.assert_called_once()
+        inspect.assert_not_called()
+        self.assertEqual(play.discarded, ["com.google.android.youtube.tv"])
+        reasons = app_updates.review_reasons(record)
+        self.assertEqual(len(reasons), 1)
+        self.assertIn("older build than the pin", reasons[0])
+        self.assertIn("older than the pin", app_updates.play_note(record))
+
+    def test_older_play_build_with_nothing_newer_is_up_to_date(self):
+        record, _, _ = self.run_tv(FakePlay("5.30.340"), public=("7.32.300",))
+        self.assertEqual((record["status"], record["latest"]), ("up to date", "7.32.300"))
+
+    def test_play_at_the_pin_is_up_to_date(self):
+        record, listed, _ = self.run_tv(FakePlay("7.32.300"))
+        self.assertEqual((record["status"], record["latest"]), ("up to date", "7.32.300"))
+        self.assertNotIn("play_below_pin", record)
+        listed.assert_not_called()
+
+
 class DevOnlyCloseTest(unittest.TestCase):
     """An app no main release has yet must not be closed as "released"."""
 
