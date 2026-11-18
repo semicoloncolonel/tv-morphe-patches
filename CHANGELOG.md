@@ -1,9 +1,8 @@
 # [1.2.0-dev.3](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.2...v1.2.0-dev.3) (2026-11-18)
 
+### Supported apps
 
-### Bug Fixes
-
-* Remove Starz 6.11.0, which was never tested on Android TV ([49c3b9d](https://github.com/semicoloncolonel/tv-morphe-patches/commit/49c3b9d373d65968eb63bfde193b711dbacb55f4))
+- **Starz**: 6.11.0 is no longer supported. It was a phone version and was never tested on an Android TV build. 6.12.1 (version code 9511) and 6.12.0 are still supported.
 
 # [1.2.0-dev.2](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.1...v1.2.0-dev.2) (2026-11-18)
 
