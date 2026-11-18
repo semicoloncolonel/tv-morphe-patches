@@ -1,3 +1,10 @@
+# [1.2.0-dev.10](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.9...v1.2.0-dev.10) (2026-11-18)
+
+
+### Bug Fixes
+
+* **ci:** Do not report a phone build from Google Play as an Android TV update ([8a0eca3](https://github.com/semicoloncolonel/tv-morphe-patches/commit/8a0eca32192a6803d4224606f89e039a8ae57c67))
+
 # [1.2.0-dev.9](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.8...v1.2.0-dev.9) (2026-11-18)
 
 
