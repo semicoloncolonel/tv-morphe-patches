@@ -152,3 +152,9 @@
 -keep class semicoloncolonel.mobilestream.extension.fandango.ads.AdMask {
     public static *;
 }
+
+# ABC News and CBS News — "Mask live ad breaks". Called only from injected
+# smali; trackTimer reads getValue() by reflection.
+-keep class semicoloncolonel.mobilestream.extension.shared.misc.LiveBreakMask { public static *; }
+-keep class semicoloncolonel.mobilestream.extension.cbsnews.CbsLiveMask { public static *; }
+-keep class semicoloncolonel.mobilestream.extension.cbsnews.CbsLiveMask$Remaining { public *; }

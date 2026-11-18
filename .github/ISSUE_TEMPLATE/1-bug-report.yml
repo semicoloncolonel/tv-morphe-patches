@@ -52,10 +52,16 @@ body:
       label: App
       description: The app you patched.
       options:
+        - "ABC News"
         - "Apple TV"
+        - "CBS News"
+        - "CNBC"
+        - "CNN"
         - "Disney+"
         - "ESPN"
         - "Fandango at Home"
+        - "Fox Local"
+        - "Fox News"
         - "Fox One"
         - "HBO Max"
         - "Hulu"
@@ -63,7 +69,9 @@ body:
         - "MGM+"
         - "MLB"
         - "Movies Anywhere"
+        - "MS NOW"
         - "NBA"
+        - "NBC News"
         - "NewsNation"
         - "NFL"
         - "PBS"

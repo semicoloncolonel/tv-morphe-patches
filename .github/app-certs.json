@@ -2,6 +2,9 @@
   "air.com.vudu.air.DownloaderTablet": [
     "a853c31d562d4e5e0ae4be2bea35735cfa0eb15abebb7087eb2cc284fac11eb2"
   ],
+  "com.abc.abcnews": [
+    "84ffa7412f76777e76a22f5b51874e012bd81607110c1b2bda3e6008c4bc75be"
+  ],
   "com.apple.atve.androidtv.appletv": [
     "771d8674d3d9837c9edf11b11873443998f19105abcecab425ed9b8e6fefff9b"
   ],
@@ -10,6 +13,15 @@
   ],
   "com.bydeluxe.d3.android.program.starz": [
     "ad6fee5661fed3145fc6a383df1a79882317ad3a45abe0280f738c84606637d2"
+  ],
+  "com.cbsnews.ott": [
+    "956ed587190e915e05c6db04b2ddec7e585bd0786fd3482e5e96d0888ab1fda8"
+  ],
+  "com.cnbc.client": [
+    "fd048298e3a5f042bc9617e348c951ccab0c896969b8162c553f7d85a1c66f31"
+  ],
+  "com.cnn.mobile.android.tv": [
+    "b2329417c1e2ef82195476d997e571d904f4816334e90d8f0544c2a85d769ca4"
   ],
   "com.disney.disneyplus": [
     "b4d251e979ea974d8f070feb5ab69fc4c2873f4e8add421ff63ad5f2789d63d4"
@@ -23,6 +35,12 @@
   ],
   "com.fox.foxone": [
     "fa1f75b196ec5cde7ab895a335beaf95c1a005fcfc2d85fb6071b0801ff3fe0c"
+  ],
+  "com.fox.fts.android": [
+    "18a284e2a6122874116deb1ebf1d9610c15e45ce7479e2b7c6f82c2a89828a71"
+  ],
+  "com.foxnews.android": [
+    "56f4b0412df023323dcbe10740690a782faf1f8723b335afa57d4dd3e6c6ff01"
   ],
   "com.gotv.nflgamecenter.us.lite": [
     "1d985b3aad0684cf25ea1725f8c73d7b70939ce294122cc18fd0be9be6118870"
@@ -38,6 +56,9 @@
   ],
   "com.nbaimd.gametime.nba2011": [
     "2309209340875f6f8a008ea25dbd98d8a03e482704d43211933d2b9a91923aff"
+  ],
+  "com.nbcnews.msnbc.mobile": [
+    "2d072ce000030dfef5566a1eafdf651c134762fcb05bc05aeb40b73116eb326f"
   ],
   "com.nexstar.newsnation": [
     "7f96e905b4bfed3a431194c364ea0a0c6e3d7c1291ec429cd0cf5bbf632563fd"
@@ -60,6 +81,9 @@
   ],
   "com.wbd.stream": [
     "619cbb027b715560b843d15a5599f900485af1cd4294097811a77609bc8273a8"
+  ],
+  "com.zumobi.msnbc": [
+    "42cc360992c161b46ae9474713f005522cff860ccc5fdafbdfd7471e911eedb2"
   ],
   "tv.pluto.android": [
     "29946c49261522d69e4daf1110b400d9341736be25517700a81ccbfde130e96c"
