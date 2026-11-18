@@ -1,3 +1,10 @@
+# [1.2.0-dev.7](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.6...v1.2.0-dev.7) (2026-11-18)
+
+
+### Bug Fixes
+
+* testing NFL (Android TV) 18.28.0, Starz (Android TV) 6.12.2, Tubi (Android TV) 10.46.5000 ([6bca25d](https://github.com/semicoloncolonel/tv-morphe-patches/commit/6bca25dd25d792b16689a5d2714d4721c5cbe328))
+
 # [1.2.0-dev.6](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.5...v1.2.0-dev.6) (2026-11-18)
 
 
