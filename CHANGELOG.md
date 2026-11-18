@@ -1,3 +1,11 @@
+# [1.2.0-dev.9](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.8...v1.2.0-dev.9) (2026-11-18)
+
+
+### Bug Fixes
+
+* **ci:** Ask APKPure when Google Play serves an Android TV build older than the pin ([ff115bb](https://github.com/semicoloncolonel/tv-morphe-patches/commit/ff115bb549b0ee39df45ce3037363146227e5f6e))
+* **ci:** Record YouTube for Android TV's signing certificate ([96b0cd5](https://github.com/semicoloncolonel/tv-morphe-patches/commit/96b0cd5979a4c5d29ae49cbf540f2cdaee5ac7fc))
+
 # [1.2.0-dev.8](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.7...v1.2.0-dev.8) (2026-11-18)
 
 
