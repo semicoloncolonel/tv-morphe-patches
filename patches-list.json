@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.2.0-dev.7",
+  "version": "1.2.0-dev.8",
   "patches": [
     {
       "name": "Allow screenshots",
@@ -469,7 +469,7 @@
         {
           "packageName": "com.wbd.hbomax",
           "name": "HBO Max",
-          "description": "The HBO Max app (version 22.0.0.36).",
+          "description": "The HBO Max app.",
           "apkFileType": "APKM",
           "appIconColor": "#002BE7",
           "signatures": null,
@@ -492,7 +492,7 @@
         {
           "packageName": "com.wbd.stream",
           "name": "HBO Max",
-          "description": "The HBO Max app as the Play Store installs it (version 22.0.0.36).",
+          "description": "The HBO Max app as the Play Store installs it.",
           "apkFileType": "APKM",
           "appIconColor": "#002BE7",
           "signatures": null,
@@ -1246,7 +1246,7 @@
         {
           "packageName": "com.wbd.hbomax",
           "name": "HBO Max",
-          "description": "The HBO Max app (version 22.0.0.36).",
+          "description": "The HBO Max app.",
           "apkFileType": "APKM",
           "appIconColor": "#002BE7",
           "signatures": null,
@@ -1269,7 +1269,7 @@
         {
           "packageName": "com.wbd.stream",
           "name": "HBO Max",
-          "description": "The HBO Max app as the Play Store installs it (version 22.0.0.36).",
+          "description": "The HBO Max app as the Play Store installs it.",
           "apkFileType": "APKM",
           "appIconColor": "#002BE7",
           "signatures": null,
@@ -2558,7 +2558,7 @@
         {
           "packageName": "com.wbd.hbomax",
           "name": "HBO Max",
-          "description": "The HBO Max app (version 22.0.0.36).",
+          "description": "The HBO Max app.",
           "apkFileType": "APKM",
           "appIconColor": "#002BE7",
           "signatures": null,
@@ -2581,7 +2581,7 @@
         {
           "packageName": "com.wbd.stream",
           "name": "HBO Max",
-          "description": "The HBO Max app as the Play Store installs it (version 22.0.0.36).",
+          "description": "The HBO Max app as the Play Store installs it.",
           "apkFileType": "APKM",
           "appIconColor": "#002BE7",
           "signatures": null,
@@ -3110,7 +3110,7 @@
         {
           "packageName": "com.wbd.hbomax",
           "name": "HBO Max",
-          "description": "The HBO Max app (version 22.0.0.36).",
+          "description": "The HBO Max app.",
           "apkFileType": "APKM",
           "appIconColor": "#002BE7",
           "signatures": null,
@@ -3133,7 +3133,7 @@
         {
           "packageName": "com.wbd.stream",
           "name": "HBO Max",
-          "description": "The HBO Max app as the Play Store installs it (version 22.0.0.36).",
+          "description": "The HBO Max app as the Play Store installs it.",
           "apkFileType": "APKM",
           "appIconColor": "#002BE7",
           "signatures": null,
@@ -4291,7 +4291,7 @@
         {
           "packageName": "com.wbd.hbomax",
           "name": "HBO Max",
-          "description": "The HBO Max app (version 22.0.0.36).",
+          "description": "The HBO Max app.",
           "apkFileType": "APKM",
           "appIconColor": "#002BE7",
           "signatures": null,
@@ -4314,7 +4314,7 @@
         {
           "packageName": "com.wbd.stream",
           "name": "HBO Max",
-          "description": "The HBO Max app as the Play Store installs it (version 22.0.0.36).",
+          "description": "The HBO Max app as the Play Store installs it.",
           "apkFileType": "APKM",
           "appIconColor": "#002BE7",
           "signatures": null,
@@ -5118,7 +5118,7 @@
         {
           "packageName": "com.wbd.hbomax",
           "name": "HBO Max",
-          "description": "The HBO Max app (version 22.0.0.36).",
+          "description": "The HBO Max app.",
           "apkFileType": "APKM",
           "appIconColor": "#002BE7",
           "signatures": null,
@@ -5141,7 +5141,7 @@
         {
           "packageName": "com.wbd.stream",
           "name": "HBO Max",
-          "description": "The HBO Max app as the Play Store installs it (version 22.0.0.36).",
+          "description": "The HBO Max app as the Play Store installs it.",
           "apkFileType": "APKM",
           "appIconColor": "#002BE7",
           "signatures": null,
