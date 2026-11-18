@@ -1,8 +1,8 @@
 {
-  "created_at": "2026-11-18T23:27:10",
-  "description": "# [1.2.0-dev.10](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.9...v1.2.0-dev.10) (2026-11-18)\n\n\n### Bug Fixes\n\n* **ci:** Do not report a phone build from Google Play as an Android TV update ([8a0eca3](https://github.com/semicoloncolonel/tv-morphe-patches/commit/8a0eca32192a6803d4224606f89e039a8ae57c67))",
-  "download_url": "https://github.com/semicoloncolonel/tv-morphe-patches/releases/download/v1.2.0-dev.10/patches-1.2.0-dev.10.mpp",
+  "created_at": "2026-11-18T23:46:11",
+  "description": "# [1.2.0-dev.11](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.10...v1.2.0-dev.11) (2026-11-18)\n\n\n### Bug Fixes\n\n* **ci:** Check the bundle before a release is pushed, and repair a release that did not finish ([02ec532](https://github.com/semicoloncolonel/tv-morphe-patches/commit/02ec532c1a9900350807b4e393efef55c6e05fa7))",
+  "download_url": "https://github.com/semicoloncolonel/tv-morphe-patches/releases/download/v1.2.0-dev.11/patches-1.2.0-dev.11.mpp",
   "signature_download_url": "",
-  "version": "1.2.0-dev.10",
+  "version": "1.2.0-dev.11",
   "public_key": "6sNE7CnUmEbvfVcaYklfOzJuN60m4+HH2LKlqlxhSN0="
 }

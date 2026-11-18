@@ -1,3 +1,10 @@
+# [1.2.0-dev.11](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.10...v1.2.0-dev.11) (2026-11-18)
+
+
+### Bug Fixes
+
+* **ci:** Check the bundle before a release is pushed, and repair a release that did not finish ([02ec532](https://github.com/semicoloncolonel/tv-morphe-patches/commit/02ec532c1a9900350807b4e393efef55c6e05fa7))
+
 # [1.2.0-dev.10](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.9...v1.2.0-dev.10) (2026-11-18)
 
 
