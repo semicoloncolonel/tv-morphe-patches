@@ -11,6 +11,19 @@
 * **msnow:** Add Skip ads for clips and load the public web app ([72cad1c](https://github.com/semicoloncolonel/tv-morphe-patches/commit/72cad1c39d11d054397d544d9613182069bd8cfc))
 * **nbcuott:** Skip ads in CNBC and NBC News clips ([b145ac8](https://github.com/semicoloncolonel/tv-morphe-patches/commit/b145ac81ab40457db602151f6f21fdfa2c0e808a))
 
+# [1.2.0-dev.6](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.5...v1.2.0-dev.6) (2026-11-18)
+
+
+### Bug Fixes
+
+* Rebuild the WebView request filter when a second patch adds to it ([c4ad8a0](https://github.com/semicoloncolonel/tv-morphe-patches/commit/c4ad8a0b85eeac577872708f4f6dc45f49eb96c3))
+
+
+### Features
+
+* **msnow:** Add Skip ads for clips and load the public web app ([72cad1c](https://github.com/semicoloncolonel/tv-morphe-patches/commit/72cad1c39d11d054397d544d9613182069bd8cfc))
+* **nbcuott:** Skip ads in CNBC and NBC News clips ([b145ac8](https://github.com/semicoloncolonel/tv-morphe-patches/commit/b145ac81ab40457db602151f6f21fdfa2c0e808a))
+
 # [1.2.0-dev.5](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.4...v1.2.0-dev.5) (2026-11-18)
 
 
