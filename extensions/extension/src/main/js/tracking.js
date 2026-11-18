@@ -38,7 +38,7 @@
             var url = (input && input.url) || input;
             if (blocked(url)) {
                 note();
-                try { return Promise.resolve(new Response("", { status: 204, statusText: "No Content" })); }
+                try { return Promise.resolve(new Response(null, { status: 204, statusText: "No Content" })); }
                 catch (e) { return Promise.resolve(); }
             }
             return fetch0.apply(this, arguments);
