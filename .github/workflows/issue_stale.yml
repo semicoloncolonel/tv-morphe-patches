@@ -5,9 +5,7 @@ name: Close untargeted and incomplete reports
 # more is posted. An edit that fixes the report removes the label first.
 #
 # It also removes "may reopen" from closed issues after 7 days without a new
-# comment. See mobile-morphe-patches/.github/scripts/expire_may_reopen.py.
-#
-# Copied from mobile-morphe-patches/.github/tv-repo. Edit it there.
+# comment. See .github/scripts/expire_may_reopen.py.
 
 on:
   schedule:
@@ -46,7 +44,6 @@ jobs:
       - name: Checkout the script
         uses: actions/checkout@v7
         with:
-          repository: semicoloncolonel/mobile-morphe-patches
           persist-credentials: false
 
       - name: Remove the label after 7 quiet days
