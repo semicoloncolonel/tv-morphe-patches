@@ -146,3 +146,9 @@
 -keep class semicoloncolonel.mobilestream.extension.primevideotv.PrimeVideoHookLoader {
     public static void load();
 }
+
+# Fandango at Home — "Mask ads". Called only from injected smali in
+# PlaybackPresenter, PlayerActivity, and NVPlaybackActivity.
+-keep class semicoloncolonel.mobilestream.extension.fandango.ads.AdMask {
+    public static *;
+}

@@ -1,4 +1,7 @@
 {
+  "air.com.vudu.air.DownloaderTablet": [
+    "a853c31d562d4e5e0ae4be2bea35735cfa0eb15abebb7087eb2cc284fac11eb2"
+  ],
   "com.apple.atve.androidtv.appletv": [
     "771d8674d3d9837c9edf11b11873443998f19105abcecab425ed9b8e6fefff9b"
   ],
@@ -29,6 +32,9 @@
   ],
   "com.justwatch.justwatch": [
     "a24cb9ee497862eb734e97786a2715657b0010fbe7ea13a4ac2add6a703af9a4"
+  ],
+  "com.moviesanywhere.goo": [
+    "897680ad6d6ce337529a127e8556ecc0141e37077bcb15f7897504afb8d236e6"
   ],
   "com.nbaimd.gametime.nba2011": [
     "2309209340875f6f8a008ea25dbd98d8a03e482704d43211933d2b9a91923aff"

@@ -19,6 +19,8 @@ import com.android.tools.smali.dexlib2.iface.instruction.RegisterRangeInstructio
 import com.android.tools.smali.dexlib2.iface.reference.MethodReference
 import com.android.tools.smali.dexlib2.iface.reference.StringReference
 import org.w3c.dom.Element
+import semicoloncolonel.mobilestream.patches.fandango.shared.Constants as Fandango
+import semicoloncolonel.mobilestream.patches.moviesanywhere.shared.Constants as MoviesAnywhere
 import semicoloncolonel.mobilestream.patches.pbs.shared.Constants as Pbs
 import semicoloncolonel.mobilestream.patches.starz.shared.Constants as Starz
 import semicoloncolonel.mobilestream.patches.espn.shared.Constants as Espn
@@ -229,6 +231,8 @@ val hideDeviceIdentifiersPatch: BytecodePatch = bytecodePatch(
     default = false,
 ) {
     compatibleWith(
+        Fandango.COMPATIBILITY,
+        MoviesAnywhere.COMPATIBILITY,
         Tubi.COMPATIBILITY,
         Disney.COMPATIBILITY,
         Pluto.COMPATIBILITY,

@@ -3,6 +3,7 @@ package semicoloncolonel.mobilestream.patches.shared.misc
 import app.morphe.patcher.Fingerprint
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.patch.bytecodePatch
+import semicoloncolonel.mobilestream.patches.fandango.shared.Constants as Fandango
 import semicoloncolonel.mobilestream.patches.mlb.shared.Constants as Mlb
 import semicoloncolonel.mobilestream.patches.pluto.shared.Constants as Pluto
 
@@ -24,7 +25,7 @@ val translateAdBreakScreenPatch = bytecodePatch(
         "Please submit corrections or rewrites through GitHub issues.",
 ) {
     category("Ads")
-    compatibleWith(Mlb.COMPATIBILITY, Pluto.COMPATIBILITY)
+    compatibleWith(Fandango.COMPATIBILITY, Mlb.COMPATIBILITY, Pluto.COMPATIBILITY)
 
     extendWith("extensions/extension.mpe")
 
