@@ -1,3 +1,11 @@
+# [1.2.0-dev.5](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.4...v1.2.0-dev.5) (2026-11-18)
+
+
+### Features
+
+* Add Fandango at Home and Movies Anywhere for Android TV ([441f48b](https://github.com/semicoloncolonel/tv-morphe-patches/commit/441f48b81839a9fea70b28d0489f258f846bea21))
+* Add the Android TV builds of eight news apps ([99c634c](https://github.com/semicoloncolonel/tv-morphe-patches/commit/99c634c13badce96193472b7717c07dcbf05810e))
+
 # [1.2.0-dev.4](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.3...v1.2.0-dev.4) (2026-11-18)
 
 
