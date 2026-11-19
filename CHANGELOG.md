@@ -1,3 +1,10 @@
+# [1.2.0-dev.13](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.12...v1.2.0-dev.13) (2026-11-19)
+
+
+### Bug Fixes
+
+* **plex:** Accept both Plex 2026.23.0 builds ([1d1c342](https://github.com/semicoloncolonel/tv-morphe-patches/commit/1d1c34203795a25fe5148752ba0e0eaffadcc95b))
+
 # [1.2.0-dev.12](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.11...v1.2.0-dev.12) (2026-11-19)
 
 
