@@ -1,3 +1,10 @@
+# [1.2.0-dev.14](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.13...v1.2.0-dev.14) (2026-11-19)
+
+
+### Bug Fixes
+
+* testing Fox One (Android TV) 1.21.0, HBO Max (Android TV) 22.1.0.82, JustWatch (Android TV) 26.45.4, YouTube TV (Android TV) 8.02.300 ([c735afa](https://github.com/semicoloncolonel/tv-morphe-patches/commit/c735afa83a1ab8c38da737f9e896519fe4a46042))
+
 # [1.2.0-dev.13](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.12...v1.2.0-dev.13) (2026-11-19)
 
 
