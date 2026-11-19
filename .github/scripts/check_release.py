@@ -176,6 +176,8 @@ def download(url):
             return response.read()
     except urllib.error.HTTPError as e:
         raise ReleaseError(f"{url} returned HTTP {e.code}")
+    except (urllib.error.URLError, TimeoutError) as e:
+        raise ReleaseError(f"{url} could not be downloaded: {e}")
 
 
 def remote_ref(ref):

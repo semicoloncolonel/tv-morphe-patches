@@ -160,6 +160,14 @@ class PublishedTest(unittest.TestCase):
         self.assertTrue(any("manifest says version '1.2.0-dev.9'" in p for p in problems))
 
 
+class DownloadTest(unittest.TestCase):
+    def test_network_error_is_a_release_error(self):
+        import urllib.error
+        with mock.patch("urllib.request.urlopen", side_effect=urllib.error.URLError("no route")):
+            with self.assertRaises(check_release.ReleaseError):
+                check_release.download("https://example.invalid/patches.mpp")
+
+
 class RepairTest(unittest.TestCase):
     VERSION = "1.2.0-dev.10"
 
