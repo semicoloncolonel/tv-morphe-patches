@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.2.0-dev.12",
+  "version": "1.2.0-dev.13",
   "patches": [
     {
       "name": "Allow screenshots",
@@ -928,12 +928,7 @@
             },
             {
               "version": "2026.23.0",
-              "versionCodes": {
-                "ARM64_V8A": 971050598,
-                "ARMEABI_V7A": 971050598,
-                "X86_64": 971050598,
-                "X86": 971050598
-              },
+              "versionCodes": null,
               "isExperimental": true,
               "minSdk": null,
               "description": "Beta"
@@ -3309,12 +3304,7 @@
             },
             {
               "version": "2026.23.0",
-              "versionCodes": {
-                "ARM64_V8A": 971050598,
-                "ARMEABI_V7A": 971050598,
-                "X86_64": 971050598,
-                "X86": 971050598
-              },
+              "versionCodes": null,
               "isExperimental": true,
               "minSdk": null,
               "description": "Beta"
@@ -3516,12 +3506,7 @@
             },
             {
               "version": "2026.23.0",
-              "versionCodes": {
-                "ARM64_V8A": 971050598,
-                "ARMEABI_V7A": 971050598,
-                "X86_64": 971050598,
-                "X86": 971050598
-              },
+              "versionCodes": null,
               "isExperimental": true,
               "minSdk": null,
               "description": "Beta"
@@ -4690,12 +4675,7 @@
             },
             {
               "version": "2026.23.0",
-              "versionCodes": {
-                "ARM64_V8A": 971050598,
-                "ARMEABI_V7A": 971050598,
-                "X86_64": 971050598,
-                "X86": 971050598
-              },
+              "versionCodes": null,
               "isExperimental": true,
               "minSdk": null,
               "description": "Beta"
