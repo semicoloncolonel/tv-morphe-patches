@@ -1,3 +1,10 @@
+# [1.2.0-dev.15](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.14...v1.2.0-dev.15) (2026-11-19)
+
+
+### Bug Fixes
+
+* testing Apple TV (Android TV) 17.0.4 ([8aaaa12](https://github.com/semicoloncolonel/tv-morphe-patches/commit/8aaaa1256a0d46d53afd4f2e795257330c64bb75))
+
 # [1.2.0-dev.14](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.13...v1.2.0-dev.14) (2026-11-19)
 
 
