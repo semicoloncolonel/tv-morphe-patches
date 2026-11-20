@@ -1,3 +1,10 @@
+# [1.2.0-dev.16](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.15...v1.2.0-dev.16) (2026-11-20)
+
+
+### Bug Fixes
+
+* testing Disney+ (Android TV) 26.21.0+rc3-2026.11.17 ([363d1ce](https://github.com/semicoloncolonel/tv-morphe-patches/commit/363d1ce62d0450798b004b362fda02665c0699dd))
+
 # [1.2.0-dev.15](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.14...v1.2.0-dev.15) (2026-11-19)
 
 
