@@ -1,3 +1,10 @@
+# [1.2.0-dev.18](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.17...v1.2.0-dev.18) (2026-11-24)
+
+
+### Bug Fixes
+
+* testing ABC News (Android TV) 11.13.0, Fox Local (Android TV) 2.19.1, HBO Max (Android TV) 22.1.0.82, NBA (Android TV) 1.4.0.20261113201204, NFL (Android TV) 18.29.0 ([a12b135](https://github.com/semicoloncolonel/tv-morphe-patches/commit/a12b1352807384fe99ac83cbb08280542c3727de))
+
 # [1.2.0-dev.17](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.16...v1.2.0-dev.17) (2026-11-24)
 
 
