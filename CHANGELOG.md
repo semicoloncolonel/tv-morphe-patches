@@ -1,3 +1,17 @@
+# [1.2.0-dev.17](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.16...v1.2.0-dev.17) (2026-11-24)
+
+
+### Bug Fixes
+
+* **Apple TV:** Show release times for evening releases in the Americas ([08140f4](https://github.com/semicoloncolonel/tv-morphe-patches/commit/08140f438a95e2ad7f4e6b43b2123aba41853b54)), closes [#25](https://github.com/semicoloncolonel/tv-morphe-patches/issues/25)
+* **ci:** Read TV apps from Morphe CLI 2.3.0 patch lists, and accept prefixed versions in reports ([4e80110](https://github.com/semicoloncolonel/tv-morphe-patches/commit/4e80110b899281614cd1bc845b5fe11bb598789e))
+* **GmsCore support:** Restore the certificate only where a call takes a String ([835a2e1](https://github.com/semicoloncolonel/tv-morphe-patches/commit/835a2e152a37284b89cee3c689a2f9de756a353e))
+
+
+### Features
+
+* **The Roku Channel:** Add Skip ads and the Pairip license check ([e35b067](https://github.com/semicoloncolonel/tv-morphe-patches/commit/e35b0670a2840522cb71937ca5acaddc6427a29f)), closes [#26](https://github.com/semicoloncolonel/tv-morphe-patches/issues/26)
+
 # [1.2.0-dev.16](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.15...v1.2.0-dev.16) (2026-11-20)
 
 
