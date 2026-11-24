@@ -16,6 +16,7 @@ object Constants {
         targets = listOf(
             AppTarget("18.27.0"),
             devTarget("18.28.0", versionCode = 101397113),
+            devTarget("18.29.0", versionCode = 101397380),
         ),
         formFactor = FormFactor.TV,
     )

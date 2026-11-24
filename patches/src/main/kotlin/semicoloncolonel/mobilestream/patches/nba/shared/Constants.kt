@@ -18,6 +18,7 @@ object Constants {
         appIconColor = 0x1D428A,
         targets = listOf(
             devTarget("1.2.0.20261103221954", versionCode = 6161027),
+            devTarget("1.4.0.20261113201204", versionCode = 6163020),
             AppTarget("1.1.0.20261026155843"),
         ),
         formFactor = FormFactor.TV,
