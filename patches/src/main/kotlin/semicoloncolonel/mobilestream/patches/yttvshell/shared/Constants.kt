@@ -23,7 +23,7 @@ object Constants {
             "your YouTube and YouTube TV apps, which stay unchanged.",
         apkFileType = ApkFileType.APKM,
         appIconColor = 0xFF0000,
-        targets = listOf(AppTarget(version = "7.32.300"), devTarget("8.02.300", versionCode = 802300320)),
+        targets = listOf(AppTarget(version = "7.32.300"), devTarget("8.02.300", versionCode = 802300320), devTarget("8.03.300", versionCode = 803300320)),
         formFactor = FormFactor.TV,
     )
 
