@@ -1,3 +1,10 @@
+# [1.2.0-dev.19](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.18...v1.2.0-dev.19) (2026-11-26)
+
+
+### Bug Fixes
+
+* testing YouTube TV (Android TV) 8.03.300 ([4dcc364](https://github.com/semicoloncolonel/tv-morphe-patches/commit/4dcc364c69e15429f34d48d9fd20abcfe1178782))
+
 # [1.2.0-dev.18](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.17...v1.2.0-dev.18) (2026-11-24)
 
 
