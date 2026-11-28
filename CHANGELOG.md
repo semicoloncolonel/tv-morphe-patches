@@ -1,3 +1,10 @@
+# [1.2.0-dev.22](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.21...v1.2.0-dev.22) (2026-11-28)
+
+
+### Bug Fixes
+
+* **Fox One:** Add Skip splash sound for 1.21.0 ([7b4e2fc](https://github.com/semicoloncolonel/tv-morphe-patches/commit/7b4e2fc6963b7e130b986486e3aeeccac7259fd1)), closes [#23](https://github.com/semicoloncolonel/tv-morphe-patches/issues/23)
+
 # [1.2.0-dev.21](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.20...v1.2.0-dev.21) (2026-11-28)
 
 
