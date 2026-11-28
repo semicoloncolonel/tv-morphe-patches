@@ -27,7 +27,8 @@ private const val BLOCK_WEB_REQUEST =
 @Suppress("unused")
 val blockAnalyticsPatch = bytecodePatch(
     name = "Block analytics & tracking",
-    description = "Stops the analytics and audience-measurement services in the app's web pages.",
+    description = "Stops the analytics and audience-measurement services in the app's web pages. " +
+        "Experimental, not yet tested on a device.",
     default = false,
 ) {
     category("Privacy")
