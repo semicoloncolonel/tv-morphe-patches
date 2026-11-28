@@ -9,7 +9,6 @@ import app.morphe.patcher.patch.ResourcePatch
 import app.morphe.patcher.patch.booleanOption
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patcher.patch.resourcePatch
-import app.morphe.patcher.patch.stringOption
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.instruction.FiveRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.Instruction
@@ -41,7 +40,6 @@ import semicoloncolonel.mobilestream.patches.justwatch.shared.Constants as JustW
 import semicoloncolonel.mobilestream.patches.tubi.shared.Constants as Tubi
 import semicoloncolonel.mobilestream.patches.mlb.shared.Constants as Mlb
 import semicoloncolonel.mobilestream.patches.newsnation.shared.Constants as NewsNation
-import semicoloncolonel.mobilestream.patches.appletv.shared.Constants as AppleTv
 import semicoloncolonel.mobilestream.patches.roku.shared.Constants as Roku
 
 // ─────────────────────────────────────────────────────────────────────────────

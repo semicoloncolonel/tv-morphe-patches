@@ -7,7 +7,6 @@
 package semicoloncolonel.mobilestream.patches.shared.misc
 
 import app.morphe.patcher.patch.resourcePatch
-import semicoloncolonel.mobilestream.patches.appletv.shared.Constants as AppleTv
 import semicoloncolonel.mobilestream.patches.moviesanywhere.shared.Constants as MoviesAnywhere
 import semicoloncolonel.mobilestream.patches.fandango.shared.Constants as Fandango
 import semicoloncolonel.mobilestream.patches.abcnews.shared.Constants as AbcNews
