@@ -4,7 +4,6 @@ import app.morphe.patcher.patch.ApkFileType
 import app.morphe.patcher.patch.AppTarget
 import app.morphe.patcher.patch.Compatibility
 import app.morphe.patcher.patch.FormFactor
-import semicoloncolonel.mobilestream.patches.shared.misc.devTarget
 
 // YouTube TV's own Android TV app (com.google.android.youtube.tvunplugged) runs on an older,
 // un-patchable classic Cobalt engine. Regular YouTube for Android TV
@@ -23,7 +22,7 @@ object Constants {
             "your YouTube and YouTube TV apps, which stay unchanged.",
         apkFileType = ApkFileType.APKM,
         appIconColor = 0xFF0000,
-        targets = listOf(AppTarget(version = "7.32.300"), devTarget("8.02.300", versionCode = 802300320), devTarget("8.03.300", versionCode = 803300320)),
+        targets = listOf(AppTarget(version = "7.32.300"), AppTarget("8.02.300", versionCode = 802300320), AppTarget("8.03.300", versionCode = 803300320)),
         formFactor = FormFactor.TV,
     )
 

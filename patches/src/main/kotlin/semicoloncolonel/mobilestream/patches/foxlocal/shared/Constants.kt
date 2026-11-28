@@ -5,7 +5,6 @@ import app.morphe.patcher.patch.AppTarget
 import app.morphe.patcher.patch.Compatibility
 import app.morphe.patcher.patch.FormFactor
 import semicoloncolonel.mobilestream.patches.shared.misc.requireNativeLibsPatch
-import semicoloncolonel.mobilestream.patches.shared.misc.devTarget
 
 object Constants {
     val COMPATIBILITY = Compatibility(
@@ -16,7 +15,7 @@ object Constants {
         appIconColor = 0x031840,
         // The phone build shares the package name but has its own version
         // names (7.22.0) and codes.
-        targets = listOf(AppTarget("2.18.1", versionCode = 202610272), devTarget("2.19.1", versionCode = 202611202)),
+        targets = listOf(AppTarget("2.18.1", versionCode = 202610272), AppTarget("2.19.1", versionCode = 202611202)),
         formFactor = FormFactor.TV,
     )
 

@@ -4,7 +4,6 @@ import app.morphe.patcher.patch.ApkFileType
 import app.morphe.patcher.patch.AppTarget
 import app.morphe.patcher.patch.Compatibility
 import app.morphe.patcher.patch.FormFactor
-import semicoloncolonel.mobilestream.patches.shared.misc.devTarget
 
 object Constants {
     val COMPATIBILITY = Compatibility(
@@ -15,7 +14,7 @@ object Constants {
         appIconColor = 0x030B1A,
         targets = listOf(
             AppTarget("1.20.0"),
-            devTarget("1.21.0", versionCode = 520261111),
+            AppTarget("1.21.0", versionCode = 520261111),
         ),
         formFactor = FormFactor.TV,
     )

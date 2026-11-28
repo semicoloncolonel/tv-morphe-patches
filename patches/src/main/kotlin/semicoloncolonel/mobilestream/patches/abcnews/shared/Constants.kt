@@ -5,7 +5,6 @@ import app.morphe.patcher.patch.AppTarget
 import app.morphe.patcher.patch.Compatibility
 import app.morphe.patcher.patch.FormFactor
 import semicoloncolonel.mobilestream.patches.shared.misc.requireNativeLibsPatch
-import semicoloncolonel.mobilestream.patches.shared.misc.devTarget
 
 // The Android TV app shares its package name with the phone app, but it is a
 // separate build with its own version line (11.x on TV, 8.x on phones).
@@ -16,7 +15,7 @@ object Constants {
         description = "The Android TV app. Patch the Android TV build: version code 53550563 for 11.12.0.",
         apkFileType = ApkFileType.APKM,
         appIconColor = 0x0A0A0A,
-        targets = listOf(AppTarget("11.12.0", versionCode = 53550563), devTarget("11.13.0", versionCode = 53550569)),
+        targets = listOf(AppTarget("11.12.0", versionCode = 53550563), AppTarget("11.13.0", versionCode = 53550569)),
         formFactor = FormFactor.TV,
     )
 
