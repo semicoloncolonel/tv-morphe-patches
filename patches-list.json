@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.2.0-dev.19",
+  "version": "1.2.0-dev.20",
   "patches": [
     {
       "name": "Allow screenshots",
@@ -1128,6 +1128,38 @@
           }
         }
       ]
+    },
+    {
+      "name": "Block analytics & tracking",
+      "description": "Stops the analytics and audience-measurement services in the app's web pages.",
+      "default": false,
+      "category": "Privacy",
+      "compatiblePackages": [
+        {
+          "packageName": "com.roku.web.trc",
+          "name": "The Roku Channel",
+          "description": "The Roku Channel Android TV app. Needs the Pairip license-check patch to run once re-signed.",
+          "apkFileType": "APKM",
+          "appIconColor": "#6F1AB1",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "2.0.90",
+              "versionCodes": {
+                "ARM64_V8A": 2000090,
+                "ARMEABI_V7A": 2000090,
+                "X86_64": 2000090,
+                "X86": 2000090
+              },
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
     },
     {
       "name": "Block analytics & tracking",
@@ -3319,6 +3351,29 @@
                 "X86": 8294
               },
               "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        },
+        {
+          "packageName": "com.roku.web.trc",
+          "name": "The Roku Channel",
+          "description": "The Roku Channel Android TV app. Needs the Pairip license-check patch to run once re-signed.",
+          "apkFileType": "APKM",
+          "appIconColor": "#6F1AB1",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "2.0.90",
+              "versionCodes": {
+                "ARM64_V8A": 2000090,
+                "ARMEABI_V7A": 2000090,
+                "X86_64": 2000090,
+                "X86": 2000090
+              },
+              "isExperimental": true,
               "minSdk": null,
               "description": null
             }
