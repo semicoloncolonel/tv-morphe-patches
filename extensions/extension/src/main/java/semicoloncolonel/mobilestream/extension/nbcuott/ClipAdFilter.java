@@ -147,11 +147,30 @@ public final class ClipAdFilter {
      * deeper relative BaseURLs resolve against it in turn.
      */
     static String withBaseUrl(String mpd, String base) {
-        Matcher open = Pattern.compile("<MPD\\b[^>]*>").matcher(mpd);
-        if (!open.find()) return mpd;
+        int open = openTagEnd(mpd, "<MPD");
+        if (open < 0) return mpd;
         Matcher existing = Pattern.compile("<BaseURL>\\s*(https?://)").matcher(mpd);
         if (existing.find() && existing.start() < mpd.indexOf("<Period")) return mpd;
-        return mpd.substring(0, open.end()) + "<BaseURL>" + base + "</BaseURL>" + mpd.substring(open.end());
+        return mpd.substring(0, open) + "<BaseURL>" + base + "</BaseURL>" + mpd.substring(open);
+    }
+
+    /**
+     * The index just past the first start tag named tag, as the pattern
+     * tag\b[^>]*> finds it, or -1. A pattern would retry from every unclosed
+     * tag, which on a long manifest takes time that grows with the square of
+     * its length. This scan reads the text once.
+     */
+    static int openTagEnd(String text, String tag) {
+        for (int at = text.indexOf(tag); at >= 0; at = text.indexOf(tag, at + tag.length())) {
+            int next = at + tag.length();
+            if (next < text.length()) {
+                char c = text.charAt(next);
+                if (Character.isLetterOrDigit(c) || c == '_') continue;
+            }
+            int close = text.indexOf('>', next);
+            return close < 0 ? -1 : close + 1;
+        }
+        return -1;
     }
 
     /** Relative URIs would resolve against MediaTailor, so point them at the origin. */
