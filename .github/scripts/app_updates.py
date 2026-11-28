@@ -851,7 +851,7 @@ def sync_issues(results, owner, stable=None):
     for label in (ISSUE_LABEL, REVIEW_LABEL, READY_LABEL, TESTING_LABEL, RELEASED_LABEL):
         subprocess.run(["gh", "label", "create", label], capture_output=True, text=True)
     issues = json.loads(gh("issue", "list", "--label", ISSUE_LABEL, "--state", "open", "--limit", "500",
-                           "--json", "number,title") or "[]")
+                           "--json", "number,title,labels") or "[]")
     for r in results:
         prefix = f"{TITLE_PREFIX}{r['name']} "
         # "App update: Apple TV " also starts "App update: Apple TV (Android TV) 17.0.3".
@@ -872,6 +872,22 @@ def sync_issues(results, owner, stable=None):
                 gh("issue", "edit", str(issue["number"]), *labels, "--remove-label", TESTING_LABEL)
                 gh("issue", "close", str(issue["number"]), "--reason", "completed", "--comment",
                    f"{why}, so this is closed.")
+        # A bumped version whose first dev pre-release failed keeps "ready to
+        # bump", because only the bump job labels it (NBA, issue 31). The
+        # bundle checked here is the latest dev pre-release, so a version it
+        # targets is in a pre-release now.
+        for issue in mine:
+            version = issue["title"][len(prefix):]
+            labels = {label.get("name") for label in issue.get("labels") or []}
+            if (READY_LABEL in labels and TESTING_LABEL not in labels and r["pinned"]
+                    and not newer(version, r["pinned"]) and released and newer(version, released)):
+                gh("issue", "edit", str(issue["number"]), "--add-label", TESTING_LABEL,
+                   "--remove-label", READY_LABEL)
+                gh("issue", "comment", str(issue["number"]), "--body-file", "-",
+                   stdin=f"{r['name']} `{version}` is in the latest dev pre-release, marked experimental. "
+                         "If you try it, please comment here with what works and what does not, along with "
+                         "your device and Android version. This issue closes when a main release includes "
+                         "this version.\n")
         tv_only = [v for v in r.get("tv_builds_skipped", []) if r["status"] != "update" or v != r.get("latest")]
         for issue in mine:
             version = issue["title"][len(prefix):]

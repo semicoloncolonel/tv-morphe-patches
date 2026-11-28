@@ -246,6 +246,37 @@ class TvTrackTest(unittest.TestCase):
         self.assertEqual(results[1]["status"], "up to date")
         inspect.assert_not_called()
 
+    def test_shipped_ready_issue_moves_to_testing(self):
+        record = {"package": "com.nba", "name": "NBA (Android TV)", "pinned": "1.4.0", "status": "up to date"}
+        listed = ('[{"number": 31, "title": "App update: NBA (Android TV) 1.4.0", '
+                  '"labels": [{"name": "app update"}, {"name": "ready to bump"}]}]')
+        calls = []
+
+        def gh(*args, stdin=None):
+            calls.append(args)
+            return listed if args[:2] == ("issue", "list") else ""
+
+        with mock.patch.object(app_updates, "gh", side_effect=gh):
+            app_updates.sync_issues([record], None, {"com.nba": "1.2.0"})
+        self.assertIn(("issue", "edit", "31", "--add-label", "testing on dev", "--remove-label", "ready to bump"),
+                      calls)
+        self.assertEqual(len([c for c in calls if c[:2] == ("issue", "comment")]), 1)
+        self.assertFalse([c for c in calls if c[:2] == ("issue", "close")])
+
+    def test_testing_issue_is_left_alone(self):
+        record = {"package": "com.nba", "name": "NBA (Android TV)", "pinned": "1.4.0", "status": "up to date"}
+        listed = ('[{"number": 31, "title": "App update: NBA (Android TV) 1.4.0", '
+                  '"labels": [{"name": "app update"}, {"name": "testing on dev"}]}]')
+        calls = []
+
+        def gh(*args, stdin=None):
+            calls.append(args)
+            return listed if args[:2] == ("issue", "list") else ""
+
+        with mock.patch.object(app_updates, "gh", side_effect=gh):
+            app_updates.sync_issues([record], None, {"com.nba": "1.2.0"})
+        self.assertFalse([c for c in calls if c[:2] in (("issue", "edit"), ("issue", "comment"))])
+
     def test_phone_issue_ignores_tv_issue(self):
         phone = {"package": "com.apple.atve.androidtv.appletv", "key": "com.apple.atve.androidtv.appletv",
                  "name": "Apple TV", "pinned": "3.0.0", "status": "up to date"}
