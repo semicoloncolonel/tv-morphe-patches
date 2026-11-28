@@ -1,3 +1,10 @@
+# [1.2.0-dev.21](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.20...v1.2.0-dev.21) (2026-11-28)
+
+
+### Features
+
+* **Rakuten TV:** Add the Android TV app with Skip ads ([9a97e1c](https://github.com/semicoloncolonel/tv-morphe-patches/commit/9a97e1c3a1abc6160bce61f771e6223772a0da76)), closes [#34](https://github.com/semicoloncolonel/tv-morphe-patches/issues/34)
+
 # [1.2.0-dev.20](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.19...v1.2.0-dev.20) (2026-11-28)
 
 

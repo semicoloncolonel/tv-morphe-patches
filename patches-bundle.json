@@ -1,8 +1,8 @@
 {
-  "created_at": "2026-11-28T00:50:07",
-  "description": "# [1.2.0-dev.20](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.19...v1.2.0-dev.20) (2026-11-28)\n\n\n### Features\n\n* **The Roku Channel:** Add Hide device identifiers and Block analytics & tracking ([042bd86](https://github.com/semicoloncolonel/tv-morphe-patches/commit/042bd86b9641bfacfa863ebc075307a9a61069cf))",
-  "download_url": "https://github.com/semicoloncolonel/tv-morphe-patches/releases/download/v1.2.0-dev.20/patches-1.2.0-dev.20.mpp",
+  "created_at": "2026-11-28T01:14:43",
+  "description": "# [1.2.0-dev.21](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.20...v1.2.0-dev.21) (2026-11-28)\n\n\n### Features\n\n* **Rakuten TV:** Add the Android TV app with Skip ads ([9a97e1c](https://github.com/semicoloncolonel/tv-morphe-patches/commit/9a97e1c3a1abc6160bce61f771e6223772a0da76)), closes [#34](https://github.com/semicoloncolonel/tv-morphe-patches/issues/34)",
+  "download_url": "https://github.com/semicoloncolonel/tv-morphe-patches/releases/download/v1.2.0-dev.21/patches-1.2.0-dev.21.mpp",
   "signature_download_url": "",
-  "version": "1.2.0-dev.20",
+  "version": "1.2.0-dev.21",
   "public_key": "6sNE7CnUmEbvfVcaYklfOzJuN60m4+HH2LKlqlxhSN0="
 }
