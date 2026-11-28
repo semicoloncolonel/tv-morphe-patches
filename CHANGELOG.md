@@ -1,3 +1,19 @@
+# [1.3.0-dev.1](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0...v1.3.0-dev.1) (2026-11-28)
+
+
+### Bug Fixes
+
+* **Mask live ad breaks:** Keep the cover from staying up after a short break ([558d173](https://github.com/semicoloncolonel/tv-morphe-patches/commit/558d17362bcb54942613d466b07b9de699b230cb))
+* **nbcuott:** Find the MPD start tag without a slow pattern ([715ffdf](https://github.com/semicoloncolonel/tv-morphe-patches/commit/715ffdf49cd5d81fa067007715c7250fdfe3cea1))
+* **Plex:** Support Plex 2026.23.0 ([8805bb5](https://github.com/semicoloncolonel/tv-morphe-patches/commit/8805bb546a056d189cc74debf81b8199effb4cf3)), closes [#12](https://github.com/semicoloncolonel/tv-morphe-patches/issues/12)
+* **The Roku Channel:** Mark the privacy patches experimental ([7ed626c](https://github.com/semicoloncolonel/tv-morphe-patches/commit/7ed626cfb83d406d7f9763bc3fad86434bb5eb13))
+
+
+### Features
+
+* **Rakuten TV:** Add the Android TV app with Skip ads ([2470e26](https://github.com/semicoloncolonel/tv-morphe-patches/commit/2470e26efd689352d61aebb705d61e27c6100b86)), closes [#34](https://github.com/semicoloncolonel/tv-morphe-patches/issues/34)
+* **release:** Begin the 1.3.0 dev line ([5c78e90](https://github.com/semicoloncolonel/tv-morphe-patches/commit/5c78e909530a405eb129a3e335b277bd0b3e61e6))
+
 ## [1.2.0](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.1.2...v1.2.0) (2026-11-28)
 
 ### New apps
