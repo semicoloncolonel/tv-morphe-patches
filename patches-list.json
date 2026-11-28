@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.2.0-dev.21",
+  "version": "1.2.0-dev.22",
   "patches": [
     {
       "name": "Allow screenshots",
@@ -5853,6 +5853,45 @@
               "version": "6.12.0",
               "versionCodes": null,
               "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Skip splash sound",
+      "description": "Opens the app with the silent splash animation, without the launch sound.",
+      "default": true,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "com.fox.foxone",
+          "name": "Fox One",
+          "description": "The Fox One app. Needs the Pairip license-check patch to run once re-signed.",
+          "apkFileType": "APKM",
+          "appIconColor": "#030B1A",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "1.20.0",
+              "versionCodes": null,
+              "isExperimental": false,
+              "minSdk": null,
+              "description": null
+            },
+            {
+              "version": "1.21.0",
+              "versionCodes": {
+                "ARM64_V8A": 520261111,
+                "ARMEABI_V7A": 520261111,
+                "X86_64": 520261111,
+                "X86": 520261111
+              },
+              "isExperimental": true,
               "minSdk": null,
               "description": null
             }
