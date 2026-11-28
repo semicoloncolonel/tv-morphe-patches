@@ -1,3 +1,10 @@
+# [1.2.0-dev.20](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.19...v1.2.0-dev.20) (2026-11-28)
+
+
+### Features
+
+* **The Roku Channel:** Add Hide device identifiers and Block analytics & tracking ([042bd86](https://github.com/semicoloncolonel/tv-morphe-patches/commit/042bd86b9641bfacfa863ebc075307a9a61069cf))
+
 # [1.2.0-dev.19](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.18...v1.2.0-dev.19) (2026-11-26)
 
 
