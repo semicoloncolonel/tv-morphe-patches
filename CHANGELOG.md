@@ -1,3 +1,11 @@
+# [1.2.0-dev.24](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.23...v1.2.0-dev.24) (2026-11-28)
+
+
+### Bug Fixes
+
+* **Mask live ad breaks:** Keep the cover from staying up after a short break ([558d173](https://github.com/semicoloncolonel/tv-morphe-patches/commit/558d17362bcb54942613d466b07b9de699b230cb))
+* **nbcuott:** Find the MPD start tag without a slow pattern ([715ffdf](https://github.com/semicoloncolonel/tv-morphe-patches/commit/715ffdf49cd5d81fa067007715c7250fdfe3cea1))
+
 # [1.2.0-dev.23](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.22...v1.2.0-dev.23) (2026-11-28)
 
 

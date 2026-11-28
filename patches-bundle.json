@@ -1,8 +1,8 @@
 {
-  "created_at": "2026-11-28T01:46:27",
-  "description": "# [1.2.0-dev.23](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.22...v1.2.0-dev.23) (2026-11-28)\n\n\n### Bug Fixes\n\n* **The Roku Channel:** Mark the privacy patches experimental ([7ed626c](https://github.com/semicoloncolonel/tv-morphe-patches/commit/7ed626cfb83d406d7f9763bc3fad86434bb5eb13))",
-  "download_url": "https://github.com/semicoloncolonel/tv-morphe-patches/releases/download/v1.2.0-dev.23/patches-1.2.0-dev.23.mpp",
+  "created_at": "2026-11-28T01:53:25",
+  "description": "# [1.2.0-dev.24](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.23...v1.2.0-dev.24) (2026-11-28)\n\n\n### Bug Fixes\n\n* **Mask live ad breaks:** Keep the cover from staying up after a short break ([558d173](https://github.com/semicoloncolonel/tv-morphe-patches/commit/558d17362bcb54942613d466b07b9de699b230cb))\n* **nbcuott:** Find the MPD start tag without a slow pattern ([715ffdf](https://github.com/semicoloncolonel/tv-morphe-patches/commit/715ffdf49cd5d81fa067007715c7250fdfe3cea1))",
+  "download_url": "https://github.com/semicoloncolonel/tv-morphe-patches/releases/download/v1.2.0-dev.24/patches-1.2.0-dev.24.mpp",
   "signature_download_url": "",
-  "version": "1.2.0-dev.23",
+  "version": "1.2.0-dev.24",
   "public_key": "6sNE7CnUmEbvfVcaYklfOzJuN60m4+HH2LKlqlxhSN0="
 }
