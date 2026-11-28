@@ -34,7 +34,7 @@ The phone patches are a separate source, [mobile-morphe-patches](https://github.
 
 <!-- apps:start -->
 
-TV Morphe Patches supports 31 Android TV apps: ABC News, Apple TV, CBS News, CNBC, CNN, Disney+, ESPN, Fandango at Home, Fox Local, Fox News, Fox One, HBO Max, Hulu, JustWatch, MGM+, MLB, Movies Anywhere, MS NOW, NBA, NBC News, NewsNation, NFL, PBS, Peacock, Plex, Pluto TV, Prime Video, Starz, The Roku Channel, Tubi, and YouTube TV. [Supported apps](https://github.com/semicoloncolonel/tv-morphe-patches/blob/main/docs/apps.md) lists the patches and the tested versions for each.
+TV Morphe Patches supports 32 Android TV apps: ABC News, Apple TV, CBS News, CNBC, CNN, Disney+, ESPN, Fandango at Home, Fox Local, Fox News, Fox One, HBO Max, Hulu, JustWatch, MGM+, MLB, Movies Anywhere, MS NOW, NBA, NBC News, NewsNation, NFL, PBS, Peacock, Plex, Pluto TV, Prime Video, Rakuten TV, Starz, The Roku Channel, Tubi, and YouTube TV. [Supported apps](https://github.com/semicoloncolonel/tv-morphe-patches/blob/main/docs/apps.md) lists the patches and the tested versions for each.
 
 <!-- apps:end -->
 

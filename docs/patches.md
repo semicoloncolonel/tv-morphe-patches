@@ -60,6 +60,7 @@ Each row is a patch, the Android TV apps it is for, and what it does. Morphe Man
 | Skip ads | Plex | Stops on-demand titles from requesting video ads and pause ads. |
 | Skip ads | Pluto TV | Removes the ads, ad markers, and pause ads from on-demand videos. |
 | Skip ads | Prime Video | Removes the ads in Android TV titles. Ads in live channels still play. |
+| Skip ads (experimental) | Rakuten TV | Removes the ads from on-demand videos and the pre-roll from live channels. Ads that a live channel carries in its own stream still play. |
 | Skip ads | The Roku Channel | Removes the bumper, pre-roll, and mid-roll ads from on-demand videos. |
 | Skip ads | Tubi | Removes the ads in videos, including ad breaks and image pause ads. |
 | Skip ads | YouTube TV | Removes the ads YouTube adds to on-demand videos and recordings in the official YouTube TV app, along with ad and analytics tracking. Experimental and not yet tested on a device. It needs version 4.01.03, for Android TV devices on Android 12 or later. Commercials that are part of a live broadcast still play. |
