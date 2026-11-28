@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.2.0-dev.20",
+  "version": "1.2.0-dev.21",
   "patches": [
     {
       "name": "Allow screenshots",
@@ -4407,7 +4407,17 @@
           ]
         }
       ],
-      "options": []
+      "options": [
+        {
+          "key": "translate",
+          "title": "Show it in your language",
+          "description": "Experimental. Shows the ad break cover in your device's language when it is Arabic, Chinese, French, German, Greek, Italian, Korean, Portuguese, Russian, Spanish, Tagalog, or Vietnamese. Other languages show English. The translations come from a translation service, so some may read awkwardly. Please submit corrections or rewrites through GitHub issues.",
+          "required": false,
+          "type": "kotlin.Boolean",
+          "default": false,
+          "values": null
+        }
+      ]
     },
     {
       "name": "Mask live ad breaks",
@@ -4434,7 +4444,17 @@
           ]
         }
       ],
-      "options": []
+      "options": [
+        {
+          "key": "translate",
+          "title": "Show it in your language",
+          "description": "Experimental. Shows the ad break cover in your device's language when it is Arabic, Chinese, French, German, Greek, Italian, Korean, Portuguese, Russian, Spanish, Tagalog, or Vietnamese. Other languages show English. The translations come from a translation service, so some may read awkwardly. Please submit corrections or rewrites through GitHub issues.",
+          "required": false,
+          "type": "kotlin.Boolean",
+          "default": false,
+          "values": null
+        }
+      ]
     },
     {
       "name": "Mask live ad breaks",
@@ -4468,7 +4488,17 @@
           ]
         }
       ],
-      "options": []
+      "options": [
+        {
+          "key": "translate",
+          "title": "Show it in your language",
+          "description": "Experimental. Shows the ad break cover in your device's language when it is Arabic, Chinese, French, German, Greek, Italian, Korean, Portuguese, Russian, Spanish, Tagalog, or Vietnamese. Other languages show English. The translations come from a translation service, so some may read awkwardly. Please submit corrections or rewrites through GitHub issues.",
+          "required": false,
+          "type": "kotlin.Boolean",
+          "default": false,
+          "values": null
+        }
+      ]
     },
     {
       "name": "Opt out of data sale & sharing",
@@ -5510,6 +5540,38 @@
     },
     {
       "name": "Skip ads",
+      "description": "Removes the pre-roll and mid-roll ads from on-demand videos, and the pre-roll from live channels.",
+      "default": true,
+      "category": null,
+      "compatiblePackages": [
+        {
+          "packageName": "tv.wuaki.apptv",
+          "name": "Rakuten TV",
+          "description": "The Rakuten TV Android TV app.",
+          "apkFileType": "APKM",
+          "appIconColor": "#BF0002",
+          "signatures": null,
+          "formFactor": "TV",
+          "targets": [
+            {
+              "version": "4.14.6",
+              "versionCodes": {
+                "ARM64_V8A": 4140601,
+                "ARMEABI_V7A": 4140601,
+                "X86_64": 4140601,
+                "X86": 4140601
+              },
+              "isExperimental": true,
+              "minSdk": null,
+              "description": null
+            }
+          ]
+        }
+      ],
+      "options": []
+    },
+    {
+      "name": "Skip ads",
       "description": "Removes the Roku bumper, pre-roll, and mid-roll ads from videos.",
       "default": true,
       "category": null,
@@ -5840,81 +5902,6 @@
                 "X86": 2645004
               },
               "isExperimental": true,
-              "minSdk": null,
-              "description": null
-            }
-          ]
-        }
-      ],
-      "options": []
-    },
-    {
-      "name": "Translate ad break screen",
-      "description": "Experimental. Shows the \"We'll be right back!\" screen in your device's language when it is Arabic, Chinese, French, German, Greek, Italian, Korean, Portuguese, Russian, Spanish, Tagalog, or Vietnamese. Other languages show English. The translations come from a translation service. Please submit corrections or rewrites through GitHub issues.",
-      "default": true,
-      "category": "Ads",
-      "compatiblePackages": [
-        {
-          "packageName": "air.com.vudu.air.DownloaderTablet",
-          "name": "Fandango at Home",
-          "description": "The Android TV app, formerly Vudu. Patch the Android TV build: version code 179219068 for 10.20.a016.",
-          "apkFileType": "APKM",
-          "appIconColor": "#3D7CF4",
-          "signatures": null,
-          "formFactor": "TV",
-          "targets": [
-            {
-              "version": "10.20.a016",
-              "versionCodes": {
-                "ARM64_V8A": 179219068,
-                "ARMEABI_V7A": 179219068,
-                "X86_64": 179219068,
-                "X86": 179219068
-              },
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            }
-          ]
-        },
-        {
-          "packageName": "com.bamnetworks.mobile.android.gameday.atbat",
-          "name": "MLB",
-          "description": "The MLB app.",
-          "apkFileType": "APKM",
-          "appIconColor": "#002D72",
-          "signatures": null,
-          "formFactor": "TV",
-          "targets": [
-            {
-              "version": "26.21.0.76",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            }
-          ]
-        },
-        {
-          "packageName": "tv.pluto.android",
-          "name": "Pluto TV",
-          "description": "The Pluto TV app. Its version codes start with 5, and the phone app's start with 4.",
-          "apkFileType": "APKM",
-          "appIconColor": "#B8B004",
-          "signatures": null,
-          "formFactor": "TV",
-          "targets": [
-            {
-              "version": "17.4.0",
-              "versionCodes": null,
-              "isExperimental": false,
-              "minSdk": null,
-              "description": null
-            },
-            {
-              "version": "17.3.0",
-              "versionCodes": null,
-              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
