@@ -69,6 +69,7 @@ Each row is a patch, the Android TV apps it is for, and what it does. Morphe Man
 | Skip launch video | Pluto TV | Opens the app with the static logo instead of the branded intro video. |
 | Skip lion intro | MGM+ | Opens the app after the MGM+ logo, without the lion intro video. |
 | Skip pre-roll promo | Starz | Starts titles without the promo for other Starz shows that plays first. |
+| Skip splash sound | Fox One | Opens the app with the silent splash animation. Without it, a re-signed Fox One 1.21.0 plays a few seconds of static at launch. |
 | Streaming titles only | JustWatch (off by default) | Shows only titles you can stream on a subscription or for free on the Watchlist. Titles you can only rent or buy are hidden. Picking a Types filter in the app overrides this. |
 | Use the public web app | MS NOW | Loads the public MS NOW web app. The 7.10.2 build loads a test version of it by default. |
 | Video quality | HBO Max (off by default) | Plays the video resolution you choose instead of letting the app pick one. Videos can buffer if your connection is too slow for it. |
