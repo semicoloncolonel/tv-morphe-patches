@@ -161,8 +161,3 @@
 
 # CNBC, NBC News, and MS NOW — "Skip ads". Called only from the injected shouldInterceptRequest.
 -keep class semicoloncolonel.mobilestream.extension.nbcuott.ClipAdFilter { public static *; }
-
-# Rakuten TV — "Skip ads". attach() is called only from injected smali.
--keep class semicoloncolonel.mobilestream.extension.rakuten.RakutenAds {
-    public static void attach(android.webkit.WebView);
-}

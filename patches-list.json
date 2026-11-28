@@ -1,6 +1,6 @@
 {
   "NOTE": "Do NOT manually edit this file. This file is automatically updated when semantic release (release.yml) runs. Manually editing this file can break your releases and break third party tools that use this file.",
-  "version": "1.2.0-dev.24",
+  "version": "1.2.0",
   "patches": [
     {
       "name": "Allow screenshots",
@@ -69,7 +69,7 @@
                 "X86_64": 170400,
                 "X86": 170400
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             },
@@ -158,7 +158,7 @@
                 "X86_64": 2645004,
                 "X86": 2645004
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -202,7 +202,7 @@
                 "X86_64": 53550569,
                 "X86": 53550569
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -246,7 +246,7 @@
                 "X86_64": 170400,
                 "X86": 170400
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             },
@@ -361,7 +361,7 @@
                 "X86_64": 1794879420,
                 "X86": 1794879420
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -464,7 +464,7 @@
                 "X86_64": 202611202,
                 "X86": 202611202
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -535,7 +535,7 @@
                 "X86_64": 520261111,
                 "X86": 520261111
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -579,7 +579,7 @@
                 "X86_64": 1842010082,
                 "X86": 1842010082
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -614,7 +614,7 @@
                 "X86_64": 1842010082,
                 "X86": 1842010082
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -663,7 +663,7 @@
                 "X86_64": 2645004,
                 "X86": 2645004
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -781,7 +781,7 @@
                 "X86_64": 6161027,
                 "X86": 6161027
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             },
@@ -793,7 +793,7 @@
                 "X86_64": 6163020,
                 "X86": 6163020
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             },
@@ -961,7 +961,7 @@
                 "X86_64": 101397113,
                 "X86": 101397113
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             },
@@ -973,7 +973,7 @@
                 "X86_64": 101397380,
                 "X86": 101397380
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -1032,7 +1032,7 @@
                 "X86_64": 230711200,
                 "X86": 230711200
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             },
@@ -1069,13 +1069,6 @@
               "isExperimental": false,
               "minSdk": null,
               "description": null
-            },
-            {
-              "version": "2026.23.0",
-              "versionCodes": null,
-              "isExperimental": true,
-              "minSdk": null,
-              "description": "Beta"
             }
           ]
         }
@@ -1152,7 +1145,7 @@
                 "X86_64": 2000090,
                 "X86": 2000090
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -1196,7 +1189,7 @@
                 "X86_64": 9512,
                 "X86": 9512
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             },
@@ -1247,7 +1240,7 @@
                 "X86_64": 1069,
                 "X86": 1069
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -1345,7 +1338,7 @@
                 "X86_64": 520261111,
                 "X86": 520261111
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -1368,7 +1361,7 @@
                 "X86_64": 2000090,
                 "X86": 2000090
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -1412,7 +1405,7 @@
                 "X86_64": 1069,
                 "X86": 1069
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -1442,7 +1435,7 @@
                 "X86_64": 1794879420,
                 "X86": 1794879420
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -1502,7 +1495,7 @@
                 "X86_64": 1842010082,
                 "X86": 1842010082
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -1537,7 +1530,7 @@
                 "X86_64": 1842010082,
                 "X86": 1842010082
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -1560,7 +1553,7 @@
                 "X86_64": 230711200,
                 "X86": 230711200
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             },
@@ -1615,7 +1608,7 @@
                 "X86_64": 520261111,
                 "X86": 520261111
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -1650,7 +1643,7 @@
                 "X86_64": 9512,
                 "X86": 9512
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             },
@@ -1723,7 +1716,7 @@
                 "X86_64": 101397113,
                 "X86": 101397113
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             },
@@ -1735,7 +1728,7 @@
                 "X86_64": 101397380,
                 "X86": 101397380
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -1758,7 +1751,7 @@
                 "X86_64": 6161027,
                 "X86": 6161027
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             },
@@ -1770,7 +1763,7 @@
                 "X86_64": 6163020,
                 "X86": 6163020
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             },
@@ -1817,7 +1810,7 @@
                 "X86_64": 2645004,
                 "X86": 2645004
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -2020,7 +2013,7 @@
                 "X86_64": 53550569,
                 "X86": 53550569
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -2101,7 +2094,7 @@
                 "X86_64": 202611202,
                 "X86": 202611202
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -2168,7 +2161,7 @@
                 "X86_64": 53550569,
                 "X86": 53550569
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -2314,7 +2307,7 @@
                 "X86_64": 202611202,
                 "X86": 202611202
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -2473,7 +2466,7 @@
                 "X86_64": 2645004,
                 "X86": 2645004
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -2707,7 +2700,7 @@
                 "X86_64": 53550569,
                 "X86": 53550569
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -2834,7 +2827,7 @@
                 "X86_64": 202611202,
                 "X86": 202611202
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -2892,7 +2885,7 @@
                 "X86_64": 1069,
                 "X86": 1069
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -2922,7 +2915,7 @@
                 "X86_64": 1794879420,
                 "X86": 1794879420
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -2982,7 +2975,7 @@
                 "X86_64": 1842010082,
                 "X86": 1842010082
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -3017,7 +3010,7 @@
                 "X86_64": 1842010082,
                 "X86": 1842010082
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -3040,7 +3033,7 @@
                 "X86_64": 230711200,
                 "X86": 230711200
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             },
@@ -3095,7 +3088,7 @@
                 "X86_64": 520261111,
                 "X86": 520261111
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -3130,7 +3123,7 @@
                 "X86_64": 9512,
                 "X86": 9512
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             },
@@ -3203,7 +3196,7 @@
                 "X86_64": 101397113,
                 "X86": 101397113
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             },
@@ -3215,7 +3208,7 @@
                 "X86_64": 101397380,
                 "X86": 101397380
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -3238,7 +3231,7 @@
                 "X86_64": 6161027,
                 "X86": 6161027
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             },
@@ -3250,7 +3243,7 @@
                 "X86_64": 6163020,
                 "X86": 6163020
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             },
@@ -3297,7 +3290,7 @@
                 "X86_64": 2645004,
                 "X86": 2645004
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -3373,7 +3366,7 @@
                 "X86_64": 2000090,
                 "X86": 2000090
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -3463,7 +3456,7 @@
                 "X86_64": 170400,
                 "X86": 170400
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             },
@@ -3563,7 +3556,7 @@
                 "X86_64": 1069,
                 "X86": 1069
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -3593,7 +3586,7 @@
                 "X86_64": 1794879420,
                 "X86": 1794879420
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -3653,7 +3646,7 @@
                 "X86_64": 1842010082,
                 "X86": 1842010082
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -3688,7 +3681,7 @@
                 "X86_64": 1842010082,
                 "X86": 1842010082
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -3711,7 +3704,7 @@
                 "X86_64": 230711200,
                 "X86": 230711200
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             },
@@ -3766,7 +3759,7 @@
                 "X86_64": 520261111,
                 "X86": 520261111
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -3801,7 +3794,7 @@
                 "X86_64": 9512,
                 "X86": 9512
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             },
@@ -3847,13 +3840,6 @@
               "isExperimental": false,
               "minSdk": null,
               "description": null
-            },
-            {
-              "version": "2026.23.0",
-              "versionCodes": null,
-              "isExperimental": true,
-              "minSdk": null,
-              "description": "Beta"
             }
           ]
         },
@@ -3891,7 +3877,7 @@
                 "X86_64": 2645004,
                 "X86": 2645004
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -3939,7 +3925,7 @@
                 "X86_64": 101397113,
                 "X86": 101397113
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             },
@@ -3951,7 +3937,7 @@
                 "X86_64": 101397380,
                 "X86": 101397380
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -3974,7 +3960,7 @@
                 "X86_64": 6161027,
                 "X86": 6161027
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             },
@@ -3986,7 +3972,7 @@
                 "X86_64": 6163020,
                 "X86": 6163020
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             },
@@ -4055,7 +4041,7 @@
                 "X86_64": 1069,
                 "X86": 1069
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -4085,13 +4071,6 @@
               "isExperimental": false,
               "minSdk": null,
               "description": null
-            },
-            {
-              "version": "2026.23.0",
-              "versionCodes": null,
-              "isExperimental": true,
-              "minSdk": null,
-              "description": "Beta"
             }
           ]
         }
@@ -4138,7 +4117,7 @@
                 "X86_64": 2645004,
                 "X86": 2645004
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -4187,7 +4166,7 @@
                 "X86_64": 2645004,
                 "X86": 2645004
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -4231,7 +4210,7 @@
                 "X86_64": 53550569,
                 "X86": 53550569
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -4275,7 +4254,7 @@
                 "X86_64": 1069,
                 "X86": 1069
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -4324,7 +4303,7 @@
                 "X86_64": 2645004,
                 "X86": 2645004
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -4368,7 +4347,7 @@
                 "X86_64": 1069,
                 "X86": 1069
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -4567,7 +4546,7 @@
                 "X86_64": 202611202,
                 "X86": 202611202
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -4638,7 +4617,7 @@
                 "X86_64": 101397113,
                 "X86": 101397113
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             },
@@ -4650,7 +4629,7 @@
                 "X86_64": 101397380,
                 "X86": 101397380
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -4673,7 +4652,7 @@
                 "X86_64": 6161027,
                 "X86": 6161027
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             },
@@ -4685,7 +4664,7 @@
                 "X86_64": 6163020,
                 "X86": 6163020
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             },
@@ -4736,7 +4715,7 @@
                 "X86_64": 1069,
                 "X86": 1069
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -4780,7 +4759,7 @@
                 "X86_64": 170400,
                 "X86": 170400
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             },
@@ -4849,7 +4828,7 @@
                 "X86_64": 53550569,
                 "X86": 53550569
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -4940,7 +4919,7 @@
                 "X86_64": 1794879420,
                 "X86": 1794879420
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -5038,7 +5017,7 @@
                 "X86_64": 520261111,
                 "X86": 520261111
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -5082,7 +5061,7 @@
                 "X86_64": 1842010082,
                 "X86": 1842010082
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -5117,7 +5096,7 @@
                 "X86_64": 1842010082,
                 "X86": 1842010082
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -5176,7 +5155,7 @@
                 "X86_64": 6161027,
                 "X86": 6161027
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             },
@@ -5188,7 +5167,7 @@
                 "X86_64": 6163020,
                 "X86": 6163020
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             },
@@ -5356,7 +5335,7 @@
                 "X86_64": 101397113,
                 "X86": 101397113
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             },
@@ -5368,7 +5347,7 @@
                 "X86_64": 101397380,
                 "X86": 101397380
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -5427,7 +5406,7 @@
                 "X86_64": 230711200,
                 "X86": 230711200
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             },
@@ -5464,13 +5443,6 @@
               "isExperimental": false,
               "minSdk": null,
               "description": null
-            },
-            {
-              "version": "2026.23.0",
-              "versionCodes": null,
-              "isExperimental": true,
-              "minSdk": null,
-              "description": "Beta"
             }
           ]
         }
@@ -5540,38 +5512,6 @@
     },
     {
       "name": "Skip ads",
-      "description": "Removes the pre-roll and mid-roll ads from on-demand videos, and the pre-roll from live channels.",
-      "default": true,
-      "category": null,
-      "compatiblePackages": [
-        {
-          "packageName": "tv.wuaki.apptv",
-          "name": "Rakuten TV",
-          "description": "The Rakuten TV Android TV app.",
-          "apkFileType": "APKM",
-          "appIconColor": "#BF0002",
-          "signatures": null,
-          "formFactor": "TV",
-          "targets": [
-            {
-              "version": "4.14.6",
-              "versionCodes": {
-                "ARM64_V8A": 4140601,
-                "ARMEABI_V7A": 4140601,
-                "X86_64": 4140601,
-                "X86": 4140601
-              },
-              "isExperimental": true,
-              "minSdk": null,
-              "description": null
-            }
-          ]
-        }
-      ],
-      "options": []
-    },
-    {
-      "name": "Skip ads",
       "description": "Removes the Roku bumper, pre-roll, and mid-roll ads from videos.",
       "default": true,
       "category": null,
@@ -5593,7 +5533,7 @@
                 "X86_64": 2000090,
                 "X86": 2000090
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -5637,7 +5577,7 @@
                 "X86_64": 1069,
                 "X86": 1069
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -5740,7 +5680,7 @@
                 "X86_64": 1794879420,
                 "X86": 1794879420
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -5845,7 +5785,7 @@
                 "X86_64": 9512,
                 "X86": 9512
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             },
@@ -5891,7 +5831,7 @@
                 "X86_64": 520261111,
                 "X86": 520261111
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -5940,7 +5880,7 @@
                 "X86_64": 2645004,
                 "X86": 2645004
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -6016,7 +5956,7 @@
                 "X86_64": 1842010082,
                 "X86": 1842010082
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -6051,7 +5991,7 @@
                 "X86_64": 1842010082,
                 "X86": 1842010082
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
@@ -6105,7 +6045,7 @@
                 "X86_64": 802300320,
                 "X86": 802300320
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             },
@@ -6117,7 +6057,7 @@
                 "X86_64": 803300320,
                 "X86": 803300320
               },
-              "isExperimental": true,
+              "isExperimental": false,
               "minSdk": null,
               "description": null
             }
