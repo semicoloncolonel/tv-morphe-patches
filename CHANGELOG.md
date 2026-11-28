@@ -1,3 +1,10 @@
+# [1.2.0-dev.23](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.22...v1.2.0-dev.23) (2026-11-28)
+
+
+### Bug Fixes
+
+* **The Roku Channel:** Mark the privacy patches experimental ([7ed626c](https://github.com/semicoloncolonel/tv-morphe-patches/commit/7ed626cfb83d406d7f9763bc3fad86434bb5eb13))
+
 # [1.2.0-dev.22](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.21...v1.2.0-dev.22) (2026-11-28)
 
 

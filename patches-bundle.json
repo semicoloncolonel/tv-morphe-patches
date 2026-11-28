@@ -1,8 +1,8 @@
 {
-  "created_at": "2026-11-28T01:29:49",
-  "description": "# [1.2.0-dev.22](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.21...v1.2.0-dev.22) (2026-11-28)\n\n\n### Bug Fixes\n\n* **Fox One:** Add Skip splash sound for 1.21.0 ([7b4e2fc](https://github.com/semicoloncolonel/tv-morphe-patches/commit/7b4e2fc6963b7e130b986486e3aeeccac7259fd1)), closes [#23](https://github.com/semicoloncolonel/tv-morphe-patches/issues/23)",
-  "download_url": "https://github.com/semicoloncolonel/tv-morphe-patches/releases/download/v1.2.0-dev.22/patches-1.2.0-dev.22.mpp",
+  "created_at": "2026-11-28T01:46:27",
+  "description": "# [1.2.0-dev.23](https://github.com/semicoloncolonel/tv-morphe-patches/compare/v1.2.0-dev.22...v1.2.0-dev.23) (2026-11-28)\n\n\n### Bug Fixes\n\n* **The Roku Channel:** Mark the privacy patches experimental ([7ed626c](https://github.com/semicoloncolonel/tv-morphe-patches/commit/7ed626cfb83d406d7f9763bc3fad86434bb5eb13))",
+  "download_url": "https://github.com/semicoloncolonel/tv-morphe-patches/releases/download/v1.2.0-dev.23/patches-1.2.0-dev.23.mpp",
   "signature_download_url": "",
-  "version": "1.2.0-dev.22",
+  "version": "1.2.0-dev.23",
   "public_key": "6sNE7CnUmEbvfVcaYklfOzJuN60m4+HH2LKlqlxhSN0="
 }
