@@ -38,6 +38,9 @@ public final class LiveBreakMask {
     private static WeakReference<Activity> front = new WeakReference<>(null);
     private static View cover;
     private static boolean muted;
+    // The state the player last asked for. The cover and the mute change on
+    // the main thread, after the request, so they can lag behind it.
+    private static volatile boolean wanted;
     private static Context audioContext;
     private static TextView label;
     private static Object timer;
@@ -65,8 +68,10 @@ public final class LiveBreakMask {
             @Override
             public void onActivityResumed(Activity resumed) {
                 front = new WeakReference<>(resumed);
-                // Move a cover that is up to the new screen.
-                if (cover != null) MAIN.post(LiveBreakMask::show);
+                // Move a cover that is up to the new screen. apply() checks
+                // the request when it runs, so a break that ended meanwhile is
+                // not covered again.
+                if (cover != null) MAIN.post(LiveBreakMask::apply);
             }
 
             @Override
@@ -124,10 +129,26 @@ public final class LiveBreakMask {
         return AdBreakText.untimed();
     }
 
-    /** Injection point: AdStatusStateModifier, with the new isInAd value. */
+    /**
+     * Injection point: AdStatusStateModifier, with the new isInAd value. CBS
+     * News calls it too, from its ad events and when the stream is released.
+     *
+     * A break can start and end before the main thread runs the first change.
+     * Comparing against the cover on screen would then drop the end, and the
+     * cover and mute would stay up. The request is recorded here instead, and
+     * apply() makes the screen match the latest one when it runs.
+     */
     public static void onAdState(boolean inAd) {
-        if (inAd == (cover != null || muted)) return;
-        MAIN.post(inAd ? LiveBreakMask::show : LiveBreakMask::hide);
+        // A repeated start still retries a cover that could not go up (no
+        // screen in front yet).
+        if (inAd == wanted && inAd == (cover != null || muted)) return;
+        wanted = inAd;
+        MAIN.post(LiveBreakMask::apply);
+    }
+
+    private static void apply() {
+        if (wanted) show();
+        else hide();
     }
 
     private static void show() {
