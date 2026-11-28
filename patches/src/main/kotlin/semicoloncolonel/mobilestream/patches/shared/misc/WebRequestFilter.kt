@@ -25,11 +25,17 @@ import com.android.tools.smali.dexlib2.immutable.ImmutableMethodParameter
 // client (for example an ads filter after the analytics one) rebuilds the
 // method with the new filter first. Inserting a check into the existing method
 // would leave the earlier check's branch pointing into the new code.
+//
+// A client can define the method itself, as Cordova's SystemWebViewClient does
+// to serve the app's local files. That method is kept under another name, and
+// the added method falls through to it instead of to WebViewClient's.
 
 private const val WEB_VIEW_CLIENT = "Landroid/webkit/WebViewClient;"
 private const val INTERCEPT = "shouldInterceptRequest"
 private const val RESPONSE = "Landroid/webkit/WebResourceResponse;"
 private val INTERCEPT_PARAMETERS = listOf("Landroid/webkit/WebView;", "Landroid/webkit/WebResourceRequest;")
+private const val INTERCEPT_SIGNATURE = "(Landroid/webkit/WebView;Landroid/webkit/WebResourceRequest;)$RESPONSE"
+private const val APP_INTERCEPT = "shouldInterceptRequest\$app"
 
 /**
  * Adds [filter] to [client]'s shouldInterceptRequest. [filter] is a full
@@ -45,8 +51,8 @@ internal fun BytecodePatchContext.filterWebRequests(client: String, filter: Stri
         method.name == INTERCEPT && method.returnType == RESPONSE &&
             method.parameterTypes.map { it.toString() } == INTERCEPT_PARAMETERS
     }
-    // Only a method an earlier call added is expected here: its filters are
-    // its static calls, in order.
+    // A method an earlier call added: its filters are its static calls, in
+    // order, and it ends by calling WebViewClient's method or the app's.
     val earlier = existing?.let { method ->
         val instructions = method.implementation?.instructions?.toList()
             ?: throw PatchException("$client.$INTERCEPT has no code")
@@ -54,12 +60,36 @@ internal fun BytecodePatchContext.filterWebRequests(client: String, filter: Stri
             val reference = (it as ReferenceInstruction).reference as MethodReference
             "${reference.definingClass}->${reference.name}(${reference.parameterTypes.joinToString("")})${reference.returnType}"
         }
-        if (calls.isEmpty() || instructions.none { it.opcode == Opcode.INVOKE_SUPER }) {
-            throw PatchException("$client.$INTERCEPT was not added by filterWebRequests")
+        val fallsThrough = instructions.any { instruction ->
+            instruction.opcode == Opcode.INVOKE_SUPER ||
+                (instruction.opcode == Opcode.INVOKE_VIRTUAL &&
+                    ((instruction as ReferenceInstruction).reference as MethodReference).name == APP_INTERCEPT)
         }
         classDef.methods.remove(method)
-        calls
+        if (calls.isNotEmpty() && fallsThrough) {
+            calls
+        } else {
+            // The app's own method: keep it under APP_INTERCEPT.
+            classDef.methods.add(
+                ImmutableMethod(
+                    client,
+                    APP_INTERCEPT,
+                    method.parameters,
+                    RESPONSE,
+                    method.accessFlags,
+                    null,
+                    null,
+                    method.implementation,
+                ).toMutable(),
+            )
+            emptyList()
+        }
     } ?: emptyList()
+    val fallThrough = if (classDef.methods.any { it.name == APP_INTERCEPT }) {
+        "invoke-virtual { p0, p1, p2 }, $client->$APP_INTERCEPT$INTERCEPT_SIGNATURE"
+    } else {
+        "invoke-super { p0, p1, p2 }, $WEB_VIEW_CLIENT->$INTERCEPT$INTERCEPT_SIGNATURE"
+    }
 
     val checks = (listOf(filter) + earlier).withIndex().joinToString("\n") { (index, call) ->
         """
@@ -87,7 +117,7 @@ internal fun BytecodePatchContext.filterWebRequests(client: String, filter: Stri
         0,
         """
             $checks
-            invoke-super { p0, p1, p2 }, $WEB_VIEW_CLIENT->$INTERCEPT(Landroid/webkit/WebView;Landroid/webkit/WebResourceRequest;)$RESPONSE
+            $fallThrough
             move-result-object v0
             return-object v0
         """.trimIndent(),

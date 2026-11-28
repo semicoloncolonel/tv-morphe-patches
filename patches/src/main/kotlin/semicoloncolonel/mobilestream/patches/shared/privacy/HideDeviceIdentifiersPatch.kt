@@ -42,6 +42,7 @@ import semicoloncolonel.mobilestream.patches.tubi.shared.Constants as Tubi
 import semicoloncolonel.mobilestream.patches.mlb.shared.Constants as Mlb
 import semicoloncolonel.mobilestream.patches.newsnation.shared.Constants as NewsNation
 import semicoloncolonel.mobilestream.patches.appletv.shared.Constants as AppleTv
+import semicoloncolonel.mobilestream.patches.roku.shared.Constants as Roku
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Hide device identifiers (OPT-IN, default OFF).
@@ -261,6 +262,7 @@ val hideDeviceIdentifiersPatch: BytecodePatch = bytecodePatch(
         JustWatch.COMPATIBILITY,
         Mlb.COMPATIBILITY,
         NewsNation.COMPATIBILITY,
+        Roku.COMPATIBILITY,
     )
 
     dependsOn(deviceIdentifiersManifestPatch)
